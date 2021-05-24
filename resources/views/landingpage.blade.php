@@ -68,7 +68,7 @@
     </div>
 
     </div> -->
-
+    <div style="display:block;">
       <div class=""
         style="
         position: relative;
@@ -468,14 +468,14 @@
       Dabei gehen wir schrittweise vor, besprechen uns anfangs, während und abschließend zum Entwicklungsprozess und prüfen ob Änderungen vorgenommen werden sollen oder der eingeschlagende Weg der Richtige ist.</p>
       <hr>
     </div>
-     <div class="container-fluid p-0 mt-4 shadow-lg bg-light">
+     <div class="container-fluid p-0 shadow-lg bg-light">
        <div class="row text-center text-dark">
          <span style="font-size: 2em; font-weight: 500;">Bildergallerien, featured by Frank Robrahn</span>
        </div>
        <div class="row m-0 justify-content-center align-items-center" id="paginatedGallery">
          <section>
             <div class="data-container"></div>
-            <div id="pagination-demo1" class="" style="position: absolute; left: calc(50% - 140px); width: 50%;"></div>
+            <div id="pagination-demo1" class="mt-3" style="position: absolute; left: calc(50% - 140px); width: 50%;"></div>
         </section>
 
          <!-- <div class="col-sm-5 bg-dark m-1 d-flex justify-content-center align-items-center p-2"><img src="{{asset('/Naturbilder/_DSC0786.jpg')}}" alt="" class="galleryimg"> </div>
@@ -485,6 +485,14 @@
        </div> -->
      </div>
    </div>
+   <div class="container-fluid p-0 shadow-lg bg-light" style="margin-top: 5em;">
+     <div class="row justify-content-center align-items-center mb-2">
+        <button type="button" class="btn-primary" name="button" style="background-color: #34568B; color:white; font-weight: 500; border-radius: 25px; width: 350px;">Kontaktiere uns</button>
+     </div>
+   </div>
+  </div>
+
+
     <template id="">
       <div class="col-sm-3 bg-dark m-1 d-flex justify-content-center align-items-center p-3" style="position:relative;" id="pictureborder">
         <div class="borderrectangle" style=" left: 10px; top: 10px;"></div>
