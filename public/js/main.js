@@ -18,3 +18,11 @@ function createBubble()
   bubble.remove()  }, 10000);
 
 }
+function showContactModal()
+{
+  // console.log('')
+  $('#exampleModalCenter').modal('show')
+}
+function toggleContactModal() {
+  $('#exampleModalCenter').modal('toggle')
+}

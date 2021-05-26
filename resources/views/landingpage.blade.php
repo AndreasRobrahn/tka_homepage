@@ -487,19 +487,66 @@
    </div>
    <div class="container-fluid p-0 shadow-lg bg-light" style="margin-top: 5em;">
      <div class="row justify-content-center align-items-center mb-2">
-        <button type="button" class="btn-primary" name="button" style="background-color: #34568B; color:white; font-weight: 500; border-radius: 25px; width: 350px;">Kontaktiere uns</button>
+        <button type="button" class="btn-primary" name="button" onclick="showContactModal()" style="background-color: #34568B; color:white; font-weight: 500; border-radius: 25px; width: 350px;">Kontaktiere uns</button>
+
      </div>
    </div>
   </div>
 
 
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Deine Angaben</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="toggleContactModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="" action="index.html" method="post">
+          @csrf
+          <div class="row m-0">
+            <div class="col">
+              <input type="text" name="" value=""> Vorname
+            </div>
+            <div class="col">
+              <input type="text" name="" value=""> Nachname
+            </div>
+          </div>
+          <div class="row m-0">
+            <div class="col">
+                <input type="text" name="" value="">Emailadresse
+            </div>
+          </div>
+          <div class="row m-0">
+            <div class="col">
+                <input type="text" name="" value="">Telefonnummer
+            </div>
+          <div class="row m-0">
+            <div class="col">
+              <h5>Was stellst du dir vor?</h5>
+              <textarea name="name" rows="8" cols="80" style="width: 100%;"></textarea>
+            </div>
+          </div>
+          <div class="row m-2">
+            <button type="button" name="button" class="btn btn-success btn-block btn-outline">Absenden</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
     <template id="">
-      <div class="col-sm-3 bg-dark m-1 d-flex justify-content-center align-items-center p-3" style="position:relative;" id="pictureborder">
-        <div class="borderrectangle" style=" left: 10px; top: 10px;"></div>
+      <div class="col-sm-3 m-1 d-flex justify-content-center align-items-center p-3" style="position:relative; background" id="pictureborder">
+        <!-- <div class="borderrectangle" style=" left: 10px; top: 10px;"></div>
         <div class="borderrectangle" style="position: absolute; right: 10px; top: 10px;"></div>
         <div class="borderrectangle" style="position: absolute; left: 10px; bottom: 10px;"></div>
-        <div class="borderrectangle" style="position: absolute; right: 10px; bottom: 10px;"></div>
-        <div class="innerborder" style="position: absolute; height: 85%; width: 85%; border: 2px solid white; overflow: hidden;" id="innerBorder">
+        <div class="borderrectangle" style="position: absolute; right: 10px; bottom: 10px;"></div> -->
+        <img src="https://image.freepik.com/free-photo/vintage-golden-picture-frame-rust-cement-wall_34810-1330.jpg" alt="" style="position:absolute; height: 100%; width: 100%; object-fit:fill;">
+        <div class="innerborder" style="position: absolute; height: 77%; width: 73%; border: 2px solid white; overflow: hidden;" id="innerBorder">
           <img src="" alt="" class="" style="height: 100%; width: 100%; object-fit: cover; " id="innerPicture">
         </div>
       </div>
