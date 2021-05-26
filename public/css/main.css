@@ -322,6 +322,7 @@ to
     {
       height: 45vh;
       width: 40vw;
+
     }
     .bubble
     {
@@ -337,6 +338,7 @@ to
       font-weight: 900;
       background: rgb(65,95,255);
       background: radial-gradient(circle, rgba(65,95,255,1) 17%, rgba(12,44,201,0.9780287114845938) 48%, rgba(211,211,237,1) 92%);
+      opacity: 0.4;
 
     }
     .bubble-up
