@@ -19,21 +19,23 @@ class NotificationsController extends Controller
       ]);
 
       $data = array(
-        'name'=>$request->name,
+        'name'=> $request->name,
         'message' => $request->message,
         'email' => $request->email,
         'phone' => $request->phone,
       );
 
-        Mail::send('mails.notification', $data, function($message) {
+      $adress = $request->email;
+
+        Mail::send('mails.notification', $data, function($message) use($data){
            $message->to('info@tka-software-systems.de', 'Sie haben eine Anfrage erhalten')
            ->subject('Anfrage');
            $message->from('info@tka-software-systems.de','Test Robot');
         });
 
-        Mail::send('mails.notification', $data, function($message) {
-           $message->to($request->email, 'Wir haben Ihre Nachricht erhalten')->subject
-              ('Kontaktaufnahme');
+        Mail::send('mails.notification', $data, function($message) use($data, $adress){
+           $message->to($adress, 'Wir haben Ihre Nachricht erhalten')
+           ->subject('Wir haben Ihre Nachricht erhalten');
            $message->from('info@tka-software-systems.de','Kundendienst');
         });
 
