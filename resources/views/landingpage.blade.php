@@ -8,10 +8,10 @@
     <link href="{{asset('bootstrap-5.0.1-dist/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('js/slick-1.8.1/slick/slick.css')}}"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">/ -->
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script> -->
     <!-- jquery-->
     <script  src="{{asset('js/jquery.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -68,7 +68,8 @@
     </div>
 
     </div> -->
-    <div style="display:block;">
+    <div style="display:block;" id="top">
+
       <div class=""
         style="
         position: relative;
@@ -85,6 +86,81 @@
           border-radius: 15px;
           overflow: hidden;
         ">
+        <div class="" style="position: fixed; z-index: 200; margin-top: 5px; margin-left: 5px; color:white;">
+          <button type="button" name="button" onclick="showSidebar()" style="width: 50px; height: 50px; border-radius: 25px; background-color:#34568B; ">
+            <span class="material-icons text-white">
+            east
+            </span>
+          </button>
+          <div class="popupmenu" style='position:relative; display:none; font-size: 1.5em;'>
+            <ul class="subissues" id='targetlist'>
+              <a href="#" onclick="showContactModal()"><li>
+                <div class="row m-2 d-flex">
+                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                    <i class="material-icons">
+                      email
+                    </i>
+                  </div>
+                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+                  <span>Schreibe uns</span>
+                  </div>
+                </div>
+
+              </li></a>
+                <a href="#"><li>
+                  <div class="row m-2">
+                    <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                      <i class="material-icons">
+                        dialpad
+                      </i>
+                    </div>
+                    <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+                      <span>Ruf uns an</span>
+                    </div>
+                  </div>
+
+              </li></a>
+              <a href="#top"><li>
+                <div class="row m-2">
+                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                    <i class="material-icons">
+                      arrow_upward
+                    </i>
+                  </div>
+                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+                    <span>Zum Anfang</span>
+                  </div>
+              </div>
+                </li></a>
+              <a href="#aboutus"><li>
+
+                <div class="row m-2">
+                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                    <i class="material-icons">
+                      info
+                    </i>
+                  </div>
+                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+                    <span>Über uns</span>
+                  </div>
+              </div>
+              </li></a>
+              <a href="#aboutus"><li>
+
+                <div class="row m-2">
+                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                    <i class="material-icons">
+                      account_tree
+                    </i>
+                  </div>
+                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+                    <span>Einsatzbereiche</span>
+                  </div>
+              </div>
+              </li></a>
+            </ul>
+          </div>
+        </div>
         <div class="d-flex p-2" style="position: relative;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
         </div>
@@ -113,17 +189,25 @@
       ">
     </div>
   </div>
-<div class="container mt-4 p-2 text-shadow" style="font-size: 1.5em; font-weight: 900;">
+<div class="container mt-4 p-2 " style="">
   <div class="row">
-    <h2 class="text-center">Über uns</h2>
+    <h2 class="text-center" id="aboutus">Über uns</h2>
   </div>
   <hr>
-  <p>
-  Wir sind die TKA Software Systems. Wir sind ein junges Unternehmen aus dem Norden. Und wir nutzen unsere Expertise um dir deine Webseite zu erstellen.
-  Dabei sind deiner Fantasien keine Grenzen gesetzt. Vielleicht willst du eine hübsch anzusehende Seite, mit allerlei
-  Animationen in einem zeitgemäßem Design. Oder du benötigst eine Anwendung zum Verwalten deines Geschäfts, hast keine Übersicht mehr über die ganzen Exceltabelle. Wie wärs mit einer Datenbankschnittstelle?
-  Oder beides. Verschaff dir einen Überblick und kontaktiere uns.
-  Hast du die Idee finden wir einen Weg der ganzen Welt Eintritt zu gewähren.</p>
+  <div class="row">
+    <div class="col-sm p-0 d-flex align-items-center">
+      <img src="{{asset('images/flensburg1.jpg')}}" class="img-fluid p-2 rounded" alt="Flensburg">
+    </div>
+    <div class="col-sm p-2">
+      <p class="t_stand">
+      Wir sind die TKA Software Systems. Wir sind ein junges Unternehmen aus dem Norden Deutschlands(Flensburg). Wir wollen dir mit unserer Expertise deine Webseite zu erstellen.
+      Dabei sind deiner Fantasien keine Grenzen gesetzt. Vielleicht willst du eine hübsch anzusehende Seite, mit allerlei
+      Animationen in einem zeitgemäßem Design. Oder du benötigst eine Anwendung zum Verwalten deines Geschäfts, hast keine Übersicht mehr über die ganzen Exceltabelle. Wie wärs mit einer Datenbankschnittstelle?
+      Oder beides. Verschaff dir einen Überblick und kontaktiere uns.
+      Hast du die Idee finden wir einen Weg der ganzen Welt Eintritt zu gewähren.</p>
+    </div>
+  </div>
+
   <hr>
 </div>
     <div class="container-fluid p-0 mt-4 shadow-lg bg-light" style="">
@@ -135,7 +219,7 @@
         </div>
       <div class="col-10">
         <div class="row m-0">
-          <h2 class="text-center w-100">Unterschiedlichste Einsatzmöglichkeiten</h2>
+          <h2 class="text-center w-100" id="possibilities">Unterschiedlichste Einsatzmöglichkeiten</h2>
         </div>
         <div class="row m-0 gallery" style="height: 70vh;">
           <div class="csh">
@@ -457,20 +541,30 @@
           </div>
         </div>
       </div>
-    <div class="container mt-4 p-2 text-shadow" style="font-size: 1.5em; font-weight: 900;">
+    <div class="container mt-4 p-2 t_stand" style="">
       <div class="row">
-        <h2 class="text-center">Was erwartet dich</h2>
+        <h2 class="text-center">Das Problem</h2>
       </div>
+
       <hr>
-      <p>
-      Wir sind ein loses Netzwerk aus Fotografen, Webentwicklern und Designern die die üblichen Entwicklungsprozesse für hochindividualisierte Webseiten oft langsam und teuer empfinden.
-      Unsere Lösung, wir vereinfachen diese Wege. Durch ein lockeres Umfeld und gute Kommunikation erschaffen wir die Webseite die du vor deinem geistigen Auge hast.
-      Dabei gehen wir schrittweise vor, besprechen uns anfangs, während und abschließend zum Entwicklungsprozess und prüfen ob Änderungen vorgenommen werden sollen oder der eingeschlagende Weg der Richtige ist.</p>
+      <div class="row m-0">
+        <div class="col d-flex justify-content-center align-items-center">
+          <img src="{{asset('images/frustrated.jpg')}}" class="img-fluid p-2" alt="">
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+          <p>
+          Viele Entwicklungsprozesse in der Softwareentwicklung sind langwierig, unnötig teuer und wenn wir ehrlich sind meistens nie das was man vor dem Auge hatte. Überplanung und ein zu hoher Personaleinsatz führen dazu, dass ein Mindestmaß an Inhalt da sein muss um die immensen Kosten zu rechtfertigen. Wieviel Programmierer braucht man um eine einzige Seite zu programmieren oder?
+          
+
+          </p>
+        </div>
+      </div>
+
       <hr>
     </div>
      <div class="container-fluid p-0 shadow-lg bg-light">
        <div class="row text-center text-dark">
-         <span style="font-size: 2em; font-weight: 500;">Bildergallerien, featured by Frank Robrahn</span>
+         <span style="">Bildergallerien, featured by Frank Robrahn</span>
        </div>
        <div class="row m-0 justify-content-center align-items-center" id="paginatedGallery">
          <section>
@@ -504,40 +598,55 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="" action="index.html" method="post">
+        <form class="" action="{{route('notification.customer')}}" method="post">
           @csrf
           <div class="row m-0">
             <div class="col">
-              <input type="text" name="" value=""> Vorname
+              <label for="surname">Vorname</label>
+              <input type="text" class="form-control" name="surname" value="" id="surname">
             </div>
             <div class="col">
-              <input type="text" name="" value=""> Nachname
-            </div>
-          </div>
-          <div class="row m-0">
-            <div class="col">
-                <input type="text" name="" value="">Emailadresse
+              <label for="lastname">Nachname</label>
+              <input type="text" class="form-control" name="lastname" value="">
             </div>
           </div>
           <div class="row m-0">
             <div class="col">
-                <input type="text" name="" value="">Telefonnummer
+                <input type="text" class="form-control" name="email" value="" required>Emailadresse
+            </div>
+          </div>
+          <div class="row m-0">
+            <div class="col">
+                <input type="text" class="form-control" name="phone" value="">Telefonnummer
             </div>
           <div class="row m-0">
             <div class="col">
               <h5>Was stellst du dir vor?</h5>
-              <textarea name="name" rows="8" cols="80" style="width: 100%;"></textarea>
+              <textarea name="message" class="" rows="8" cols="80" style="width: 100%;"></textarea>
             </div>
           </div>
           <div class="row m-2">
-            <button type="button" name="button" class="btn btn-success btn-block btn-outline">Absenden</button>
+            <button type="submit" name="button" class="btn btn-success btn-block btn-outline">Absenden</button>
           </div>
         </form>
       </div>
-
+      </div>
     </div>
   </div>
 </div>
+
+<div class="modal" id="errormodal" tabindex="-1" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col">
+          <p id="errorcontent">@if($errors->any()) {{$errors->first()}} @endif</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <template id="">
       <div class="col-sm-3 m-1 d-flex justify-content-center align-items-center p-3" style="position:relative; background" id="pictureborder">
@@ -552,12 +661,25 @@
       </div>
     </template>
   </body>
+  <script>
+
+
+  </script>
   <script  src="{{asset('js/slick-1.8.1/slick/slick.min.js')}}"></script>
   <script  src="{{asset('js/pagination.js')}}"></script>
   <script  src="{{asset('js/main.js')}}"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script>
+
+
   <script type="text/javascript">
   $(document).ready(function(){
+
+    @if($errors->any())
+
+        showErrorsModal()
+
+    @endif
+
 
     $('.gallery').slick({
     slidesToShow: 1,

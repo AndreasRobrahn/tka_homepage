@@ -26,7 +26,10 @@ Route::get('/', function () {
     return view('landingpage', compact('filenames'));
 });
 
+Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@CustomerNotification')->name('notification.customer');
+
 Route::get('test', function(){
 
-  return view('templates/images');
+
+
 });

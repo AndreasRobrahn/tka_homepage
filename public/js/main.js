@@ -26,3 +26,9 @@ function showContactModal()
 function toggleContactModal() {
   $('#exampleModalCenter').modal('toggle')
 }
+function showErrorsModal() {
+  $('#errormodal').modal('toggle')
+}
+function showSidebar(){
+  $('.popupmenu').toggle()
+}
