@@ -19,13 +19,15 @@ class NotificationsController extends Controller
       ]);
 
       $data = array(
-        'name'=> $request->name,
-        'message' => $request->message,
+        'surname'=> $request->surname,
+        'lastname'=> $request->lastname,
+        'dmessage' => $request->message,
         'email' => $request->email,
         'phone' => $request->phone,
       );
 
       $adress = $request->email;
+      $customer = 1;
 
         Mail::send('mails.notification', $data, function($message) use($data){
            $message->to('info@tka-software-systems.de', 'Sie haben eine Anfrage erhalten')
@@ -33,7 +35,11 @@ class NotificationsController extends Controller
            $message->from('info@tka-software-systems.de','Test Robot');
         });
 
+        $data['customer'] = $customer;
+
         Mail::send('mails.notification', $data, function($message) use($data, $adress){
+
+
            $message->to($adress, 'Wir haben Ihre Nachricht erhalten')
            ->subject('Wir haben Ihre Nachricht erhalten');
            $message->from('info@tka-software-systems.de','Kundendienst');

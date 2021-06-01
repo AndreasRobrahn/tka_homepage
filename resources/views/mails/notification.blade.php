@@ -10,14 +10,22 @@
     <body>
       <div class="" style="display: block; height: auto; width: 100%;">
         <div class="" style="display: flex; width: 100%; padding: 5px; justify-content: center;">
-          <h5>Ihr habt eine Anfrage erhalten</h5>
+          @if(isset($customer))
+            <h5>Danke für deine Anfrage. In Kürze erhälst du eine Rückmeldung</h5>
+          @else
+            <h5>Wir haben eine Anfrage erhalten</h5>
+          @endif
         </div>
         <div class="" style="display: flex; width: 100%; padding: 5px; justify-content: center;">
-          <p>{{$message}}</p>
+          <p>{{$dmessage}}</p>
         </div>
+        @if(!isset($customer))
         <div class="" style="display: flex; width: 100%; padding: 5px; justify-content: center;">
-          <p>Von: {{$name}}, {{$email}}, @if( $phone) {{$phone}} @else kein Rufnummer @endif</p>
+          <p>Von: {{$surname}}, {{$lastname}} </p>
+          <p>Email: {{$email}}</p>
+          @if( $phone)<p>{{$phone}}</p>   @else <p>kein Rufnummer @endif</p>
         </div>
+        @endif
       </div>
     </body>
 
