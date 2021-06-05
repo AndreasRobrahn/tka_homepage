@@ -29,7 +29,7 @@ Route::get('/', function () {
 Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@CustomerNotification')->name('notification.customer');
 
 Route::get('/projects/TeamYak', function(){
-  return view('projects.TeamYaK.teamyak');
+  return view('teamyak');
 });
 
 Route::get('test', function(){
