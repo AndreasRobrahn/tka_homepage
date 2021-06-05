@@ -368,20 +368,18 @@ tr{
 
 
     <div class="container-fluid p-0  text-white">
-
-
-    <div class="row border-bottom justify-content-center align-items-center mainColor" >
-      <h4 class="text-center">Kontakt</h4>
-    </div>
-    <div class="row  text-center justify-content-center mainColor">
-      <p>Adresse: Husumer Str. 8, 24941 Flensburg</p>
-    </div>
-    <div class="row text-center justify-content-center mainColor">
-      <p>Email: info@teamyak.de</p>
-    </div>
-    <div class="row text-center justify-content-center mainColor">
-      <p>Social Media: <a class="fa fa-facebook" href="#"></a>  <a class="fa fa-instagram" href="#"></a></p>
-    </div>
+      <div class="row border-bottom justify-content-center align-items-center mainColor" >
+        <h4 class="text-center">Kontakt</h4>
+      </div>
+      <div class="row  text-center justify-content-center mainColor">
+        <p>Adresse: Husumer Str. 8, 24941 Flensburg</p>
+      </div>
+      <div class="row text-center justify-content-center mainColor">
+        <p>Email: info@teamyak.de</p>
+      </div>
+      <div class="row text-center justify-content-center mainColor">
+        <p>Social Media: <a class="fa fa-facebook" href="#"></a>  <a class="fa fa-instagram" href="#"></a></p>
+      </div>
   </div>
 </div>
 
