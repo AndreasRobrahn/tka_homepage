@@ -128,7 +128,140 @@ tr{
 }
 </style>
 <body>
+  <div class="" style="position: fixed; z-index: 200; top: 40%; margin-left: 0px; color:white;">
+  <!--
+    <input type="checkbox" id="hamburg" onclick="showSidebar()">
+      <label for="hamburg" class="hamburg">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+      </label> -->
 
+    <!-- <div class="popupmenu" style='position:absolute; left:50px; display:none; font-size: 1.5em;'>
+      <ul class="subissues" id='targetlist'>
+        <a href="#" onclick="showContactModal()"><li>
+          <div class="row m-2 d-flex">
+            <div class="col p-0 d-flex justify-content-center align-items-center">
+              <i class="material-icons">
+                email
+              </i>
+            </div>
+            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+              <span>Schreibe uns</span>
+            </div>
+          </div>
+
+        </li></a>
+          <a href="#"><li>
+            <div class="row m-2">
+              <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                <i class="material-icons">
+                  dialpad
+                </i>
+              </div>
+              <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+                <span>Ruf uns an</span>
+              </div>
+            </div>
+
+        </li></a>
+        <a href="#top"><li>
+          <div class="row m-2">
+            <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+              <i class="material-icons">
+                arrow_upward
+              </i>
+            </div>
+            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+              <span>Zum Anfang</span>
+            </div>
+        </div>
+          </li></a>
+        <a href="#aboutus"><li>
+
+          <div class="row m-2">
+            <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+              <i class="material-icons">
+                info
+              </i>
+            </div>
+            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+              <span>Über uns</span>
+            </div>
+        </div>
+        </li></a>
+        <a href="#aboutus"><li>
+
+          <div class="row m-2">
+            <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+              <i class="material-icons">
+                account_tree
+              </i>
+            </div>
+            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
+              <span>Einsatzbereiche</span>
+            </div>
+        </div>
+        </li></a>
+      </ul>
+    </div> -->
+    <div class="" id="sidemenuwrapper" >
+
+      <div class="row  d-flex align-items-center justify-content-start m-0" >
+
+          <div class="sidemenu text-white">
+            <i class="material-icons" onclick="toTheId('contact')">
+              email
+            </i>
+            <div class="popupleft ml-2">
+              <span>Schreibe uns</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="row d-flex align-items-center justify-content-start m-0" >
+          <div class="sidemenu">
+            <i class="material-icons" onmouseover="">
+                dialpad
+              </i>
+            <div class="popupleft" >
+            <span>Melde dich direkt telefonisch</span>
+          </div>
+        </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-start m-0" >
+          <div class="sidemenu">
+            <i class="material-icons" onclick="toTheId('aboutus')">
+              info
+            </i>
+            <div class="popupleft">
+              <span>Uber uns</span>
+            </div>
+          </div>
+      </div>
+        <div class="row d-flex align-items-center justify-content-start m-0" >
+          <div class="sidemenu">
+            <i class="material-icons" onclick="toTheId('aboutus')">
+              account_tree
+            </i>
+            <div class="popupleft">
+              <span>Beispiele</span>
+            </div>
+          </div>
+      </div>
+        <div class="row d-flex align-items-center justify-content-start m-0" >
+          <div class="sidemenu">
+            <i class="material-icons" onclick="toTheId('current')">
+              arrow_upward
+            </i>
+            <div class="popupleft">
+              <span>Zum Anfang</span>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
 <div class="container-fluid bg-light">
 
   <div class="row sticky-top mainColor" id='stickynavmob'>
@@ -384,4 +517,6 @@ tr{
 </div>
 
 </body>
+
+  <script  src="{{asset('js/main.js')}}"></script>
 </html>
