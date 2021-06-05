@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">/ -->
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script>
     <!-- jquery-->
     <script  src="{{asset('js/jquery.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,7 +24,10 @@
     {
       list-style: none;
     }
-
+    a {
+      text-decoration: none;
+      background-color: none;
+    }
     </style>
 
 </head>
@@ -86,23 +89,26 @@
           border-radius: 15px;
           overflow: hidden;
         ">
-        <div class="" style="position: fixed; z-index: 200; margin-top: 5px; margin-left: 5px; color:white;">
-          <button type="button" name="button" onclick="showSidebar()" style="width: 50px; height: 50px; border-radius: 25px; background-color:#34568B; ">
-            <span class="material-icons text-white">
-            east
-            </span>
-          </button>
-          <div class="popupmenu" style='position:relative; display:none; font-size: 1.5em;'>
+        <div class="" style="position: fixed; z-index: 200; top: 40%; margin-left: 0px; color:white;">
+<!--
+          <input type="checkbox" id="hamburg" onclick="showSidebar()">
+            <label for="hamburg" class="hamburg">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label> -->
+
+          <!-- <div class="popupmenu" style='position:absolute; left:50px; display:none; font-size: 1.5em;'>
             <ul class="subissues" id='targetlist'>
               <a href="#" onclick="showContactModal()"><li>
                 <div class="row m-2 d-flex">
-                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                  <div class="col p-0 d-flex justify-content-center align-items-center">
                     <i class="material-icons">
                       email
                     </i>
                   </div>
                   <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                  <span>Schreibe uns</span>
+                    <span>Schreibe uns</span>
                   </div>
                 </div>
 
@@ -159,7 +165,63 @@
               </div>
               </li></a>
             </ul>
+          </div> -->
+          <div class="" id="sidemenuwrapper" >
+
+            <div class="row  d-flex align-items-center justify-content-start m-0" >
+
+                <div class="sidemenu text-white">
+                  <i class="material-icons" onclick="showContactModal()">
+                    email
+                  </i>
+                  <div class="popupleft ml-2">
+                    <span>Schreibe uns</span>
+                  </div>
+                </div>
+              </a>
+              </div>
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                <div class="sidemenu">
+                  <i class="material-icons" onmouseover="">
+                      dialpad
+                    </i>
+                  <div class="popupleft" >
+                  <span>Melde dich direkt telefonisch</span>
+                </div>
+              </div>
+              </div>
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                <div class="sidemenu">
+                  <i class="material-icons" onclick="toTheId('aboutus')">
+                    info
+                  </i>
+                  <div class="popupleft">
+                    <span>Uber uns</span>
+                  </div>
+                </div>
+            </div>
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                <div class="sidemenu">
+                  <i class="material-icons" onclick="toTheId('possibilities')">
+                    account_tree
+                  </i>
+                  <div class="popupleft">
+                    <span>Beispiele</span>
+                  </div>
+                </div>
+            </div>
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                <div class="sidemenu">
+                  <i class="material-icons" onclick="toTheId('top')">
+                    arrow_upward
+                  </i>
+                  <div class="popupleft">
+                    <span>Zum Anfang</span>
+                  </div>
+                </div>
+            </div>
           </div>
+
         </div>
         <div class="d-flex p-2" style="position: relative;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
@@ -191,18 +253,18 @@
   </div>
 <div class="container mt-4 p-2 " style="">
   <div class="row">
-    <h2 class="text-center" id="aboutus">Über uns</h2>
+    <h2 class="text-center" id="aboutus">TKA Software Systems</h2>
   </div>
   <hr>
   <div class="row">
-    <div class="col-sm p-0 d-flex align-items-center">
+    <div class="col-md p-0 d-flex align-items-center">
       <img src="{{asset('images/flensburg1.jpg')}}" class="img-fluid p-2 rounded" alt="Flensburg">
     </div>
-    <div class="col-sm p-2">
+    <div class="col-md p-2">
       <p class="t_stand">
-      Wir sind die TKA Software Systems. Wir sind ein junges Unternehmen aus dem Norden Deutschlands(Flensburg). Wir wollen dir mit unserer Expertise deine Webseite zu erstellen.
-      Dabei sind deiner Fantasien keine Grenzen gesetzt. Vielleicht willst du eine hübsch anzusehende Seite, mit allerlei
-      Animationen in einem zeitgemäßem Design. Oder du benötigst eine Anwendung zum Verwalten deines Geschäfts, hast keine Übersicht mehr über die ganzen Exceltabelle. Wie wärs mit einer Datenbankschnittstelle?
+      Wir sind ein junges Unternehmen direkt aus dem Herzen Flensburgs. Mit unserer Expertise wird die Webseite aus deiner Vorstellung ins World Wide Web übertragen.
+      Dabei sind deiner Fantasien keine Grenzen gesetzt.<br> Vielleicht willst du eine hübsch anzusehende Seite, mit allerlei
+      Animationen und einem zeitgemäßem Design. Oder du benötigst eine Anwendung zum Verwalten deines Geschäfts, hast keine Übersicht mehr über die ganzen Exceltabelle. Wie wärs mit einer Datenbankschnittstelle?
       Oder beides. Verschaff dir einen Überblick und kontaktiere uns.
       Hast du die Idee finden wir einen Weg der ganzen Welt Eintritt zu gewähren.</p>
     </div>
@@ -548,14 +610,12 @@
 
       <hr>
       <div class="row m-0">
-        <div class="col d-flex justify-content-center align-items-center">
+        <div class="col-md d-flex justify-content-center align-items-center">
           <img src="{{asset('images/frustrated.jpg')}}" class="img-fluid p-2" alt="">
         </div>
-        <div class="col d-flex justify-content-center align-items-center">
+        <div class="col-md d-flex justify-content-center align-items-center">
           <p>
           Viele Entwicklungsprozesse in der Softwareentwicklung sind langwierig, unnötig teuer und wenn wir ehrlich sind meistens nie das was man vor dem Auge hatte. Überplanung und ein zu hoher Personaleinsatz führen dazu, dass ein Mindestmaß an Inhalt da sein muss um die immensen Kosten zu rechtfertigen. Wieviel Programmierer braucht man um eine einzige Seite zu programmieren oder?
-          
-
           </p>
         </div>
       </div>

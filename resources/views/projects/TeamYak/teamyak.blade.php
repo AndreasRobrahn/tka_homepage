@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <!-- <link href="bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet"> -->
+    <link href="{{asset('bootstrap-5.0.1-dist/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('js/slick-1.8.1/slick/slick.css')}}"/>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">/ -->
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script>
+    <!-- jquery-->
+    <script  src="{{asset('js/jquery.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap js -->
+    <script  src="{{asset('bootstrap-5.0.1-dist/js/bootstrap.min.js')}}"></script>
+    <title>Team Yak Landingpage</title>
+    <!-- Styles -->
+<style media="screen">
+body{
+  font-family: 'Merienda One';
+  font-size: 1.1em;
+  overflow:initial !important
+}
+.mapouter{
+  position:relative;
+  text-align:right;
+  height:100%;
+  width:100%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:100%;
+  width:100%;
+  padding: 15px;
+}
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa-facebook {
+  background: black;
+  color: white;
+}
+.fa-instagram {
+  background: black;
+  color: white;
+}
+.mainColor
+{
+  background: RGB(221, 65, 36);
+}
+#stickynav
+{
+  color: white;
+}
+#img_training
+{
+  background-image: url('https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.table-striped>tbody>tr:nth-child(even) {
+    background-color: #ddf8e8;
+}
+
+.table-striped>tbody>tr:nth-child(odd) {
+    background-color: #fefdfa;
+}
+.table-striped>tbody>tr:hover {
+  opacity: 0.5;
+}
+
+.customdg-input
+{
+  width: 100%;
+  border-radius: 15px;
+  padding: 5px;
+}
+.customdg-input:focus{
+  border: 3px solid rgba(0,0,255, 0.5) ;
+}
+.customdg-input:hover{
+  border: 2px solid rgba(0,0,255, 0.8) ;
+}
+div label {
+  font-size: 1.1em;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+}
+tr{
+  /* text-align: center; */
+}
+#stickynavmob{
+  display:none;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  #stickynav{
+    display:none;
+  }
+  #stickynavmob{
+    display:flex;
+  }
+}
+@media only screen and (max-height: 400px) {
+
+  #stickynav{
+    display:none;
+  }
+  #stickynavmob{
+    display:flex;
+    background-color: rgba(221, 65, 36,0.5);
+  }
+}
+</style>
+<body>
+
+<div class="container-fluid bg-light">
+
+  <div class="row sticky-top mainColor" id='stickynavmob'>
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <div class="navbar-wrapper">
+        <input type="checkbox" id="hamburg" onclick="showSidebar()">
+          <label for="hamburg" class="hamburg">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+          </label>
+        </div>
+    </div>
+    <div class="col-4 p-2">
+      <div class="row m-0 justify-content-center align-items-center">
+        <a class="fa fa-facebook" href="#"></a>
+      </div>
+      <div class="row justify-content-center align-items-center">
+        <a class="fa fa-instagram" href="#"></a>
+      </div>
+    </div>
+    <div class="col-5 p-1 d-flex justify-content-end align-items-center">
+      <a href="#"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
+
+    </div>
+  </div>
+  <div class="row sticky-top mainColor" id='stickynav'>
+    <div class="col d-flex justify-content-center align-items-center">
+      <a href="#current">Aktuelles</a>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <a href="#aboutus">Über uns</a>
+
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <a href="#training">Training</a>
+
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;">
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <a href="#sport">Sport</a>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <a href="#contact">Kontakt/Social Media</a>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <a href="#">Impressum</a>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-8 p-0 " id="current">
+      <p><h3 class="text-center">🥋🤼 Team Yak 🤼🥋 <br> Brasilian Jiu Jitsu in Flensburg ! </h3> </p>
+      <p class="" style="margin-top: 55px;">
+        Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus.
+        Wir bitten um euer Verständnis!
+      </p>
+    </div>
+  </div>
+  <div class="row bg-dark text-white justify-content-center mt-3">
+    <div class="col-8 p-0 " id="aboutus">
+      <p><h3 class="text-center">Das ist Team Yak</h3> </p>
+      <p class="" style="margin-top: 55px;">
+        Wir sind das erste BJJ Team Flensburgs. Gegründet wurde das Team Yak 2015 vom Braungurt Eitan Bronschtein. Derzeit Unterrichtet er BJJ im Ninja Sportclub e.V. in Hamburg. Das Training in Flensburg wird von den Brüdern Andreas & Kristoffer Madsen geleitet. Beide tragen einen lila Gurt der ihnen von Eitan Bronschtain 2020 und 2019 übergeben wurde und bringen zusammen mehr als 10 Jahre Erfahrung auf die Matte. Das Team steht für ein offenes Klima, das jede an dem Sport Interessierte Person herzlich aufnimmt und ein Teil des Teams werden lässt.
+      </p>
+    </div>
+  </div>
+  <div class="row bg-white justify-content-center mt-3">
+    <div class="col-8 p-0 ">
+      <p><h3 class="text-center">Unsere Trainingszeiten</h3> </p>
+      <div class="table-responsive">
+      <table class="table table-striped " id="training">
+        <thead class="text-white" style="background-color: #ffcc5c; opacity: 0.5;">
+          <tr>
+            <th class="">#</th>
+            <th style="font-weight: 700px;">Uhrzeit</th>
+            <th>Trainingsinhalt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Montag</td>
+            <td>20.00 Uhr - 21.30 Uhr</td>
+            <td>Grappling Fundamentals</td>
+          </tr>
+          <tr>
+            <td>Dienstag</td>
+            <td>16.15 Uhr - 17.45 Uhr</td>
+            <td>BJJ Technik</td>
+          </tr>
+          <tr>
+            <td>Donnerstag</td>
+            <td>16.15 Uhr - 17.45 Uhr</td>
+            <td>BJJ Technik</td>
+          </tr>
+          <tr>
+            <td>Freitag</td>
+            <td>18.00 Uhr - 19.30 Uhr</td>
+            <td>Competition Class</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center m-0 w-100" >
+    <div class="d-flex" style="position:relative; height: 1000px; width: 100vw" id='img_training' >
+      <!-- <img src="https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp" alt="hintergrund.jpg" style="width: 1426px; height: 1058px; object-fit: cover; object-position: 50% 50%;"> -->
+      <div class="container" style="position: absolute; top: 25%; left: 50%; transform: translate(-50%,-50%);">
+        <div class="row justify-content-center">
+          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px;">
+            <div class="">
+              <h4 class="text-center">Personal Training</h4>
+              <p>Nimm für dein privates Training einfach Kontakt zu uns auf</p>
+              <p class="text-center"><button type="button" name="button">Buchen!</button> </p>
+            </div>
+          </div>
+          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px; background-color: #45B8AC;">
+            <div class="">
+              <h4 class="text-center">Group Training</h4>
+              <p>Die Teilnahme am Gruppentraining setzt ein <b>negatives Coronatestergebis</b> voraus, dass nicht älter als 48 Stunden ist.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+        <div class="row justify-content-center">
+          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px; background-color: #92A8D1;">
+            <div class="">
+              <h4 class="text-center">Personal Training</h4>
+              <p>Nimm für dein privates Training einfach Kontakt zu uns auf</p>
+              <p class="text-center"><button type="button" name="button">Buchen!</button> </p>
+            </div>
+          </div>
+          <div class="col-sm-5 m-2 p-2 bg-dark text-white d-flex justify-content-center " style="border-radius: 50px; background-color: #34568B;">
+            <div class="">
+              <h4 class="text-center">Group Training</h4>
+              <p>Die Teilnahme am Gruppentraining setzt ein <b>negatives Coronatestergebis</b> voraus, dass nicht älter als 48 Stunden ist.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="position: absolute; top: 75%; left: 50%; transform: translate(-50%,-50%);">
+        <div class="row justify-content-center">
+          <div class="col-sm-5 m-2 p-2 mainColor d-flex justify-content-center " style="border-radius: 50px; background-color: #fdf5e6 !important; color: black;">
+            <div class="">
+              <h4 class="text-center">Personal Training</h4>
+              <p>Nimm für dein privates Training einfach Kontakt zu uns auf</p>
+              <p class="text-center"><button type="button" name="button">Buchen!</button> </p>
+            </div>
+          </div>
+          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px;background-color: #ffcc5c !important; color:black;">
+            <div class="">
+              <h4 class="text-center">Group Training</h4>
+              <p>Die Teilnahme am Gruppentraining setzt ein <b>negatives Coronatestergebis</b> voraus, dass nicht älter als 48 Stunden ist.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center bg-dark text-white mt-3">
+    <div class="col-8" id="sport">
+      <h4> Brazilian Jiu Jitsu / Grappling</h4>
+      <p>Brasilianisches Jiu-Jitsu (BJJ) ist eine weiter entwickelte Form des japanischen Jujitsu. Das japanische Jujitsu, auch Nihon Jitsu genannt, konzentriert sich in seiner Anwendung hauptsächlich auf Selbstverteidigungsmechanismen im Stand. BJJ greift den Kampf im Stand mit auf und erweitert ihn mit Techniken am Boden. Der Bodenkampf ist das charakteristische Merkmal dieses Sports. Ein weiteres Unterscheidungsmerkmal dieser Kampfsportarten besteht in der Form des Unterrichts. BJJ vermittelt die Anwendung verschiedenster Techniken, in einen strategischen Kontext, der den Trainierenden offenlegt wie man sich gegen z.B. größere Kontrahenten durchsetzt. Die Simulation einer kämpferischen Auseinandersetzung wird wie in anderen Kampfsportarten als Sparring oder typischer für BJJ als "Rollen" bezeichnet und stellt einen festen Bestandteil des Trainings dar. </p>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center text-white">
+      <div class="col-3 m-2 p-2 ">
+        <img src="https://static.wixstatic.com/media/f48c3a_02bd9c31fee746fc829bb492f4ddabc3~mv2.jpg/v1/fill/w_692,h_519,al_c,q_80,usm_0.66_1.00_0.01/72754548_2191665604459662_39557093110526.webp" alt=""  class="img-fluid">
+      </div>
+      <div class="col-3 m-2 p-2 ">
+        <img src="https://static.wixstatic.com/media/f48c3a_02bd9c31fee746fc829bb492f4ddabc3~mv2.jpg/v1/fill/w_692,h_519,al_c,q_80,usm_0.66_1.00_0.01/72754548_2191665604459662_39557093110526.webp" alt="" class="img-fluid">
+      </div>
+      <div class="col-3 m-2 p-2 ">
+        <img src="https://static.wixstatic.com/media/f48c3a_02bd9c31fee746fc829bb492f4ddabc3~mv2.jpg/v1/fill/w_692,h_519,al_c,q_80,usm_0.66_1.00_0.01/72754548_2191665604459662_39557093110526.webp" alt="" class="img-fluid">
+      </div>
+  </div>
+  <div class="container-fluid m-0 p-0  mt-3">
+  <div class="row justify-content-center  bg-dark text-white">
+      <div class="col p-2">
+         <h4 id='contact' class="text-center">Kontakt</h4>
+      </div>
+  </div>
+  <div class="row justify-content-center  bg-dark text-white">
+      <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
+        <div class="w-100" style="display:block;">
+          <label for="name">Name</label>
+          <input type="text" name="" value="" class="customdg-input" id='name' placeholder='Max Mustermann'>
+        </div>
+      </div>
+  </div>
+  <div class="row justify-content-center bg-dark text-white">
+      <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
+        <div class="w-100" style="display:block;">
+          <label for="name">Email</label>
+          <input type="email" name="email" value="" class="customdg-input" id='email' placeholder='max.mustermann@web.de' required>
+        </div>
+      </div>
+  </div>
+  <div class="row justify-content-center bg-dark text-white">
+      <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
+        <div class="w-100" style="display:block;">
+          <label for="subject">Betreff</label>
+          <input type="text" name="" value="" class="customdg-input" id='subject' placeholder='Training am...'>
+        </div>
+      </div>
+  </div>
+  <div class="row justify-content-center bg-dark text-white">
+      <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
+        <div class="w-100" style="display:block;">
+            <label for="message">Deine Nachricht</label>
+             <textarea class="customdg-input" name="message" id='message'placeholer="Nachricht.."> </textarea>
+        </div>
+      </div>
+  </div>
+  <div class="row justify-content-center bg-dark text-white">
+    <button type="button" name="button">Senden</button>
+  </div>
+  </div>
+
+  <div class="row mt-3" style="height: 750px;">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=24939%20Flensburg,%20Husumer%20Str.%208&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="height: 100%; width: 100%;"></iframe>
+        <br>
+        </style>
+        <a href="https://www.embedgooglemap.net">
+          google map website
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container-fluid p-0  text-white">
+
+
+    <div class="row border-bottom justify-content-center align-items-center mainColor" >
+      <h4 class="text-center">Kontakt</h4>
+    </div>
+    <div class="row  text-center justify-content-center mainColor">
+      <p>Adresse: Husumer Str. 8, 24941 Flensburg</p>
+    </div>
+    <div class="row text-center justify-content-center mainColor">
+      <p>Email: info@teamyak.de</p>
+    </div>
+    <div class="row text-center justify-content-center mainColor">
+      <p>Social Media: <a class="fa fa-facebook" href="#"></a>  <a class="fa fa-instagram" href="#"></a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -31,4 +31,12 @@ function showErrorsModal() {
 }
 function showSidebar(){
   $('.popupmenu').toggle()
+  // $('#sidemenuwrapper').hide()
+}
+function hideSidebar(){
+  $('.popupmenu').toggle()
+  // $('#sidemenuwrapper').hide()
+}
+function toTheId(id) {
+  document.getElementById(id).scrollIntoView();
 }
