@@ -22,8 +22,18 @@
 <style media="screen">
 body{
   font-family: 'Merienda One';
-  font-size: 1.1em;
-  overflow:initial !important
+  font-size: 1.3em;
+  overflow:initial !important;
+}
+.headline
+{
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.headline1
+{
+  font-size: 1.7em;
+  font-weight: 900;
 }
 .mapouter{
   position:relative;
@@ -62,6 +72,7 @@ body{
 #stickynav
 {
   color: white;
+  background: RGBA(221, 65, 36,0.2);
 }
 #img_training
 {
@@ -114,6 +125,7 @@ tr{
   }
   #stickynavmob{
     display:flex;
+    background: RGBA(221, 65, 36,0.2);
   }
 }
 @media only screen and (max-height: 400px) {
@@ -265,7 +277,7 @@ tr{
 <div class="container-fluid bg-light">
 
   <div class="row sticky-top mainColor" id='stickynavmob'>
-    <div class="col-3 d-flex justify-content-center align-items-center">
+    <div class="col d-flex justify-content-center align-items-center">
       <div class="navbar-wrapper">
         <input type="checkbox" id="hamburg" onclick="showSidebar()">
           <label for="hamburg" class="hamburg">
@@ -275,47 +287,41 @@ tr{
           </label>
         </div>
     </div>
-    <div class="col-4 p-2">
+    <!-- <div class="col-4 p-2">
       <div class="row m-0 justify-content-center align-items-center">
         <a class="fa fa-facebook" href="#"></a>
       </div>
       <div class="row justify-content-center align-items-center">
         <a class="fa fa-instagram" href="#"></a>
       </div>
-    </div>
-    <div class="col-5 p-1 d-flex justify-content-end align-items-center">
+    </div> -->
+    <div class="col p-1 d-flex justify-content-end align-items-center">
       <a href="#"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
 
     </div>
   </div>
   <div class="row sticky-top mainColor" id='stickynav'>
     <div class="col d-flex justify-content-center align-items-center">
-      <a href="#current">Aktuelles</a>
-    </div>
-    <div class="col d-flex justify-content-center align-items-center">
-      <a href="#aboutus">Über uns</a>
+      <a href="#aboutus "> <span class="headline1">Über uns</span></a>
 
     </div>
-    <div class="col d-flex justify-content-center align-items-center">
+    <div class="col d-flex justify-content-center align-items-center headline1">
       <a href="#training">Training</a>
 
     </div>
-    <div class="col d-flex justify-content-center align-items-center">
+    <div class="col d-flex justify-content-center align-items-center headline1">
       <img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;">
     </div>
-    <div class="col d-flex justify-content-center align-items-center">
-      <a href="#sport">Sport</a>
+    <div class="col d-flex justify-content-center align-items-center headline">
+      <a href="#sport ">Sport</a>
     </div>
-    <div class="col d-flex justify-content-center align-items-center">
-      <a href="#contact">Kontakt/Social Media</a>
-    </div>
-    <div class="col d-flex justify-content-center align-items-center">
-      <a href="#">Impressum</a>
+    <div class="col d-flex justify-content-center align-items-center headline">
+      <a href="#contact ">Kontakt </a>
     </div>
   </div>
   <div class="row justify-content-center mt-3">
-    <div class="col-8 p-0 " id="current">
-      <p><h3 class="text-center">🥋🤼 Team Yak 🤼🥋 <br> Brasilian Jiu Jitsu in Flensburg ! </h3> </p>
+    <div class="col-sm-11 col-md-8 p-0 " id="current">
+      <p class="text-center headline">🥋🤼 Team Yak 🤼🥋 <br> Brasilian Jiu Jitsu in Flensburg !</p>
       <p class="" style="margin-top: 55px;">
         Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus.
         Wir bitten um euer Verständnis!
@@ -323,19 +329,69 @@ tr{
     </div>
   </div>
   <div class="row bg-dark text-white justify-content-center mt-3">
-    <div class="col-8 p-0 " id="aboutus">
-      <p><h3 class="text-center">Das ist Team Yak</h3> </p>
-      <p class="" style="margin-top: 55px;">
-        Wir sind das erste BJJ Team Flensburgs. Gegründet wurde das Team Yak 2015 vom Braungurt Eitan Bronschtein. Derzeit Unterrichtet er BJJ im Ninja Sportclub e.V. in Hamburg. Das Training in Flensburg wird von den Brüdern Andreas & Kristoffer Madsen geleitet. Beide tragen einen lila Gurt der ihnen von Eitan Bronschtain 2020 und 2019 übergeben wurde und bringen zusammen mehr als 10 Jahre Erfahrung auf die Matte. Das Team steht für ein offenes Klima, das jede an dem Sport Interessierte Person herzlich aufnimmt und ein Teil des Teams werden lässt.
-      </p>
+    <div class="col-sm-11 col-md-8 p-0 " id="aboutus">
+      <div class="row">
+        <p class="text-center headline">Das ist Team Yak </p>
+      </div>
+      <div class="row">
+        <p class="" style="margin-top: 55px;">
+          Wir sind das erste BJJ Team Flensburgs. Gegründet wurde das Team Yak 2015 vom Braungurt Eitan Bronschtein. Derzeit Unterrichtet er BJJ im Ninja Sportclub e.V. in Hamburg. Das Training in Flensburg wird von den Brüdern Andreas & Kristoffer Madsen geleitet. Beide tragen einen lila Gurt der ihnen von Eitan Bronschtain 2020 und 2019 übergeben wurde und bringen zusammen mehr als 10 Jahre Erfahrung auf die Matte. Das Team steht für ein offenes Klima, das jede an dem Sport Interessierte Person herzlich aufnimmt und ein Teil des Teams werden lässt.
+        </p>
+      </div>
+
+      <div class="row">
+        <p class="headline1 text-center">Der Gründer</p>
+        <div class="col m-1">
+          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="eitan">
+        </div>
+        <div class="col m-1">
+          <p class="headline">Eitan Bronschtein</p>
+          <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+        </div>
+      </div>
+      <div class="row">
+          <p class="headline1 text-center">Die Coaches</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col m-1">
+          <p class="headline">Christoffer Madsen</p>
+          <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+
+        </div>
+        <div class="col m-1">
+          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="toffa">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="andreas2.0">
+        </div>
+        <div class="col">
+          <p class="headline1">Andreas Madsen</p>
+          <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+        </div>
+      </div>
+      div class="row">
+          <p class="headline1 text-center">Das Team</p>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <img src="https://www.seekpng.com/png/full/991-9910177_team-placeholder-team.png" class="img-fluid bg-white"    alt="">
+        </div>
+      </div>
+
+
     </div>
   </div>
   <div class="row bg-white justify-content-center mt-3">
-    <div class="col-8 p-0 ">
-      <p><h3 class="text-center">Unsere Trainingszeiten</h3> </p>
+    <div class="col-sm-12 col-md-8 p-0 ">
+      <p><h3 class="text-center headline1">Unsere Trainingszeiten</h3> </p>
+      <hr>
       <div class="table-responsive">
       <table class="table table-striped " id="training">
-        <thead class="text-white" style="background-color: #ffcc5c; opacity: 0.5;">
+        <thead class="headline" style="background-color: #ffcc5c; opacity: 0.5;">
           <tr>
             <th class="">#</th>
             <th style="font-weight: 700px;">Uhrzeit</th>
@@ -425,8 +481,8 @@ tr{
     </div>
   </div>
   <div class="row justify-content-center bg-dark text-white mt-3">
-    <div class="col-8" id="sport">
-      <h4> Brazilian Jiu Jitsu / Grappling</h4>
+    <div class="col-sm-11 col-md-8" id="sport">
+      <p class="headline">Brazilian Jiu Jitsu / Grappling</p>
       <p>Brasilianisches Jiu-Jitsu (BJJ) ist eine weiter entwickelte Form des japanischen Jujitsu. Das japanische Jujitsu, auch Nihon Jitsu genannt, konzentriert sich in seiner Anwendung hauptsächlich auf Selbstverteidigungsmechanismen im Stand. BJJ greift den Kampf im Stand mit auf und erweitert ihn mit Techniken am Boden. Der Bodenkampf ist das charakteristische Merkmal dieses Sports. Ein weiteres Unterscheidungsmerkmal dieser Kampfsportarten besteht in der Form des Unterrichts. BJJ vermittelt die Anwendung verschiedenster Techniken, in einen strategischen Kontext, der den Trainierenden offenlegt wie man sich gegen z.B. größere Kontrahenten durchsetzt. Die Simulation einer kämpferischen Auseinandersetzung wird wie in anderen Kampfsportarten als Sparring oder typischer für BJJ als "Rollen" bezeichnet und stellt einen festen Bestandteil des Trainings dar. </p>
     </div>
 
@@ -446,7 +502,7 @@ tr{
   <div class="container-fluid m-0 p-0  mt-3">
   <div class="row justify-content-center  bg-dark text-white">
       <div class="col p-2">
-         <h4 id='contact' class="text-center">Kontakt</h4>
+         <h4 id='contact' class="text-center headline">Kontakt</h4>
       </div>
   </div>
   <div class="row justify-content-center  bg-dark text-white">
@@ -486,7 +542,7 @@ tr{
   </div>
   </div>
 
-  <div class="row mt-3" style="height: 750px;">
+  <div class="row mt-3" style="height: 400px;">
     <div class="mapouter">
       <div class="gmap_canvas">
         <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=24939%20Flensburg,%20Husumer%20Str.%208&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="height: 100%; width: 100%;"></iframe>
@@ -501,17 +557,20 @@ tr{
 
 
     <div class="container-fluid p-0  text-white">
-      <div class="row border-bottom justify-content-center align-items-center mainColor" >
-        <h4 class="text-center">Kontakt</h4>
+      <div class="row border-bottom justify-content-start align-items-center mainColor" >
+        <h4 class="headline1">Kontakt</h4>
       </div>
-      <div class="row  text-center justify-content-center mainColor">
+      <div class="row justify-content-center mainColor">
         <p>Adresse: Husumer Str. 8, 24941 Flensburg</p>
       </div>
-      <div class="row text-center justify-content-center mainColor">
+      <div class="row justify-content-center mainColor">
         <p>Email: info@teamyak.de</p>
       </div>
-      <div class="row text-center justify-content-center mainColor">
+      <div class="row justify-content-center mainColor">
         <p>Social Media: <a class="fa fa-facebook" href="#"></a>  <a class="fa fa-instagram" href="#"></a></p>
+      </div>
+      <div class="row justify-content-center mainColor">
+        <a href="#">Zum Impressum</a>
       </div>
   </div>
 </div>
