@@ -341,10 +341,10 @@ tr{
 
       <div class="row">
         <p class="headline1 text-center">Der Gründer</p>
-        <div class="col m-1">
+        <div class="col-sm m-1">
           <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="eitan">
         </div>
-        <div class="col m-1">
+        <div class="col-sm m-1">
           <p class="headline">Eitan Bronschtein</p>
           <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
         </div>
@@ -355,20 +355,20 @@ tr{
 
       <div class="row">
 
-        <div class="col m-1">
+        <div class="col-sm m-1">
           <p class="headline">Christoffer Madsen</p>
           <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
 
         </div>
-        <div class="col m-1">
+        <div class="col-sm m-1">
           <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="toffa">
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col-sm">
           <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="andreas2.0">
         </div>
-        <div class="col">
+        <div class="col-sm">
           <p class="headline1">Andreas Madsen</p>
           <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
         </div>
