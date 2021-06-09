@@ -25,6 +25,25 @@ body{
   font-size: 1.3em;
   overflow:initial !important;
 }
+.button
+{
+  background-color: white;
+  font-size: 1.2em;
+  font-weight: 300;
+  border-radius: 25px;
+  border: 2px solid RGB(221, 65, 36);
+  width: 50%;
+}
+.button:hover
+{
+  background-color: RGB(221, 65, 36);
+  color:white;
+}
+.coachimg
+{
+  border-radius: 25%;
+  border-color: 2px solid black;
+}
 .headline
 {
   font-size: 1.4em;
@@ -68,6 +87,12 @@ body{
 .mainColor
 {
   background: RGB(221, 65, 36);
+}
+.secondaryColor{
+
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+
 }
 #stickynav
 {
@@ -296,8 +321,7 @@ tr{
       </div>
     </div> -->
     <div class="col p-1 d-flex justify-content-end align-items-center">
-      <a href="#"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
-
+      <a href="#"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="Teamlogo" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
     </div>
   </div>
   <div class="row sticky-top mainColor" id='stickynav'>
@@ -321,17 +345,40 @@ tr{
   </div>
   <div class="row justify-content-center mt-3">
     <div class="col-sm-11 col-md-8 p-0 " id="current">
-      <p class="text-center headline">🥋🤼 Team Yak 🤼🥋 <br> Brasilian Jiu Jitsu in Flensburg !</p>
-      <p class="" style="margin-top: 55px;">
-        Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus.
-        Wir bitten um euer Verständnis!
-      </p>
+      <div class="row">
+        <p class="text-center headline">🥋🤼 Team Yak 🤼🥋 <br> Brasilian Jiu Jitsu in Flensburg !</p>
+      </div>
+      <div class="row justify-content-center mt-2 mainColor" >
+          <div class="col w-100 m-2">
+              <marquee behavior="scroll" direction="left" style="width: 100%; margin-top: 25px;">
+                <div class="" style="font-size: 1.5em; font-weight: 750; color: white;">
+                  <p>Breaking News</p>
+                </div>
+               </marquee>
+            </div>
+          </div>
+            <div class="row mt-2">
+              <p class="" style="">
+
+                Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus.
+                Wir bitten um euer Verständnis!
+              </p>
+            </div>
+            <div class="row mt-2 mainColor" >
+              <div class="w-100 m-2 ">
+                <marquee behavior="scroll" direction="right" style="width: 100%; margin-top: 25px;">
+                  <div class="" style="font-size: 1.5em; font-weight: 750; color: white;">
+                    <p>Breaking News</p>
+                  </div>
+                 </marquee>
+              </div>
+            </div>
     </div>
   </div>
-  <div class="row bg-dark text-white justify-content-center mt-3">
+  <div class="row secondaryColor text-white justify-content-center mt-3">
     <div class="col-sm-11 col-md-8 p-0 " id="aboutus">
       <div class="row">
-        <p class="text-center headline">Das ist Team Yak </p>
+        <h1><p class="text-center">Das ist Team Yak </p></h1>
       </div>
       <div class="row">
         <p class="" style="margin-top: 55px;">
@@ -339,17 +386,7 @@ tr{
         </p>
       </div>
 
-      <div class="row">
-        <p class="headline1 text-center">Der Gründer</p>
-        <div class="col-sm m-1">
-          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="eitan">
-        </div>
-        <div class="col-sm m-1">
-          <p class="headline">Eitan Bronschtein</p>
-          <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
-        </div>
-      </div>
-      <div class="row">
+      <div class="row mt-3">
           <p class="headline1 text-center">Die Coaches</p>
       </div>
 
@@ -361,35 +398,34 @@ tr{
 
         </div>
         <div class="col-sm m-1">
-          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="toffa">
+          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid coachimg" alt="toffa">
         </div>
       </div>
-      <div class="row">
+      <hr>
+      <div class="row mt-3">
         <div class="col-sm">
-          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid" alt="andreas2.0">
+          <img src="https://thumbs.dreamstime.com/z/default-placeholder-fitness-trainer-t-shirt-default-placeholder-fitness-trainer-t-shirt-half-length-portrait-photo-113622062.jpg" class="img-fluid coachimg" alt="andreas2.0">
         </div>
         <div class="col-sm">
           <p class="headline1">Andreas Madsen</p>
           <p>“Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
         </div>
       </div>
-      div class="row">
+      <div class="row">
           <p class="headline1 text-center">Das Team</p>
       </div>
-      <div class="row">
+      <div class="row m-1">
         <div class="col d-flex justify-content-center">
           <img src="https://www.seekpng.com/png/full/991-9910177_team-placeholder-team.png" class="img-fluid bg-white"    alt="">
         </div>
       </div>
-
-
     </div>
   </div>
-  <div class="row bg-white justify-content-center mt-3">
+  <div class="row m-1 bg-white justify-content-center mt-3">
     <div class="col-sm-12 col-md-8 p-0 ">
       <p><h3 class="text-center headline1">Unsere Trainingszeiten</h3> </p>
       <hr>
-      <div class="table-responsive">
+      <div class="table-responsive shadow-lg">
       <table class="table table-striped " id="training">
         <thead class="headline" style="background-color: #ffcc5c; opacity: 0.5;">
           <tr>
@@ -424,53 +460,19 @@ tr{
     </div>
   </div>
 </div>
-<div class="row justify-content-center m-0 w-100" >
+<div class="row m-1 mt-4 justify-content-center m-0 w-100" >
     <div class="d-flex" style="position:relative; height: 1000px; width: 100vw" id='img_training' >
-      <!-- <img src="https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp" alt="hintergrund.jpg" style="width: 1426px; height: 1058px; object-fit: cover; object-position: 50% 50%;"> -->
+      <img src="https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp" alt="hintergrund.jpg" style="width: 1426px; height: 1058px; object-fit: cover; object-position: 50% 50%;">
       <div class="container" style="position: absolute; top: 25%; left: 50%; transform: translate(-50%,-50%);">
         <div class="row justify-content-center">
-          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px;">
+          <div class="col-sm-5 m-2 p-2 d-flex justify-content-center bg-white shadow-lg" style="border-radius: 50px;">
             <div class="">
               <h4 class="text-center">Personal Training</h4>
               <p>Nimm für dein privates Training einfach Kontakt zu uns auf</p>
-              <p class="text-center"><button type="button" name="button">Buchen!</button> </p>
+              <p class="text-center"><button type="button" name="button" class="button">Buchen!</button> </p>
             </div>
           </div>
-          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px; background-color: #45B8AC;">
-            <div class="">
-              <h4 class="text-center">Group Training</h4>
-              <p>Die Teilnahme am Gruppentraining setzt ein <b>negatives Coronatestergebis</b> voraus, dass nicht älter als 48 Stunden ist.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
-        <div class="row justify-content-center">
-          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px; background-color: #92A8D1;">
-            <div class="">
-              <h4 class="text-center">Personal Training</h4>
-              <p>Nimm für dein privates Training einfach Kontakt zu uns auf</p>
-              <p class="text-center"><button type="button" name="button">Buchen!</button> </p>
-            </div>
-          </div>
-          <div class="col-sm-5 m-2 p-2 bg-dark text-white d-flex justify-content-center " style="border-radius: 50px; background-color: #34568B;">
-            <div class="">
-              <h4 class="text-center">Group Training</h4>
-              <p>Die Teilnahme am Gruppentraining setzt ein <b>negatives Coronatestergebis</b> voraus, dass nicht älter als 48 Stunden ist.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container" style="position: absolute; top: 75%; left: 50%; transform: translate(-50%,-50%);">
-        <div class="row justify-content-center">
-          <div class="col-sm-5 m-2 p-2 mainColor d-flex justify-content-center " style="border-radius: 50px; background-color: #fdf5e6 !important; color: black;">
-            <div class="">
-              <h4 class="text-center">Personal Training</h4>
-              <p>Nimm für dein privates Training einfach Kontakt zu uns auf</p>
-              <p class="text-center"><button type="button" name="button">Buchen!</button> </p>
-            </div>
-          </div>
-          <div class="col-sm-5 m-2 p-2 mainColor text-white d-flex justify-content-center " style="border-radius: 50px;background-color: #ffcc5c !important; color:black;">
+          <div class="col-sm-5 m-2 p-2 d-flex justify-content-center shadow-lg" style="border-radius: 50px;background-color: #fdf5e6 !important; color:black;">
             <div class="">
               <h4 class="text-center">Group Training</h4>
               <p>Die Teilnahme am Gruppentraining setzt ein <b>negatives Coronatestergebis</b> voraus, dass nicht älter als 48 Stunden ist.</p>
@@ -480,7 +482,7 @@ tr{
       </div>
     </div>
   </div>
-  <div class="row justify-content-center bg-dark text-white mt-3">
+  <div class="row justify-content-center secondaryColor text-white mt-3">
     <div class="col-sm-11 col-md-8" id="sport">
       <p class="headline">Brazilian Jiu Jitsu / Grappling</p>
       <p>Brasilianisches Jiu-Jitsu (BJJ) ist eine weiter entwickelte Form des japanischen Jujitsu. Das japanische Jujitsu, auch Nihon Jitsu genannt, konzentriert sich in seiner Anwendung hauptsächlich auf Selbstverteidigungsmechanismen im Stand. BJJ greift den Kampf im Stand mit auf und erweitert ihn mit Techniken am Boden. Der Bodenkampf ist das charakteristische Merkmal dieses Sports. Ein weiteres Unterscheidungsmerkmal dieser Kampfsportarten besteht in der Form des Unterrichts. BJJ vermittelt die Anwendung verschiedenster Techniken, in einen strategischen Kontext, der den Trainierenden offenlegt wie man sich gegen z.B. größere Kontrahenten durchsetzt. Die Simulation einer kämpferischen Auseinandersetzung wird wie in anderen Kampfsportarten als Sparring oder typischer für BJJ als "Rollen" bezeichnet und stellt einen festen Bestandteil des Trainings dar. </p>
@@ -499,13 +501,13 @@ tr{
         <img src="https://static.wixstatic.com/media/f48c3a_02bd9c31fee746fc829bb492f4ddabc3~mv2.jpg/v1/fill/w_692,h_519,al_c,q_80,usm_0.66_1.00_0.01/72754548_2191665604459662_39557093110526.webp" alt="" class="img-fluid">
       </div>
   </div>
-  <div class="container-fluid m-0 p-0  mt-3">
-  <div class="row justify-content-center  bg-dark text-white">
+  <div class="container-fluid m-0 p-0 mt-3 secondaryColor">
+  <div class="row justify-content-center text-white">
       <div class="col p-2">
          <h4 id='contact' class="text-center headline">Kontakt</h4>
       </div>
   </div>
-  <div class="row justify-content-center  bg-dark text-white">
+  <div class="row justify-content-center text-white">
       <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
         <div class="w-100" style="display:block;">
           <label for="name">Name</label>
@@ -513,7 +515,7 @@ tr{
         </div>
       </div>
   </div>
-  <div class="row justify-content-center bg-dark text-white">
+  <div class="row justify-content-center text-white">
       <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
         <div class="w-100" style="display:block;">
           <label for="name">Email</label>
@@ -521,7 +523,7 @@ tr{
         </div>
       </div>
   </div>
-  <div class="row justify-content-center bg-dark text-white">
+  <div class="row justify-content-center text-white">
       <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
         <div class="w-100" style="display:block;">
           <label for="subject">Betreff</label>
@@ -529,7 +531,7 @@ tr{
         </div>
       </div>
   </div>
-  <div class="row justify-content-center bg-dark text-white">
+  <div class="row justify-content-center text-white">
       <div class="col-sm-12 col-md-6 p-2 d-flex justify-content-center align-items-center">
         <div class="w-100" style="display:block;">
             <label for="message">Deine Nachricht</label>
@@ -537,8 +539,8 @@ tr{
         </div>
       </div>
   </div>
-  <div class="row justify-content-center bg-dark text-white">
-    <button type="button" name="button">Senden</button>
+  <div class="row justify-content-center text-white">
+    <button class="button" type="button" name="button">Senden</button>
   </div>
   </div>
 
