@@ -166,86 +166,8 @@ tr{
 </style>
 <body>
   <div class="" style="position: fixed; z-index: 200; top: 40%; margin-left: 0px; color:white;">
-  <!--
-    <input type="checkbox" id="hamburg" onclick="showSidebar()">
-      <label for="hamburg" class="hamburg">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-      </label> -->
-
-    <!-- <div class="popupmenu" style='position:absolute; left:50px; display:none; font-size: 1.5em;'>
-      <ul class="subissues" id='targetlist'>
-        <a href="#" onclick="showContactModal()"><li>
-          <div class="row m-2 d-flex">
-            <div class="col p-0 d-flex justify-content-center align-items-center">
-              <i class="material-icons">
-                email
-              </i>
-            </div>
-            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-              <span>Schreibe uns</span>
-            </div>
-          </div>
-
-        </li></a>
-          <a href="#"><li>
-            <div class="row m-2">
-              <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-                <i class="material-icons">
-                  dialpad
-                </i>
-              </div>
-              <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                <span>Ruf uns an</span>
-              </div>
-            </div>
-
-        </li></a>
-        <a href="#top"><li>
-          <div class="row m-2">
-            <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-              <i class="material-icons">
-                arrow_upward
-              </i>
-            </div>
-            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-              <span>Zum Anfang</span>
-            </div>
-        </div>
-          </li></a>
-        <a href="#aboutus"><li>
-
-          <div class="row m-2">
-            <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-              <i class="material-icons">
-                info
-              </i>
-            </div>
-            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-              <span>Über uns</span>
-            </div>
-        </div>
-        </li></a>
-        <a href="#aboutus"><li>
-
-          <div class="row m-2">
-            <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-              <i class="material-icons">
-                account_tree
-              </i>
-            </div>
-            <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-              <span>Einsatzbereiche</span>
-            </div>
-        </div>
-        </li></a>
-      </ul>
-    </div> -->
     <div class="" id="sidemenuwrapper" >
-
       <div class="row  d-flex align-items-center justify-content-start m-0" >
-
           <div class="sidemenu text-white">
             <i class="material-icons" onclick="toTheId('contact')">
               email
@@ -312,14 +234,7 @@ tr{
           </label>
         </div>
     </div>
-    <!-- <div class="col-4 p-2">
-      <div class="row m-0 justify-content-center align-items-center">
-        <a class="fa fa-facebook" href="#"></a>
-      </div>
-      <div class="row justify-content-center align-items-center">
-        <a class="fa fa-instagram" href="#"></a>
-      </div>
-    </div> -->
+
     <div class="col p-1 d-flex justify-content-end align-items-center">
       <a href="#"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="Teamlogo" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
     </div>
@@ -501,7 +416,7 @@ tr{
         <img src="https://static.wixstatic.com/media/f48c3a_02bd9c31fee746fc829bb492f4ddabc3~mv2.jpg/v1/fill/w_692,h_519,al_c,q_80,usm_0.66_1.00_0.01/72754548_2191665604459662_39557093110526.webp" alt="" class="img-fluid">
       </div>
   </div>
-  <div class="container-fluid m-0 p-0 mt-3 secondaryColor">
+  <div class="container-fluid m-0 p-0 mt-3 secondaryColor responsiveCon">
   <div class="row justify-content-center text-white">
       <div class="col p-2">
          <h4 id='contact' class="text-center headline">Kontakt</h4>

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="de" dir="ltr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ein Unternehmen für Webdesign, Webseitenerstellung und Webprogrammierung">
+    <meta name="keywords" content="Webdesign, Webseite, Webapplikation, Flensburg Webseite, Flensburg, Webprogrammierung">
+
     <meta name="csrf-token" content="{{csrf_token()}}">
     <!-- <link href="bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet"> -->
     <link href="{{asset('bootstrap-5.0.1-dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -20,57 +23,20 @@
     <title>TKA Software Systems</title>
     <!-- Styles -->
     <style media="screen">
-    li
-    {
-      list-style: none;
-    }
     a {
       text-decoration: none;
       background-color: none;
+    }
+    ul
+    {
+      list-style-type: none;
+      padding: 0px !important;
     }
     </style>
 
 </head>
   <body>
 
-    <!-- <div  id= "bgimage" class="" style="
-    position: relative; bottom: 0px;
-    width: 100%;
-    height: 100vh;
-
-    /* background-image: url({{asset('/Naturbilder/_DSC0918.jpg')}}); */
-    background-image: url({{asset('/Naturbilder/_DSC0972.jpg')}});
-
-    background-size:  100% 100%;
-    background-repeat: no-repeat;
-    /* background-position: center bottom; */
-    ">
-
-    <div class="" style="
-    position: absolute;
-
-    height: 50%;
-    width: 50%;
-    left: 25%;
-    top: 15%;
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-
-    /* box-shadow: 20px 20px 20px 20px , 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    text-align: center;
-    z-index: 100;
-    font-size: 1.5em;
-    font-weight: 700;
-    border: 1px dotted black;
-    background-color: rgba(0,0,0,0.35);
-    color: white
-    ">
-
-    <p>TKA Software Systems</p>
-    <p>Das sind wir. Ein junges Unternehmen an der Flensburger Förde. Wir erstellen dir deine eigens auf dich zugeschnittene Webseite, von einfach schön anzusehen bis zu komplexeren Anwendungen mit zB. einer Datenbank oder interaktiven Userinterface. Kontaktiere uns mit deinen Vorstellungen und wir realisieren es!</p>
-    </div>
-
-    </div> -->
     <div style="display:block;" id="top">
 
       <div class=""
@@ -89,83 +55,7 @@
           border-radius: 15px;
           overflow: hidden;
         ">
-        <div class="" style="position: fixed; z-index: 200; top: 40%; margin-left: 0px; color:white;">
-<!--
-          <input type="checkbox" id="hamburg" onclick="showSidebar()">
-            <label for="hamburg" class="hamburg">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </label> -->
 
-          <!-- <div class="popupmenu" style='position:absolute; left:50px; display:none; font-size: 1.5em;'>
-            <ul class="subissues" id='targetlist'>
-              <a href="#" onclick="showContactModal()"><li>
-                <div class="row m-2 d-flex">
-                  <div class="col p-0 d-flex justify-content-center align-items-center">
-                    <i class="material-icons">
-                      email
-                    </i>
-                  </div>
-                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                    <span>Schreibe uns</span>
-                  </div>
-                </div>
-
-              </li></a>
-                <a href="#"><li>
-                  <div class="row m-2">
-                    <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-                      <i class="material-icons">
-                        dialpad
-                      </i>
-                    </div>
-                    <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                      <span>Ruf uns an</span>
-                    </div>
-                  </div>
-
-              </li></a>
-              <a href="#top"><li>
-                <div class="row m-2">
-                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-                    <i class="material-icons">
-                      arrow_upward
-                    </i>
-                  </div>
-                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                    <span>Zum Anfang</span>
-                  </div>
-              </div>
-                </li></a>
-              <a href="#aboutus"><li>
-
-                <div class="row m-2">
-                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-                    <i class="material-icons">
-                      info
-                    </i>
-                  </div>
-                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                    <span>Über uns</span>
-                  </div>
-              </div>
-              </li></a>
-              <a href="#aboutus"><li>
-
-                <div class="row m-2">
-                  <div class="col-2 p-0 d-flex justify-content-center align-items-center">
-                    <i class="material-icons">
-                      account_tree
-                    </i>
-                  </div>
-                  <div class="col p-0 d-flex justify-content-start textani1 align-items-center">
-                    <span>Einsatzbereiche</span>
-                  </div>
-              </div>
-              </li></a>
-            </ul>
-          </div> -->
           <div class="" id="sidemenuwrapper" >
 
             <div class="row  d-flex align-items-center justify-content-start m-0" >
@@ -180,16 +70,19 @@
                 </div>
               </a>
               </div>
+              <a href="tel:01629722979" class="p-0" style="text-decoration: none; color: white;">
               <div class="row d-flex align-items-center justify-content-start m-0" >
-                <div class="sidemenu">
-                  <i class="material-icons" onmouseover="">
-                      dialpad
-                    </i>
-                  <div class="popupleft" >
-                  <span>Melde dich direkt telefonisch</span>
+                  <div class="sidemenu">
+                      <i class="material-icons" onmouseover="">
+                          dialpad
+                        </i>
+                    <div class="popupleft" >
+                    <span>Melde dich direkt telefonisch</span>
+                  </div>
                 </div>
+
               </div>
-              </div>
+                </a>
               <div class="row d-flex align-items-center justify-content-start m-0" >
                 <div class="sidemenu">
                   <i class="material-icons" onclick="toTheId('aboutus')">
@@ -220,9 +113,20 @@
                   </div>
                 </div>
             </div>
+            <a href="{{route('impressum')}}" class="p-0" style="text-decoration: none; color: white;">
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                <div class="sidemenu">
+                  <span class="material-icons">
+                    contact_support
+                  </span>
+                    <div class="popupleft">
+                      <span>Zum Impressum</span>
+                    </div>
+                  </div>
+              </div>
+            </a>
           </div>
 
-        </div>
         <div class="d-flex p-2" style="position: relative;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
         </div>
@@ -252,24 +156,44 @@
     </div>
   </div>
 <div class="container mt-4 p-2 " style="">
-  <div class="row">
-    <h2 class="text-center" id="aboutus">TKA Software Systems</h2>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md p-0 d-flex align-items-center">
-      <img src="{{asset('images/flensburg1.jpg')}}" class="img-fluid p-2 rounded" alt="Flensburg">
-    </div>
-    <div class="col-md p-2">
-      <p class="t_stand">
-      Wir sind ein junges Unternehmen direkt aus dem Herzen Flensburgs. Mit unserer Expertise wird die Webseite aus deiner Vorstellung ins World Wide Web übertragen.
-      Dabei sind deiner Fantasien keine Grenzen gesetzt.<br> Vielleicht willst du eine hübsch anzusehende Seite, mit allerlei
-      Animationen und einem zeitgemäßem Design. Oder du benötigst eine Anwendung zum Verwalten deines Geschäfts, hast keine Übersicht mehr über die ganzen Exceltabelle. Wie wärs mit einer Datenbankschnittstelle?
-      Oder beides. Verschaff dir einen Überblick und kontaktiere uns.
-      Hast du die Idee finden wir einen Weg der ganzen Welt Eintritt zu gewähren.</p>
+  <div class="row justify-content-center">
+    <div class="col-9">
+      <h2 class="text-center textsize3" id="aboutus">TKA Software Systems</h2>
+      <hr>
+      <p class="textsize1">Der Ansprechpartner in Flensburg für Webseiten. Unsere Dienstleistungen sind sowohl fur Unternehmen als auch für Privatpersonen interessant.
+        Einige Beispiele sind im Bereich <a href="#possibilities" style="color:black; text-decoration:none; font-weight: bold;">Beliebte Services</a> aufgeführt. Zudem können wir auf Wunsch auch die Einrichtung des Hostings der Webseite übernehmen so, dass du dich um nichts kümmern musst.<br><br>
+        Mit unserer Expertise und guten Vernetzung wird die Webseite die du vor Augen hast Realität!</p>
+      <hr>
     </div>
   </div>
-
+  <div class="row">
+    <h2 class="text-center textsize3" id="aboutus">Was können wir für dich tun?</h2>
+  </div>
+  <div class="row">
+    <div class="col-md p-0 d-flex align-items-center justify-content-end">
+      <img src="{{asset('images/coding.jpg')}}" class=" p-2 picLPLR" alt="Flensburg" style="border-radius: 25px;">
+    </div>
+    <div class="col-md p-2 d-flex align-items-center justify-content-center">
+      <ul class="textsize1">
+        <li>Programmierung</li>
+        <li>Design</li>
+        <li>Hosting</li>
+        <li>Emaileinrichtung</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md p-2 d-flex align-items-center justify-content-center">
+      <ul class="textsize1">
+        <li>Fotos</li>
+        <li>Videos</li>
+        <li>Social Media</li>
+      </ul>
+    </div>
+    <div class="col-md p-0 d-flex align-items-center justify-content-start">
+      <img src="{{asset('images/socmedpic.jpg')}}" class=" p-2 picLPLR" alt="Social Media">
+    </div>
+  </div>
   <hr>
 </div>
     <div class="container-fluid p-0 mt-4 shadow-lg bg-light" style="">
@@ -281,7 +205,7 @@
         </div>
       <div class="col-10">
         <div class="row m-0">
-          <h2 class="text-center w-100" id="possibilities">Unterschiedlichste Einsatzmöglichkeiten</h2>
+          <h2 class="text-center w-100 textsize3" id="possibilities">Beliebte Services</h2>
         </div>
         <div class="row m-0 gallery" style="height: 70vh;">
           <div class="csh">
@@ -495,67 +419,6 @@
               <hr>
                 <div class="row justify-content-center mt-3">
                 @for($i=0; $i <= 8; $i++ )
-                <!-- <div class="col-3 m-3 p-1" style="background-color: rgba(250, 235, 215,1); color: 	rgb(128,128,128)">
-                  <div class="row m-0" id="bgimage">
-                    <div class="col p-0" style="position:relative">
-                      <img src="https://img.fotocommunity.com/herbstbaum-98afdef5-30d2-42cb-958d-a26be878075d.jpg?height=400" alt="">
-                      <div class="" style="position:absolute; bottom: 5px; left: 5px;">
-                        <img src="https://spd-mvp.de/uploads/spdLandesverbandMecklenburgVorpommern/Landtagswahl-2021/_1024xAUTO_crop_center-center_none/Manuela-Schwesig.jpg" alt="" style="border-radius:50%; height: 125px; width: 125px; object-fit: cover;">
-                      </div>
-                      <div class="d-flex justify-content-center" role="group" style="position:absolute; top: 5px; right: 5px; border-radius: 50px; height: 30px; width: 30px;">
-                        <button class="btn-white rounded-circle h-100 w-100 p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                            <i class="material-icons">
-                            settings
-                          </i>
-                          </button>
-                          <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Chatten</a>
-                            <a class="dropdown-item" href="#">Als Freund hinzufügen</a>
-                            <a class="dropdown-item" href="#">Blockieren</a>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col" >
-                      <p>Name, Alter</p>
-                      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                    </div>
-                    <div class="col">
-                    </div>
-                    <div class="col">
-                    </div>
-                  </div>
-                </div> -->
-
-                <!-- profilecard 2 -->
-
-
-                    <!-- <div class="flip-card">
-                      <div class="flip-inner">
-                        <div class="flip-front" >
-                          <div class="col-5 m-2 d-flex align-items-center">
-                            <img src="https://spd-mvp.de/uploads/spdLandesverbandMecklenburgVorpommern/Landtagswahl-2021/_1024xAUTO_crop_center-center_none/Manuela-Schwesig.jpg" class="img-fluid shadow-lg" alt="" style="border: 5px solid white;">
-                          </div>
-                          <div class="col-6 overflow-auto" style="">
-                            <div class="row  d-flex align-items-center">
-                              Manuela Schwesing, 43
-                            </div>
-                          </div>
-                        </div>
-                        <div class="flip-back" >
-                          <div class="row text-white" style="">
-                            <span style="font-size: 1em;">Motto:</span>
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div> -->
-
                       <div class="col-designed m-3" style="">
                         @if($i % 2)
                         <div class="d-flex" style="background-image: url('{{asset('Naturbilder/DSC_9797.jpg')}}');background-size: contain;position:absolute; height: 100%; width: 100%; font-size: 3em; display: flex; align-items: center; justify-content: center;">
@@ -605,21 +468,18 @@
       </div>
     <div class="container mt-4 p-2 t_stand" style="">
       <div class="row">
-        <h2 class="text-center">Das Problem</h2>
+        <h2 class="text-center textsize3">Deine Vorteile</h2>
       </div>
 
       <hr>
       <div class="row m-0">
         <div class="col-md d-flex justify-content-center align-items-center">
-          <img src="{{asset('images/frustrated.jpg')}}" class="img-fluid p-2" alt="">
-        </div>
-        <div class="col-md d-flex justify-content-center align-items-center">
           <p>
-          Viele Entwicklungsprozesse in der Softwareentwicklung sind langwierig, unnötig teuer und wenn wir ehrlich sind meistens nie das was man vor dem Auge hatte. Überplanung und ein zu hoher Personaleinsatz führen dazu, dass ein Mindestmaß an Inhalt da sein muss um die immensen Kosten zu rechtfertigen. Wieviel Programmierer braucht man um eine einzige Seite zu programmieren oder?
+          Softwareentwicklungsprozesse sind oft überplant, dauern lange und sind sehr teuer. Wie oft dabei das Ergebnis darstellt was der Autraggeber vor seinem geistigen Auge hatte, ist fraglich. Das Netzwerk der TKA vereinfacht die entscheidenden Entwicklungsprozesse und kann daher flexbiler und günstiger agieren.
+          Alle Bestandteile einer hervorstechenden Webseite (Design, Programmierung, Einsatz von Medien) können bei Bedarf eingesetzt werden. Durch eine fortlaufende Kommunikation verliert der Auftraggeber nie die Kontrolle über den Entwichklungsstand und vor allem über die Kosten.
           </p>
         </div>
       </div>
-
       <hr>
     </div>
      <div class="container-fluid p-0 shadow-lg bg-light">
@@ -646,8 +506,6 @@
      </div>
    </div>
   </div>
-
-
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -660,29 +518,42 @@
       <div class="modal-body">
         <form class="" action="{{route('notification.customer')}}" method="post">
           @csrf
-          <div class="row m-0">
-            <div class="col">
-              <label for="surname">Vorname</label>
-              <input type="text" class="form-control" name="surname" value="" id="surname">
+          <div class="row m-0 mt-2">
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="surname">Vorname</label>
+                <input type="text" class="form-control input1 " name="surname" value="" id="surname">
+              </div>
             </div>
-            <div class="col">
-              <label for="lastname">Nachname</label>
-              <input type="text" class="form-control" name="lastname" value="">
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="lastname">Nachname</label>
+                <input type="text" class="form-control input1" name="lastname" value="" id="lastname">
+              </div>
             </div>
           </div>
-          <div class="row m-0">
+          <div class="row m-0 mt-2">
             <div class="col">
-                <input type="text" class="form-control" name="email" value="" required>Emailadresse
+              <div class="form-group">
+              <label for="email">Emailadresse</label>
+                <input type="text" class="form-control input1" name="email" value="" required id="email">
             </div>
           </div>
-          <div class="row m-0">
+          </div>
+          <div class="row m-0 mt-2">
             <div class="col">
-                <input type="text" class="form-control" name="phone" value="">Telefonnummer
+              <div class="form-group">
+                <label for="phone">Telefonnummer für eine Rückmeldung</label>
+                <input type="text" class="form-control input1" name="phone" value="" id="phone">
+              </div>
             </div>
-          <div class="row m-0">
+            </div>
+          <div class="row m-0 mt-2">
             <div class="col">
-              <h5>Was stellst du dir vor?</h5>
-              <textarea name="message" class="" rows="8" cols="80" style="width: 100%;"></textarea>
+              <div class="form-group">
+                <h5>Was stellst du dir vor?</h5>
+                <textarea name="message" class="form-control input1" rows="8" cols="80" style="width: 100%;"></textarea>
+              </div>
             </div>
           </div>
           <div class="row m-2">

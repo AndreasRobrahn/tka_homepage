@@ -20,20 +20,26 @@
     <title>TKA Software Systems</title>
     <!-- Styles -->
     <body>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <h2>Impressum</h2>
         </div>
         <div class="row">
-          <p>Angaben nach §5 TMG:
-              TKA Software Systems Ug (haftungsbeschränkt)
-              Geschäftsführer: Andreas Robrahn
-              USt-IdNr:
-              E-Mail: info@tkasoftwaresystems.de
-              Internet:
-              Amtsgericht Flensburg HRB
+          <p>Angaben nach §6 Teledienstgesetz und Medienstaatsvertrag: <br>
+              TKA Software Systems Ug (haftungsbeschränkt)<br>
+              Norderstr. 33 <br>
+              24939 Flensburg <br>
+
+
+              Geschäftsführer: Andreas Robrahn <br>
+              USt-IdNr: noch in Gründung<br>
+              E-Mail: info@tkasoftwaresystems.de <br>
+              Internet: https://tka-software-systems.de <br>
+              Amtsgericht Flensburg HRB 14988FL <br>
+
               </p>
         </div>
+        <hr>
         <div class="row">
           <p>Haftung
             Mit Urteil vom 12. Mai 1998 - 312 O 85/98 - 'Haftung für Links' hat das Landgericht Hamburg entschieden, dass man durch die Anbringung eines Links die Inhalte der gelinkten Seite ggf. mit zu verantworten hat. Dies kann nur dadurch verhindert werden, dass man sich ausdrücklich von diesen Inhalten distanziert. Hiermit distanzieren wir uns ausdrücklich von allen Inhalten aller gelinkten Seiten auf unserer Internetpräsenz und machen uns diese Inhalte nicht zu Eigen. Diese Erklärung gilt für alle auf unserer Internetpräsenz publizierten Links und für alle Inhalte der Seiten, zu denen die bei uns veröffentlichten Banner und Links führen. Der Service enthält Links zu anderen Internet-Sites, Ressourcen und Mitgliedern dieses Service. Wir sind nicht verantwortlich für die Verfügbarkeit dieser externen Ressourcen, oder deren Inhalte, die wir darüber hinaus nicht notwendigerweise billigen. Wir sind nicht für den Inhalt von Werbung, Produkten oder anderen Materialien auf diesen Sites verantwortlich.
