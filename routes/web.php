@@ -26,6 +26,7 @@ Route::get('/', function () {
     return view('landingpage', compact('filenames'));
 });
 
+Route::view('/impressum','impressum')->name('impressum');
 Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@CustomerNotification')->name('notification.customer');
 
 Route::get('/projects/TeamYak', function(){

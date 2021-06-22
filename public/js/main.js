@@ -1,7 +1,7 @@
 function createBubble()
 {
   let bubbles = $('.bubble');
-  const busywords = ['responsive','animiert','individuell','adaptives Design','CSS','kreativ','genau das was du willst','wir übernehmen das Hosting für dich', 'Full-stack', 'HTML','JavaScript','PHP','Mobile-first','<span style="font-size:100px;">&#129327;</span>','<span style="font-size:100px;">&#129488;</span>', '<span style="font-size:100px;">&#128525;</span>','Fairness']
+  const busywords = ['responsive','animiert','individuell','adaptiv','CSS','kreativ','was du willst','leichtes Hosting', 'Full-stack', 'HTML','JavaScript','PHP','Mobile-first','<span style="font-size:100px;">&#129327;</span>','<span style="font-size:100px;">&#129488;</span>', '<span style="font-size:100px;">&#128525;</span>','Fairness']
 
   var bubble = $("<div class='bubble'></div>");
 
@@ -10,13 +10,11 @@ function createBubble()
 
   bubble.html('<p>'+busywords[Math.floor(Math.random() * busywords.length)]+'</p>')
 
-
   $('#bgimage').append(bubble)
   bubble.addClass('bubble-up')
 
   setTimeout(function(){
   bubble.remove()  }, 10000);
-
 }
 function showContactModal()
 {

@@ -16,7 +16,8 @@
             <h5>Wir haben eine Anfrage erhalten</h5>
           @endif
         </div>
-        <div class="" style="display: flex; width: 100%; padding: 5px; justify-content: center;">
+        <div class="" style="display: block; width: 100%; padding: 5px;">
+          <h4>Deine Nachricht an uns:</h4><br>
           <p>{{$dmessage}}</p>
         </div>
         @if(!isset($customer))
