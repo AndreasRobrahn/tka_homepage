@@ -462,7 +462,7 @@ tr{
 </div>
 <div class="row m-1 mt-4 justify-content-center m-0 w-100" >
     <div class="d-flex" style="position:relative; height: 1000px; width: 100vw" id='img_training' >
-      <img src="https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp" alt="hintergrund.jpg" style="width: 1426px; height: 1058px; object-fit: cover; object-position: 50% 50%;">
+     <!-- <img src="https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp" alt="hintergrund.jpg" style="width: 1426px; height: 1058px; object-fit: cover; object-position: 50% 50%;"> -->
       <div class="container" style="position: absolute; top: 25%; left: 50%; transform: translate(-50%,-50%);">
         <div class="row justify-content-center">
           <div class="col-sm-5 m-2 p-2 d-flex justify-content-center bg-white shadow-lg" style="border-radius: 50px;">
