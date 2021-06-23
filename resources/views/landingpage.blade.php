@@ -56,10 +56,8 @@
           overflow: hidden;
         ">
 
-          <div class="" id="sidemenuwrapper" >
-
+          <!-- <div class="" id="sidemenuwrapper" >
             <div class="row  d-flex align-items-center justify-content-start m-0" >
-
                 <div class="sidemenu text-white">
                   <i class="material-icons" onclick="showContactModal()">
                     email
@@ -77,7 +75,7 @@
                           dialpad
                         </i>
                     <div class="popupleft" >
-                    <span>Melde dich direkt telefonisch</span>
+                      <span>Melde dich direkt telefonisch</span>
                   </div>
                 </div>
 
@@ -125,8 +123,85 @@
                   </div>
               </div>
             </a>
-          </div>
+          </div> -->
+          <div class="" id="sidemenuwrapper">
+            <div class="sidemenubutton">
+              <i class="material-icons" onclick="openSidemenu()" id="openbutton">
+                settings
+              </i>
+              <i class="material-icons" onclick="openSidemenu()" id="closebutton">
+                cancel
+              </i>
+            </div>
+          <div class="" id="sidemenu" >
+            <div class="row  d-flex align-items-center justify-content-start m-0" onclick="showContactModal()">
+                <div class="sidemenuitem text-white">
+                  <i class="material-icons" >
+                    email
+                  </i>
+                  <div class="popupleft ml-2">
+                    <span>Schreibe uns</span>
+                  </div>
+                </div>
+              </a>
+              </div>
+              <a href="tel:01629722979" class="p-0" style="text-decoration: none; color: white;">
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                  <div class="sidemenuitem">
+                      <i class="material-icons" onmouseover="">
+                          dialpad
+                        </i>
+                    <div class="popupleft" >
+                      <span>Melde dich direkt telefonisch</span>
+                  </div>
+                </div>
 
+              </div>
+                </a>
+              <div class="row d-flex align-items-center justify-content-start m-0" onclick="toTheId('aboutus')">
+                <div class="sidemenuitem">
+                  <i class="material-icons" >
+                    info
+                  </i>
+                  <div class="popupleft">
+                    <span>Uber uns</span>
+                  </div>
+                </div>
+            </div>
+              <div class="row d-flex align-items-center justify-content-start m-0" onclick="toTheId('possibilities')">
+                <div class="sidemenuitem">
+                  <i class="material-icons" >
+                    account_tree
+                  </i>
+                  <div class="popupleft">
+                    <span>Beispiele</span>
+                  </div>
+                </div>
+            </div>
+              <div class="row d-flex align-items-center justify-content-start m-0" onclick="toTheId('top')">
+                <div class="sidemenuitem">
+                  <i class="material-icons" >
+                    arrow_upward
+                  </i>
+                  <div class="popupleft">
+                    <span>Zum Anfang</span>
+                  </div>
+                </div>
+            </div>
+            <a href="{{route('impressum')}}" class="p-0" style="text-decoration: none; color: white;">
+              <div class="row d-flex align-items-center justify-content-start m-0" >
+                <div class="sidemenuitem">
+                  <span class="material-icons">
+                    contact_support
+                  </span>
+                    <div class="popupleft">
+                      <span>Zum Impressum</span>
+                    </div>
+                  </div>
+              </div>
+            </a>
+          </div>
+        </div>
         <div class="d-flex p-2" style="position: relative;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
         </div>
@@ -157,7 +232,7 @@
   </div>
 <div class="container mt-4 p-2 " style="">
   <div class="row justify-content-center">
-    <div class="col-9">
+    <div class="col-md-9 ">
       <h2 class="text-center textsize3" id="aboutus">TKA Software Systems</h2>
       <hr>
       <p class="textsize1">Der Ansprechpartner in Flensburg für Webseiten. Unsere Dienstleistungen sind sowohl fur Unternehmen als auch für Privatpersonen interessant.
@@ -166,31 +241,30 @@
       <hr>
     </div>
   </div>
-  <div class="row">
+  <div class="row mt-3">
     <h2 class="text-center textsize3" id="aboutus">Was können wir für dich tun?</h2>
   </div>
-  <div class="row">
-    <div class="col-md p-0 d-flex align-items-center justify-content-end">
+  <div class="row mt-3">
+    <div class="col-md p-0 d-flex align-items-center justify-content-center">
       <img src="{{asset('images/coding.jpg')}}" class=" p-2 picLPLR" alt="Flensburg" style="border-radius: 25px;">
     </div>
     <div class="col-md p-2 d-flex align-items-center justify-content-center">
-      <ul class="textsize1">
+      <ul class="textsize1" style="margin-left: 25px;">
         <li>Programmierung</li>
         <li>Design</li>
         <li>Hosting</li>
-        <li>Emaileinrichtung</li>
       </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md p-2 d-flex align-items-center justify-content-center">
+  <div class="row mt-3">
+    <div class="col-md order-2 order-sm-2 order-md-1 center_items">
       <ul class="textsize1">
         <li>Fotos</li>
         <li>Videos</li>
         <li>Social Media</li>
       </ul>
     </div>
-    <div class="col-md p-0 d-flex align-items-center justify-content-start">
+    <div class="col-md order-1 order-sm-1 order-md-1 center_items">
       <img src="{{asset('images/socmedpic.jpg')}}" class=" p-2 picLPLR" alt="Social Media">
     </div>
   </div>

@@ -21,6 +21,12 @@ a{
    text-decoration: none;
    color: white;
 }
+.center_items
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .input1
 {
   border-radius: 15px;
@@ -39,13 +45,55 @@ a{
 }
 #sidemenuwrapper
 {
-  display:block;
   position: fixed;
+  display:block;
   z-index: 200;
-  top: 10%;
-  transform: translateY(50%);
-  left: 5px;
+  top: 50%;
+
+  transform: translateY(-50%);
+  right: 5px;
+
+
+}
+.sidemenubutton
+{
+  position: absolute;
+  right: 5px;
   color:white;
+  cursor: pointer;
+  top: 5px;
+  background-color: rgba(0,0,0,0.4);
+  /* transform: translateY(-20%); */
+
+}
+#openbutton
+{
+  font-size: 3em;
+}
+#closebutton
+{
+  font-size: 2em;
+  display:none;
+}
+#sidemenu
+{
+  display: none;
+  animation: fadeInRight 3s forwards;
+  /* height: 300px; */
+  /* width: 300px; */
+  color:white;
+
+}
+.sidemenuitem
+{
+  display: flex;
+  cursor: pointer;
+  border-radius: 15px;
+  width: auto;
+  height: 50px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .picLPLR
 {
@@ -113,14 +161,14 @@ a{
 
       }
 
-      @keyframes fadeInTop
+      @keyframes fadeInRight
       {
         from {
-          max-height:0px;
+          margin-right:-300px;
           background-color: rgba(0,0,0,0);
         }
         to {
-          max-height:350px;
+          margin-right:0px;
           background-color: rgba(0,0,0,0.8);
         }
       }
@@ -167,27 +215,17 @@ label.hamburg {
 }
 .popupleft
 {
-  display:none;
+  display:flex;
+  color: white;
   margin-left: 10px;
 }
-.sidemenu
-{
-  display: flex;
-  background-color:rgb(0,0,0,0.5);
-  cursor: pointer;
-  border-radius: 15px;
-  width: auto;
-  height: 50px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
 
-}
-.sidemenu i:hover + .popupleft
+/* .sidemenu i:hover + .popupleft
 {
   display: flex;
-  /* background-color: green; */
-}
+  background-color: green;
+  color:green;
+} */
 
 .line {
   position: absolute;

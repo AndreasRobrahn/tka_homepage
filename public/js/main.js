@@ -38,3 +38,11 @@ function hideSidebar(){
 function toTheId(id) {
   document.getElementById(id).scrollIntoView();
 }
+function openSidemenu(){
+
+  console.log('test')
+  $('#sidemenu').toggle()
+  $('#openbutton').toggle()
+  $('#closebutton').toggle()
+
+}
