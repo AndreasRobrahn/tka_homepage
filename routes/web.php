@@ -32,6 +32,9 @@ Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@C
 Route::get('/projects/TeamYak', function(){
   return view('teamyak');
 });
+Route::get('/projects/Unikat', function(){
+  return view('unikat');
+})->name('unikat');
 
 Route::get('test', function(){
 

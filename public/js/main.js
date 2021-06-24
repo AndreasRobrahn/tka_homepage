@@ -40,9 +40,21 @@ function toTheId(id) {
 }
 function openSidemenu(){
 
-  console.log('test')
-  $('#sidemenu').toggle()
-  $('#openbutton').toggle()
-  $('#closebutton').toggle()
+
+  $('#sidemenu1').toggle()
+  // $('#openbutton').toggle()
+  // $('#closebutton').toggle()
 
 }
+
+  $('#dropdownactivate').click(function(){
+    console.log('test')
+    $(".hoverdropdown").toggle();
+  });
+
+  $('.dropdownrightactivate').click(function(){
+    console.log('test')
+    $(".dropdownright").toggle();
+  }
+
+  )
