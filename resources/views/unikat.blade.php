@@ -32,7 +32,7 @@
           <div class="dropdownrightactivate">
             <p class="hoveritem" >Unsere Leistungen</p>
           </div>
-          <div class="dropdownright " style=" display: none;position: absolute; margin-left: 35%;">
+          <div class="dropdownright " style=" display: none;position: absolute; margin-left: 8em;">
             <p class="hoveritem">Unsere Fachkrafte</p>
             <p class="hoveritem">Stellenangebote</p>
             <p class="hoveritem">Kompetenzen</p>
