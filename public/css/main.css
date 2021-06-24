@@ -21,6 +21,134 @@ a{
    text-decoration: none;
    color: white;
 }
+/* unikat stuff
+
+
+*/
+
+.ukColor1{
+  background-color: #d3d3d3;
+  background-image: linear-gradient(315deg, #d3d3d3 0%, #57606f 74%);
+
+}
+.imageoverlay
+{
+  position: relative;
+  height: 100%;
+}
+.overlayelements
+{
+  position: absolute;
+  top: 15px;
+  width: 100%;
+}
+.betterreadabilty
+{
+  background-color: rgba(0,0,0,0.2);
+}
+.textsizeu1
+{
+  font-size: 1.1em;
+  font-weight: 900;
+}
+.textsizeu2
+{
+  font-size: 1em;
+  font-weight: 300;
+}
+.textsizeu3
+{
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.contentbreak
+{
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.contentbreakw100
+{
+  margin-top: 50px;
+}
+.socmedbutton
+{
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  padding: 5px;
+  font-size: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  background: black;
+  color: white;
+}
+.linkitem
+{
+  cursor: pointer;
+}
+.hoveritem:hover{
+  background-color: white;
+  color: black;
+}
+.hoverdropdown
+{
+  display: none;
+  position: absolute;
+  height: auto;
+  top: 95px;
+  overflow: hidden;
+  z-index: 200;
+  animation: fadeInTop 2s forwards;
+
+}
+hr{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border: 2px solid white;
+}
+.dropdownitem
+{
+  display:flex;
+}
+@keyframes growTo100
+{
+  from {
+    height:0px;
+
+  }
+  to {
+    height: 345px;
+
+  }
+}
+@media only screen and (min-width: 300px){
+
+}
+
+@media only screen and (max-width: 415px){
+
+
+}
+@media only screen and (max-width: 600px){
+
+  .hiddenonmobile
+  {
+    display:none;
+  }
+}
+@media only screen and (min-width: 601px){
+
+}
+@media only screen and (min-width: 992px){
+
+}
+/*
+end unikat stuff
+
+ */
 .center_items
 {
   display: flex;
@@ -49,7 +177,6 @@ a{
   display:block;
   z-index: 200;
   top: 50%;
-
   transform: translateY(-50%);
   right: 5px;
 
@@ -84,6 +211,16 @@ a{
   color:white;
 
 }
+#sidemenu1
+{
+  display: none;
+  height: 100%;
+  color:white;
+  animation: growTo100 2s forwards;
+  /* height: 300px; */
+  /* width: 300px; */
+
+}
 .sidemenuitem
 {
   display: flex;
@@ -103,7 +240,7 @@ a{
   object-fit: cover;
 }
 .text-shadow{
-  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 .textsize1
 {
@@ -172,6 +309,19 @@ a{
           background-color: rgba(0,0,0,0.8);
         }
       }
+      @keyframes fadeInTop
+      {
+        from {
+          margin-top:-200px;
+          background-color: rgba(0,0,0,0);
+        }
+        to {
+          margin-top:0px;
+          background-color: rgba(0,0,0,0.1);
+        }
+      }
+
+
       @keyframes type{
       from {
            width: 0;
@@ -205,12 +355,13 @@ color: #f05454;
 }
 /* MENÜ-Button */
 label.hamburg {
-    /* display: block; */
+    display: flex;
     background-color:rgb(0,0,0,0.5);
-
     border-radius: 50%;
-    width: 11vmin;
-    height: 11vmin;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 .popupleft
@@ -232,25 +383,25 @@ label.hamburg {
   left: 50%;
   transform: translate(-50%, 0);
   height: 3px;
-  width: 7vmin;
+  width: 28px;
   background: #dddddd; border-radius: 2px;
   display: block;
   transition: 0.5s;
   transform-origin: center;
   }
 
-  .line:nth-child(1) { top: 3vmin; }
-  .line:nth-child(2) { top: 5vmin; }
-  .line:nth-child(3) { top: 7vmin; }
+  .line:nth-child(1) { top: 33%; }
+  .line:nth-child(2) { top: 50%; }
+  .line:nth-child(3) { top: 67%; }
 
   #hamburg:checked + .hamburg .line:nth-child(1){
-    transform: translate(-53%,600%) rotate(-45deg);
+    transform: translate(-50%,160%) rotate(-45deg);
   }
   #hamburg:checked + .hamburg .line:nth-child(2){
   opacity:0;
   }
   #hamburg:checked + .hamburg .line:nth-child(3){
-  transform: translate(-50%,-400%) rotate(45deg);
+  transform: translate(-50%,-410%) rotate(45deg);
 }
   input#hamburg {display:none}
 
@@ -636,18 +787,6 @@ to
     }
 
     @media only screen and (max-width: 415px){
-
-      #hamburg:checked + .hamburg .line:nth-child(1){
-        transform: translate(-56%,300%) rotate(-45deg);
-      }
-
-      #hamburg:checked + .hamburg .line:nth-child(2){
-      opacity:0;
-      }
-
-      #hamburg:checked + .hamburg .line:nth-child(3){
-      transform: translate(-55%,-178%) rotate(45deg);
-      }
 
       #pictureborder
       {
