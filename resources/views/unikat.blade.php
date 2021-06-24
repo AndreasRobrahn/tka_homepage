@@ -23,31 +23,30 @@
     </div>
     <div class="col-12 " id="sidemenu1" style="">
       <hr>
-      <div class="w-100 d-flex p-1 center_items">
-        <p>Über uns</p>
+      <div class="w-100 d-flex p-1 linkitem">
+        <p class="hoveritem">Über uns</p>
       </div>
       <hr>
-      <div class="w-100 d-flex center_items">
-
+      <div class="w-100 d-flex linkitem" >
         <div class="d-flex " >
           <div class="dropdownrightactivate">
-            <p>Unsere Leistungen</p>
+            <p class="hoveritem" >Unsere Leistungen</p>
           </div>
-          <div class="dropdownright" style=" display: none;position: absolute; margin-left: 50%;">
-            <p>Unsere Fachkrafte</p>
-            <p>Stellenangebote</p>
-            <p>Kompetenzen</p>
+          <div class="dropdownright " style=" display: none;position: absolute; margin-left: 35%;">
+            <p class="hoveritem">Unsere Fachkrafte</p>
+            <p class="hoveritem">Stellenangebote</p>
+            <p class="hoveritem">Kompetenzen</p>
           </div>
         </div>
 
       </div>
       <hr>
-      <div class="w-100 d-flex center_items">
-        <p>Kompetenzen</p>
+      <div class="w-100 d-flex linkitem">
+        <p class="hoveritem">Kompetenzen</p>
       </div>
       <hr>
-      <div class="w-100 d-flex center_items">
-        <p>Zertifikate</p>
+      <div class="w-100 d-flex linkitem">
+        <p class="hoveritem">Zertifikate</p>
       </div>
     </div>
   </div>
