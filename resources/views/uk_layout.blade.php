@@ -141,7 +141,7 @@
               </div>
           </div>
           <div class="col-6 p-1 d-flex justify-content-center align-items-center">
-            <a href="#"><img src="{{asset('images/unikat_logo.jpg')}}" alt="Teamlogo" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
+            <a href="{{route('unikat')}}"><img src="{{asset('images/unikat_logo.jpg')}}" alt="Teamlogo" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
           </div>
           <div class="col-12 " id="sidemenu1" style="">
             <hr>
