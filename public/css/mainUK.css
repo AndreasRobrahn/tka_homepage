@@ -1,0 +1,53 @@
+body{
+  font-family: 'Merienda One';
+  font-size: 1.3em;
+  overflow:initial !important;
+}
+
+
+.headline
+{
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.headline1
+{
+  font-size: 1.7em;
+  font-weight: 900;
+}
+.mapouter{
+  position:relative;
+  text-align:right;
+  height:100%;
+  width:100%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:100%;
+  width:100%;
+  padding: 15px;
+}
+
+#stickynav
+{
+  color: white;
+  background: RGBA(221, 65, 36,0.2);
+}
+
+#stickynavmob{
+  display:none;
+}
+
+.customdg-input
+{
+  width: 100%;
+  border-radius: 15px;
+  padding: 5px;
+}
+.customdg-input:focus{
+  border: 3px solid rgba(0,0,255, 0.5) ;
+}
+.customdg-input:hover{
+  border: 2px solid rgba(0,0,255, 0.8) ;
+}

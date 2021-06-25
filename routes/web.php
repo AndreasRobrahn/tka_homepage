@@ -35,6 +35,9 @@ Route::get('/projects/TeamYak', function(){
 Route::get('/projects/Unikat', function(){
   return view('unikat');
 })->name('unikat');
+Route::get('/projects/Unikat/aboutus', function(){
+  return view('unikataboutus');
+})->name('unikataboutus');
 
 Route::get('test', function(){
 
