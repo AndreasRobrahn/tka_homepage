@@ -117,6 +117,11 @@
     }
     @media only screen and (min-width: 601px){
 
+      #stickynavmob{
+        display:none;
+        /* background: RGBA(221, 65, 36,0.2); */
+      }
+
       .hoverdropdown
       {
         animation: fadeInTop2 3s forwards;
@@ -226,7 +231,7 @@
                 </div>
               </div>
             </div>
-            <div class="" style="position: absolute; top: 65%; left: 50%; transform: translate(-50%,-65%);">
+            <div class="motto" style="">
               <h1 class="textsize3 text-white text-shadow">Unikat</h1>
               <p class="textsize1 text-white text-shadow">dein Motto</p>
             </div>
@@ -235,7 +240,9 @@
 
         <div class="row m-0 ukColor1 text-white textsizeu2 hiddenonmobile" style="height: 30vh;">
                 <div class="col-2 center_items linkitem">
-                  <p class="hoveritem">Über uns</p>
+                  <a href="{{route('unikataboutus')}}">
+                    <p class="hoveritem">Über uns</p>
+                  </a>
                 </div>
                 <div class="col-2 center_items linkitem" style="position: relative;">
                   <div class="" style="display: block; position: relative;">
