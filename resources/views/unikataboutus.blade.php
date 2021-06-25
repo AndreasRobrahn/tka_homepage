@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-  <div class="col-sm">
+  <div class="col-md">
     <div class="row">
         <h1>Uber Unikat</h1>
     </div>
@@ -12,7 +12,7 @@
     </div>
 
   </div>
-  <div class="col-sm center_items">
+  <div class="col-md center_items">
     <img src="{{asset('/images/officestuff.jpg')}}" class="img-fluid" alt="Unikat über uns">
   </div>
 </div>
