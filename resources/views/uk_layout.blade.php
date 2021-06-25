@@ -287,7 +287,7 @@
         @yield('content')
 
 
-      <div class="row ukColor1 text-white mt-2 justify-content-center">
+      <div class="row m-0 ukColor1 text-white mt-2 justify-content-center">
         <div class="col-6 center_items p-0">
           <a href="#">Impressum</a>
         </div>
