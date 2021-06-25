@@ -33,6 +33,7 @@
 
               Geschäftsführer: Andreas Robrahn <br>
               USt-IdNr: noch in Gründung<br>
+              Steuernummer: 1529035565<br>
               E-Mail: info@tka-software-systems.de <br>
               Internet: https://tka-software-systems.de <br>
               Amtsgericht Flensburg HRB 14988FL <br>
