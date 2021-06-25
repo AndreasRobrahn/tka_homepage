@@ -581,7 +581,7 @@
    </div>
   </div>
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Deine Angaben</h5>
@@ -638,7 +638,6 @@
       </div>
     </div>
   </div>
-</div>
 
 <div class="modal" id="errormodal" tabindex="-1" >
   <div class="modal-dialog" role="document">

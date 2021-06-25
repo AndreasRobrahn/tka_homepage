@@ -41,19 +41,24 @@ function toTheId(id) {
 function openSidemenu(){
 
 
+  $('#sidemenu').toggle()
+  $('#openbutton').toggle()
+  $('#closebutton').toggle()
+
+}
+function openSidemenu1(){
+
   $('#sidemenu1').toggle()
-  // $('#openbutton').toggle()
-  // $('#closebutton').toggle()
 
 }
 
   $('#dropdownactivate').click(function(){
-    console.log('test')
+
     $(".hoverdropdown").toggle();
   });
 
   $('.dropdownrightactivate').click(function(){
-    console.log('test')
+
     $(".dropdownright").toggle();
   }
 

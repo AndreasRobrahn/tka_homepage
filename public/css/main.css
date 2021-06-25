@@ -1,10 +1,13 @@
 body
 {
   /* height: 100%; */
-  margin: 0;
+  width: 100%;
   font-family: 'Merienda One';
   font-size: 1.3em;
-
+  margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
   /* background:
   linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
   linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -17,6 +20,7 @@ body
   background: linear-gradient(90deg, rgba(244,238,238,0.1) 10%, rgba(240,231,220,0.1) 53%, rgba(251,240,225,0.1) 89%); */
 
 }
+
 a{
    text-decoration: none;
    color: white;
@@ -73,7 +77,7 @@ a{
 }
 .socmedbutton
 {
-  height: 150px;
+  height: 130px;
   width: 150px;
   border-radius: 15px;
   padding: 5px;
@@ -113,6 +117,10 @@ hr{
 {
   display:flex;
 }
+.notonsmalldv
+{
+  display: none;
+}
 @keyframes growTo100
 {
   from {
@@ -120,7 +128,7 @@ hr{
 
   }
   to {
-    height: 345px;
+    height: 445px;
 
   }
 }
@@ -129,7 +137,10 @@ hr{
 }
 
 @media only screen and (max-width: 415px){
-
+  .notonsmalldv
+  {
+    display: flex;
+  }
 
 }
 @media only screen and (max-width: 600px){
@@ -141,6 +152,13 @@ hr{
 }
 @media only screen and (min-width: 601px){
 
+  .dropdownright
+  {
+    background:green;
+    display: block;
+    animation: fadeInTop2 3s forwards;
+    overflow: hidden;
+  }
 }
 @media only screen and (min-width: 992px){
 
@@ -312,11 +330,22 @@ end unikat stuff
       @keyframes fadeInTop
       {
         from {
-          margin-top:-200px;
+          height:0px;
           background-color: rgba(0,0,0,0);
         }
         to {
-          margin-top:0px;
+          height:150px;
+          background-color: rgba(0,0,0,0.1);
+        }
+      }
+      @keyframes fadeInTop2
+      {
+        from {
+          height:0px;
+          background-color: rgba(0,0,0,0);
+        }
+        to {
+          height:250px;
           background-color: rgba(0,0,0,0.1);
         }
       }
