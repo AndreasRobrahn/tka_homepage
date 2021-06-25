@@ -50,24 +50,8 @@
       color: white;
       background: RGBA(221, 65, 36,0.2);
     }
-    #img_training
-    {
-      background-image: url('https://static.wixstatic.com/media/f48c3a_a73aa71819424fc182341062016b3e95~mv2.jpg/v1/fill/w_670,h_497,al_c,q_80/f48c3a_a73aa71819424fc182341062016b3e95~mv2.webp');
-      background-size: cover;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    .table-striped>tbody>tr:nth-child(even) {
-        background-color: #ddf8e8;
-    }
 
-    .table-striped>tbody>tr:nth-child(odd) {
-        background-color: #fefdfa;
-    }
-    .table-striped>tbody>tr:hover {
-      opacity: 0.5;
-    }
+
 
     .customdg-input
     {
@@ -95,16 +79,7 @@
         /* background: RGBA(221, 65, 36,0.2); */
       }
     }
-    @media only screen and (max-height: 400px) {
 
-      #stickynav{
-        display:none;
-      }
-      #stickynavmob{
-        display:flex;
-        background-color: rgba(221, 65, 36,0.5);
-      }
-    }
     .img-departments
     {
       height: 150px;
@@ -116,6 +91,28 @@
       animation: fadeInTop 3s forwards;
       overflow: hidden;
     }
+    .mobileHeading
+    {
+      display:none;
+    }
+    @media only screen and (max-height: 400px) {
+
+      #stickynav{
+        display:none;
+      }
+      #stickynavmob{
+        display:flex;
+        background-color: rgba(221, 65, 36,0.5);
+      }
+    }
+    @media only screen and (max-width: 601px){
+
+      .mobileHeading
+      {
+        display:block ;
+      }
+    }
+
     @media only screen and (min-width: 601px){
 
       #stickynavmob{
@@ -160,7 +157,7 @@
             <div class="w-100 d-flex linkitem" >
               <div class="d-flex " >
                 <div class="dropdownrightactivate">
-                  <p class="hoveritem" >Unsere Leistungen</p>
+                  <p class="hoveritem">Unsere Leistungen</p>
                 </div>
                 <div class="dropdownright" style=" display: none;position: absolute; margin-left: 9em;">
                   <p class="hoveritem">Unsere Fachkrafte</p>
