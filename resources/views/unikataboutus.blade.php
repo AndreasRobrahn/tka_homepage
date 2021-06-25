@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="row">
+<div class="row m-0">
   <div class="col-md">
     <div class="row">
         <h1>Uber Unikat</h1>
