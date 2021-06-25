@@ -14,13 +14,13 @@
   </div>
 
 </div>
-<div class="row justify-content-center contentbreak">
+<div class="row m-0 justify-content-center contentbreak">
   <div class="col-sm-9 p-1">
       <h2 lass="textsize2">Social Media</h2>
     <p><a class="fa fa-facebook socmedbutton" href="#"></a>  <a class="fa fa-instagram socmedbutton" href="#"></a></p>
   </div>
 </div>
-  <div class="row justify-content-center text-white"  style="height: 60vh; overflow: hidden;">
+  <div class="row m-0 justify-content-center text-white"  style="height: 60vh; overflow: hidden;">
     <div class="imageoverlay p-0">
       <img src="{{asset('Naturbilder/DSC_9797.jpg')}}" alt="hintergrundbild" class="" style="height: 100%; width: 100%; object-fit: cover;">
       <div class="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="row justify-content-center contentbreakw100">
+  <div class="row m-0 justify-content-center contentbreakw100">
     <h2 class="text-center">Unsere Dienstleistungen</h2>
 
     <div class="col-5 col-sm-4 col-md-3 m-2">
@@ -81,8 +81,8 @@
       </div>
     </div>
   </div>
-      <div class="row ukColor1 text-white contentbreakw100 center_items">
-        <div class="col-sm-5 m-2 p-1 order-sm-last">
+      <div class="row m-0 ukColor1 text-white contentbreakw100 center_items">
+        <div class="col-sm-5 m-2 p-1 order-sm-last order-md-first">
           <div class="row m-1 border-bottom" >
             <h4 class="headline1">Zusatzliche Informationen</h4>
           </div>
@@ -102,7 +102,7 @@
 
           </div>
         </div>
-        <div class="col-sm-5 p-0 order-sm-first">
+        <div class="col-sm-5 p-0 order-sm-first order-md-last">
           <div class="mapouter" style="height: 350px; width: 100%;padding: 5px;">
             <div class="gmap_canvas p-0 center_items">
               <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=44135%20Dortmund,%20Friedenspl.%201&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width: 90%;height: 350px;"></iframe><br>
