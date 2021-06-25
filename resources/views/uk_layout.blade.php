@@ -21,6 +21,7 @@
     <script  src="{{asset('bootstrap-5.0.1-dist/js/bootstrap.min.js')}}"></script>
     <meta name="content" content="Die Unikat ist das Unternehmen für Personaldienstleistungen und Vermittlung von Arbeitskräften in Dortmund und Umgebung">
     <meta name="keywords" content="Unikat, Personaldienstleistungen, Arbeitsvermittlung, Vermittlung von Arbeitskräften, Dortmund">
+    <meta name="author" content="John Gelotti">
     <title>Unikat Personaldienstleistungen, Arbeitsvermittlung in Dortmund</title>
     <!-- Styles -->
     <style media="screen">
@@ -190,7 +191,7 @@
             <img src="{{asset('Naturbilder/DSC_0387.jpg')}}" alt="hintergrundbild" class="" style="height: 100%; width: 100%; object-fit: cover;">
             <div class="overlayelements">
               <div class="row m-0 textsizeu2 text-white text-shadow w-100 align-items-center">
-                <div class="col-1 center_items linkitem">
+                <div class="col-2 center_items linkitem">
                   <a href="{{route('unikataboutus')}}">
                     <p class="hoveritem">Über uns</p>
                   </a>
@@ -224,7 +225,7 @@
                 <div class="col-1 center_items linkitem ml-1">
                   <p class="hoveritem" onclick="toggleContactModal()">Kontakt</p>
                 </div>
-                <div class="col-1 center_items offset-2">
+                <div class="col-1 center_items offset-1">
                   <a href="{{route('unikat')}}">
                     <img src="{{asset('images/unikat_logo.jpg')}}" alt="firmenlogo_unikat" class="" style="height: 150px; width: 150px;">
                   </a>

@@ -25,14 +25,15 @@
           <h2>Impressum</h2>
         </div>
         <div class="row">
-          <p>Angaben nach §6 Teledienstgesetz und Medienstaatsvertrag: <br>
+          <p>Angaben nach §5 des Telemediengesetzes (TMG): <br>
               TKA Software Systems Ug (haftungsbeschränkt)<br>
               Norderstr. 33 <br>
               24939 Flensburg <br>
 
 
               Geschäftsführer: Andreas Robrahn <br>
-              USt-IdNr: noch in Gründung<br>
+              USt-IdNr: noch nicht vorhanden (Unternehmen in Gründung)<br>
+              Steuernummer: 1529035565<br>
               E-Mail: info@tka-software-systems.de <br>
               Internet: https://tka-software-systems.de <br>
               Amtsgericht Flensburg HRB 14988FL <br>
