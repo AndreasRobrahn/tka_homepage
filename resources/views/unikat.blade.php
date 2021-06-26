@@ -7,7 +7,7 @@
     <h1 class="textsizeu3 p-2 hiddenonmobile">Unikat Personaldienstleistungen aus Dortmund
 
       </h1>
-      <h1 class="mobileHeading textsizeu3">Unikat</h1>
+      <h1 class="mobileHeading textsizeu3 mt-4">Unikat</h1>
       <hr>
 
       <h2 class="textsizeu1 p-2 ">Arbeitsvermittlung </h2>
@@ -20,7 +20,7 @@
 </div>
 <div class="row m-0 justify-content-center contentbreak">
   <div class="col-sm-9 p-1">
-      <h2 lass="textsize2">Social Media</h2>
+      <h2 class="p-2 textsizeu1">Social Media</h2>
     <p><a class="fa fa-facebook socmedbutton" href="#"></a>  <a class="fa fa-instagram socmedbutton" href="#"></a></p>
   </div>
 </div>
