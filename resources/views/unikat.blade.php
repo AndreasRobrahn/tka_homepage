@@ -34,10 +34,14 @@
     </div>
   </div>
   <div class="row m-0 justify-content-center contentbreakw100">
-    <h2 class="text-center">Unsere Dienstleistungen</h2>
+    <h2 class="text-center textsizeu3 contentbreak">Unsere Dienstleistungen</h2>
+
+    <div class="row contentbreak">
+
+    </div>
 
     <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row">
+      <div class="row ">
         <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments" style="">
       </div>
       <div class="row justify-content-center">
@@ -84,8 +88,9 @@
         Maschinenbau
       </div>
     </div>
+
   </div>
-      <div class="row m-0 ukColor1 text-white contentbreakw100 center_items">
+      <div class="row ukColor1 text-white contentbreakw100 center_items">
         <div class="col-sm-5 m-2 p-1 order-sm-last order-md-first">
           <div class="row m-1 border-bottom" >
             <h4 class="headline1">Zusatzliche Informationen</h4>
