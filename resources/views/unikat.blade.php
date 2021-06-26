@@ -92,19 +92,19 @@
   </div>
       <div class="row ukColor1 text-white contentbreakw100 center_items">
         <div class="col-sm-5 m-2 p-1 order-sm-last order-md-first">
-          <div class="row m-1 border-bottom" >
+          <div class="row m-2 border-bottom" >
             <h4 class="headline1">Zusatzliche Informationen</h4>
           </div>
-          <div class="row m-1 justify-content-center ">
+          <div class="row m-2 justify-content-center ">
             <p>Adresse: XYZ Str. 8, XXXXX Dortmund</p>
           </div>
-          <div class="row m-1 justify-content-center ">
+          <div class="row m-2 justify-content-center ">
             <p>Email: info@unikat-deutschland.de</p>
           </div>
-          <div class="row m-1 justify-content-center ">
+          <div class="row m-2 justify-content-center ">
             <p>Social Media: <a class="fa fa-facebook" href="#"></a>  <a class="fa fa-instagram" href="#"></a></p>
           </div>
-          <div class="row m-1  justify-content-center ">
+          <div class="row m-2  justify-content-center ">
             <div class="col">
               <button type="button" name="button" class="btn btn-block border-rounded border border-white ukColor1" onclick="showContactModal()">Kontaktformular aufrufen</button>
             </div>
