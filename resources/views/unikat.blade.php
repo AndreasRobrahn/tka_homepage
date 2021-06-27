@@ -4,17 +4,17 @@
 
 <div class="row m-0 justify-content-center contentbreak" style="">
   <div class="col-sm-9 p-1">
-    <h1 class="textsizeu3 p-2 hiddenonmobile">Unikat Personaldienstleistungen aus Dortmund
+    <h1 class="textsizeu3 p-2 hiddenonmobile">Herzlich Willkommen bei Unikat Deutschland GmbH
 
       </h1>
-      <h1 class="mobileHeading textsizeu3 mt-4">Unikat</h1>
-      <hr>
+      <h1 class="mobileHeading textsizeu3 mt-4">Herzlich Willkommen bei der Unikat Deutschland GmbH</h1>
+      <h2 class="mobileHeading textsizeu1 mt-4">Arbeitsvermittlung & Personaldienstleistungen in Dortmund</h2>
 
-      <h2 class="textsizeu1 p-2 ">Arbeitsvermittlung </h2>
-    <p class="textsizeu2 m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet dui enim. Donec placerat dignissim eros, id varius magna posuere nec. Vestibulum ut urna fringilla, posuere sem ac, vehicula elit. Quisque lacus mi, molestie non auctor sed, commodo vel nisi. Integer turpis nulla, sollicitudin non ex at, pharetra aliquet eros. Mauris viverra mi dictum, molestie quam consectetur, hendrerit magna. Phasellus tincidunt ligula erat, non vehicula leo lobortis ac. Quisque sit amet nulla non mi ultrices euismod. Vivamus sit amet dignissim magna. Nulla ac risus leo. Integer cursus, enim vitae elementum volutpat, mi lectus venenatis ante, in euismod nulla felis eget massa. Nulla dui diam, dictum non iaculis ut, semper eu massa. Maecenas sit amet dui lacus. In dignissim sed velit non facilisis. Integer egestas enim id ipsum finibus, sit amet bibendum nisl euismod. Nulla vel arcu nec lectus malesuada aliquet.</p>
-
-    <h2 class="p-2 textsizeu1">Personaldienstleister</h2>
-    <p class="textsizeu2 m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet dui enim. Donec placerat dignissim eros, id varius magna posuere nec. Vestibulum ut urna fringilla, posuere sem ac, vehicula elit. Quisque lacus mi, molestie non auctor sed, commodo vel nisi. Integer turpis nulla, sollicitudin non ex at, pharetra aliquet eros. Mauris viverra mi dictum, molestie quam consectetur, hendrerit magna. Phasellus tincidunt ligula erat, non vehicula leo lobortis ac. Quisque sit amet nulla non mi ultrices euismod. Vivamus sit amet dignissim magna. Nulla ac risus leo. Integer cursus, enim vitae elementum volutpat, mi lectus venenatis ante, in euismod nulla felis eget massa. Nulla dui diam, dictum non iaculis ut, semper eu massa. Maecenas sit amet dui lacus. In dignissim sed velit non facilisis. Integer egestas enim id ipsum finibus, sit amet bibendum nisl euismod. Nulla vel arcu nec lectus malesuada aliquet.</p>
+      <h2 class="textsizeu1 p-2 "> </h2>
+    <p class="textsizeu2 m-2">
+      Wir haben uns auf die Arbeitnehmerüberlassung von Fachkräften aus der Metallbranche & Lagerlogistik spezialisiert.
+      Von unserem Firmensitz in Dortmund aus, vermitteln wir Ihnen bundesweit genau das Personal, welches Ihr Unternehmen benötigt. Profitieren sie von unseren längjahrigen Erfahrungen und Kontakten im Bereich der Personaldienstleistungen.
+    </p>
   </div>
 
 </div>
@@ -26,68 +26,51 @@
 </div>
   <div class="row m-0 justify-content-center text-white"  style="height: 60vh; overflow: hidden;">
     <div class="imageoverlay p-0">
-      <img src="{{asset('Naturbilder/DSC_9797.jpg')}}" alt="hintergrundbild" class="" style="height: 100%; width: 100%; object-fit: cover;">
-      <div class="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
-        <h1 class="textsize3 text-white text-shadow">Unikat</h1>
-        <p class="textsize1 text-white text-shadow">Arbeitsvermittlung mit Verlässlichkeit und Kompetenz</p>
+      <img src="{{asset('images/backgroundimage2.jpg')}}" alt="hintergrundbild" class="" style="height: 100%; width: 100%; object-fit: cover;">
+      <div class="h-100 w-100" style="position: absolute; top: 5px; left: 5px;">
+        <h2 class="textsizeu3 text-white text-shadow hiddenonmobile"> Kontaktieren Sie unser kompetentes Team bei</h2>
+          <h2 class="mobileHeading textsizeu1  mt-2">Kontaktieren Sie unser kompetentes Team bei</h2>
+
+          <p class="picturetextmobile">
+            * Auftragsspitzen <br>
+            * Personalengpässen <br>
+            * Terminaufträgen <br>
+            * Stillstandsarbeiten <br>
+            * Bedarf an Mitarbeitern mit speziellen Zulassungen <br>
+          </p>
+        <div class="" style="position: absolute; bottom: -5px;">
+          <p class="textsize1 text-white text-shadow">Unser Ziel ist Ihre Zufriedenheit!</p>
+        </div>
+ 
       </div>
     </div>
   </div>
   <div class="row m-0 justify-content-center contentbreakw100">
     <h2 class="text-center textsizeu3 contentbreak">Unsere Dienstleistungen</h2>
-
     <div class="row contentbreak">
 
     </div>
-
-    <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row ">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments" style="">
+        <div class="col-sm-5 m-1">
+          <a href="{{route('unikatSpeciality')}}">
+            <div class="row center_items">
+              <img src="{{asset('images/image_metallbranche.jpg')}}" alt="Arbeitsvermittlung, Jobs in der Metalbranche" class="img-fluid img-departments linkitem" style="">
+            </div>
+            <div class="row">
+              <span class="text-dark textsizeu1 text-center">Metallbranche</span>
+            </div>
+          </a>
+        </div>
+      </a>
+      <div class="col-sm-5 ">
+        <a href="{{route('unikatSpeciality')}}">
+          <div class="row">
+            <img src="{{asset('images/image_lagerlogistik.jpg')}}" alt="Arbeitsvermittlung, Jobs Lagerlogistik" class="img-fluid img-departments linkitem">
+          </div>
+          <div class="row">
+            <span class="text-dark textsizeu1 text-center">Lagerlogistik</span>
+          </div>
+        </a>
       </div>
-      <div class="row justify-content-center">
-        Maschinenbau
-      </div>
-    </div>
-    <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments">
-      </div>
-      <div class="row justify-content-center">
-        Maschinenbau
-      </div>
-    </div>
-    <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments">
-      </div>
-      <div class="row justify-content-center">
-        Maschinenbau
-      </div>
-    </div>
-    <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments">
-      </div>
-      <div class="row justify-content-center">
-        Maschinenbau
-      </div>
-    </div>
-    <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments">
-      </div>
-      <div class="row justify-content-center">
-        Maschinenbau
-      </div>
-    </div>
-    <div class="col-5 col-sm-4 col-md-3 m-2">
-      <div class="row">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" alt="Arbeitsvermittlung Maschinenbau" class="img-fluid img-departments">
-      </div>
-      <div class="row justify-content-center">
-        Maschinenbau
-      </div>
-    </div>
 
   </div>
       <div class="row ukColor1 text-white contentbreakw100 center_items">
