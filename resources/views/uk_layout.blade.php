@@ -19,12 +19,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- Bootstrap js -->
     <script  src="{{asset('bootstrap-5.0.1-dist/js/bootstrap.min.js')}}"></script>
-    <meta name="content" content="Die Unikat ist das Unternehmen für Personaldienstleistungen und Vermittlung von Arbeitskräften in Dortmund und Umgebung">
-    <meta name="keywords" content="Unikat, Personaldienstleistungen, Arbeitsvermittlung, Vermittlung von Arbeitskräften, Dortmund">
+    <meta name="content" content="Die Unikat ist ein Unternehmen für Personaldienstleistungen und Vermittlung von Arbeitskräften, in den Bereichen der Lagerlogistik und Metallbranche, in Dortmund und Umgebung">
+    <meta name="keywords" content="Unikat, Personaldienstleistungen, Arbeitsvermittlung, Vermittlung von Arbeitskräften, Metallbranche, Lagerlogistik, Dortmund">
     <meta name="author" content="John Gelotti">
-    <title>Unikat Personaldienstleistungen, Arbeitsvermittlung in Dortmund</title>
+    <title>Unikat, Arbeitsvermittlung in der Metallbranche und Lagerlogistik</title>
     <!-- Styles -->
     <style media="screen">
+
     body{
       font-family: 'Merienda One';
       font-size: 1.3em;
@@ -50,9 +51,6 @@
       color: white;
       background: RGBA(221, 65, 36,0.2);
     }
-
-
-
     .customdg-input
     {
       width: 100%;
@@ -144,7 +142,7 @@
               </div>
           </div>
           <div class="col-6 p-1 d-flex justify-content-center align-items-center">
-            <a href="{{route('unikat')}}"><img src="{{asset('images/unikat_logo.jpg')}}" alt="Teamlogo" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
+            <a href="{{route('unikat')}}"><img src="{{asset('images/unikat_logo_grey-removebg-preview.png')}}" alt="Teamlogo" class="unikat_logo" style=""></a>
           </div>
           <div class="col-12 " id="sidemenu1" style="">
             <hr>
@@ -161,15 +159,11 @@
                 </div>
                 <div class="dropdownright" style=" display: none;position: absolute; margin-left: 9em;">
                   <p class="hoveritem">Unsere Fachkrafte</p>
-                  <p class="hoveritem">Stellen angebote</p>
-                  <p class="hoveritem">Kompetenzen</p>
+                  <p class="hoveritem">Stellenangebote</p>
+                  <a href="{{route('unikatSpeciality')}}"><p class="hoveritem">Kompetenzen</p></a>
                 </div>
               </div>
 
-            </div>
-            <hr>
-            <div class="w-100 d-flex linkitem">
-              <p class="hoveritem">Kompetenzen</p>
             </div>
             <hr>
             <div class="w-100 d-flex linkitem">
@@ -183,7 +177,7 @@
           </div>
         </div>
 
-        <div class="row m-0 hiddenonmobile" style="height: 60vh; overflow: hidden;">
+        <!-- <div class="row m-0 hiddenonmobile" style="height: 60vh; overflow: hidden;">
           <div class="imageoverlay p-0">
             <img src="{{asset('Naturbilder/DSC_0387.jpg')}}" alt="hintergrundbild" class="" style="height: 100%; width: 100%; object-fit: cover;">
             <div class="overlayelements">
@@ -200,7 +194,7 @@
                   </div>
                   <div class="hoverdropdown" id="" s>
                     <div class="dropdownitem linkitem">
-                      <p class="hoveritem">Unsere Fachkrafte</p>
+                      <p class="hoveritem">Unsere Fachkräfte</p>
                     </div>
                     <hr>
                     <div class="dropdownitem linkitem">
@@ -213,9 +207,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-2 center_items linkitem ml-1">
-                  <p class="hoveritem">Kompetenzen</p>
-                </div>
+
                 <div class="col-2 center_items linkitem">
                   <p class="hoveritem">Zertifikate</p>
                 </div>
@@ -234,9 +226,9 @@
               <p class="textsize1 text-white text-shadow">dein Motto</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="row m-0 ukColor1 text-white textsizeu2 hiddenonmobile" style="height: 30vh;">
+        <div class="row m-0 ukColor1 text-white textsizeu2 hiddenonmobile align-items-center" style="height: 20vh;">
                 <div class="col-2 center_items linkitem">
                   <a href="{{route('unikataboutus')}}">
                     <p class="hoveritem">Über uns</p>
@@ -256,15 +248,12 @@
                       <p class="hoveritem">Stellenangebote</p>
                     </div>
                     <hr>
+
                     <div class="dropdownitem linkitem">
-                      <p class="hoveritem">Kompetenzen</p>
+                      <a href="{{route('unikatSpeciality')}}"><p class="hoveritem">Kompetenzen</p></a>
                     </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-2 center_items linkitem">
-                  <p class="hoveritem">Kompetenzen</p>
-
                 </div>
                 <div class="col-2 center_items linkitem">
                   <p class="hoveritem">Zertifikate</p>
@@ -274,16 +263,14 @@
                   <p class="hoveritem" onclick="toggleContactModal()">Kontakt</p>
 
                 </div>
-                <div class="col-3 center_items linkitem">
+                <div class="col-3 offset-2 center_items linkitem">
                   <a href="{{route('unikat')}}">
-                    <img src="{{asset('images/unikat_logo.jpg')}}" alt="firmenlogo_unikat" class="" style="height: 150px; width: 150px;">
+                    <img src="{{asset('images/unikat_logo_grey-removebg-preview.png')}}" alt="firmenlogo_unikat" class="unikat_logo">
                   </a>
                 </div>
               </div>
 
         @yield('content')
-
-
       <div class="row m-0 ukColor1 text-white mt-2 justify-content-center">
         <div class="col-6 center_items p-0">
           <a href="#">Impressum</a>

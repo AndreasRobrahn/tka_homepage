@@ -38,6 +38,9 @@ Route::get('/projects/Unikat', function(){
 Route::get('/projects/Unikat/aboutus', function(){
   return view('unikataboutus');
 })->name('unikataboutus');
+Route::get('/projects/Unikat/advantages', function(){
+  return view('unikatSpeciality');
+})->name('unikatSpeciality');
 
 Route::get('test', function(){
 
