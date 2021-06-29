@@ -22,7 +22,7 @@
     <meta name="content" content="Die Unikat ist ein Unternehmen für Personaldienstleistungen und Vermittlung von Arbeitskräften, in den Bereichen der Lagerlogistik und Metallbranche, in Dortmund und Umgebung">
     <meta name="keywords" content="Unikat, Personaldienstleistungen, Arbeitsvermittlung, Vermittlung von Arbeitskräften, Metallbranche, Lagerlogistik, Dortmund">
     <meta name="author" content="John Gelotti">
-    <title>Unikat, Arbeitsvermittlung in der Metallbranche und Lagerlogistik</title>
+    <title>Unikat, Datenschutzerklärung</title>
     <!-- Styles -->
     <style media="screen">
 
@@ -127,7 +127,7 @@
     </style>
     <body>
 
-      <div class="container-fluid p-0 bg-light">
+      <div class="container-fluid p-0 bg-light" style="width: 100%; overflow-x:hidden;">
         <div class="row m-0 ukColor1" id='stickynavmob'>
           <div class="col-6 d-flex justify-content-center align-items-center">
             <div class="navbar-wrapper">
@@ -228,7 +228,7 @@
           </div>
         </div> -->
 
-        <div class="row m-0 ukColor1 text-white textsizeu2 hiddenonmobile align-items-center" style="height: 20vh;">
+        <div class="row m-0 ukColor1 text-white textsizeu2 hiddenonmobile align-items-center" style="min-height: 20vh;max-height: 45vh;">
                 <div class="col-2 center_items linkitem">
                   <a href="{{route('unikataboutus')}}">
                     <p class="hoveritem">Über uns</p>
@@ -269,17 +269,19 @@
                   </a>
                 </div>
               </div>
-
+      <div class="container-fluid w-100 m-0 p-0" style="min-height: 72vh;">
         @yield('content')
+      </div>
+
       <div class="row m-0 ukColor1 text-white mt-2 justify-content-center">
         <div class="col-6 center_items p-0">
           <a href="#">Impressum</a>
         </div>
         <div class="col-6 center_items p-0">
-          <a href="#">Datenschutz</a>
+          <a href="{{route('datasecurity')}}">Datenschutz</a>
         </div>
       </div>
-      </div>
+    </div>
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -338,6 +340,16 @@
           </div>
         </div>
       </div>
+
+@if(!Session::get('cookies'))
+
+<div class="cookieDisclaimer ukColor1" id="cookiedisclaimer" style="position:fixed; bottom: 0; height: 75px; width:100%; z-index:99; text-align:center; color: white; ">
+  Diese Seite verwendet Cookies um das Nutzererlebnis zu steigern. <br>
+  <button type="button" name="button" class="btn btn-outline btn-dark" onclick="setCookieSession()">Akzeptieren</button>
+</div>
+@endif
+
   </body>
     <script  src="{{asset('js/main.js')}}"></script>
+    <script  src="{{asset('js/app.js')}}"></script>
   </html>

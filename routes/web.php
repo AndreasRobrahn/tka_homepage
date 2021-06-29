@@ -41,6 +41,10 @@ Route::get('/projects/Unikat/aboutus', function(){
 Route::get('/projects/Unikat/advantages', function(){
   return view('unikatSpeciality');
 })->name('unikatSpeciality');
+Route::get('/projects/Unikat/datasecurity', function(){
+  return view('dsvgo1');
+})->name('datasecurity');
+Route::get('/cookiesAccept', 'App\Http\Controllers\NotificationsController@setCookies');
 
 Route::get('test', function(){
 

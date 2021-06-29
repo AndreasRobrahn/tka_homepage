@@ -47,4 +47,8 @@ class NotificationsController extends Controller
 
         return redirect()->back();
     }
+    public function setCookies()
+    {
+      session(['cookies' => 'true']);
+    }
 }
