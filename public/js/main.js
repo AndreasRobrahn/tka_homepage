@@ -63,3 +63,18 @@ function openSidemenu1(){
   }
 
   )
+function setCookieSession()
+{
+  axios
+  .get("/cookiesAccept")
+  .then(response => {
+    return true
+  })
+  .catch(function(error) {
+    console.log(error.response);
+  });
+
+  $('#cookiedisclaimer').toggle()
+  $('#cookiedisclaimer').toggle()
+  // set the session
+}
