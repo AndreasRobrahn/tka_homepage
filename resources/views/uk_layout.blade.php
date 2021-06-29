@@ -343,7 +343,7 @@
 
 @if(!Session::get('cookies'))
 
-<div class="cookieDisclaimer ukColor1" id="cookiedisclaimer" style="position:fixed; bottom: 0; height: 75px; width:100%; z-index:99; text-align:center; color: white; ">
+<div class="cookieDisclaimer ukColor1" id="cookiedisclaimer" style="position:fixed; bottom: 90px; height: 75px; width:100%; z-index:99; text-align:center; color: white; ">
   Diese Seite verwendet Cookies um das Nutzererlebnis zu steigern. <br>
   <button type="button" name="button" class="btn btn-outline btn-dark" onclick="setCookieSession()">Akzeptieren</button>
 </div>
