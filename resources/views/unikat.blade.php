@@ -4,11 +4,11 @@
 
 <div class="row m-0 justify-content-center contentbreak" style="">
   <div class="col-sm-9 p-1">
-    <h1 class="textsizeu3 p-2 hiddenonmobile">Herzlich Willkommen bei Unikat Deutschland GmbH
+    <h1 class="textsizeu3 p-2 hiddenonmobile">Herzlich Willkommen bei Unikat GmbH
 
       </h1>
-      <h1 class="mobileHeading textsizeu3 mt-4">Herzlich Willkommen bei der Unikat Deutschland GmbH</h1>
-      <h2 class="mobileHeading textsizeu1 mt-4">Arbeitsvermittlung & Personaldienstleistungen in Dortmund</h2>
+      <h1 class="mobileHeading textsizeu3 mt-4">Herzlich Willkommen bei der Unikat GmbH</h1>
+      <h2 class="mobileHeading textsizeu1 mt-4">Arbeitsvermittlung & Personaldienstleistungen</h2>
 
       <h2 class="textsizeu1 p-2 "> </h2>
     <p class="textsizeu2 m-2">

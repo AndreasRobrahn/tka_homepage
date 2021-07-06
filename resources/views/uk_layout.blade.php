@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('js/slick-1.8.1/slick/slick.css')}}"/>
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">/ -->
-    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/>
+    <!-- <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/> -->
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/mainUK.css')}}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script>
     <!-- jquery-->
@@ -22,7 +23,7 @@
     <meta name="content" content="Die Unikat ist ein Unternehmen für Personaldienstleistungen und Vermittlung von Arbeitskräften, in den Bereichen der Lagerlogistik und Metallbranche, in Dortmund und Umgebung">
     <meta name="keywords" content="Unikat, Personaldienstleistungen, Arbeitsvermittlung, Vermittlung von Arbeitskräften, Metallbranche, Lagerlogistik, Dortmund">
     <meta name="author" content="John Gelotti">
-    <title>Unikat, Datenschutzerklärung</title>
+    <title>Unikat, Personaldienstleitungen & Arbeitsvermittlung in Dormtnund</title>
     <!-- Styles -->
     <style media="screen">
 
@@ -76,13 +77,6 @@
         display:flex;
         /* background: RGBA(221, 65, 36,0.2); */
       }
-    }
-
-    .img-departments
-    {
-      height: 150px;
-      border-radius: 15px;
-      object-fit: cover;
     }
     .dropdownright
     {
@@ -141,7 +135,7 @@
                   </label>
               </div>
           </div>
-          <div class="col-6 p-1 d-flex justify-content-center align-items-center">
+          <div class="col-6 p-1 d-flex justify-content-center align-items-center ">
             <a href="{{route('unikat')}}"><img src="{{asset('images/unikat_logo_grey-removebg-preview.png')}}" alt="Teamlogo" class="unikat_logo" style=""></a>
           </div>
           <div class="col-12 " id="sidemenu1" style="">
@@ -159,8 +153,8 @@
                 </div>
                 <div class="dropdownright" style=" display: none;position: absolute; margin-left: 9em;">
                   <p class="hoveritem">Unsere Fachkrafte</p>
-                  <p class="hoveritem">Stellenangebote</p>
-                  <a href="{{route('unikatSpeciality')}}"><p class="hoveritem">Kompetenzen</p></a>
+                  <a href="{{route('joboffers')}}"> <p class="hoveritem" >Stellen- <br>angebote</p></a>
+                  <a href="{{route('unikatSpeciality')}}"><p class="hoveritem">Kompe- <br>tenzen</p></a>
                 </div>
               </div>
 
@@ -176,58 +170,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="row m-0 hiddenonmobile" style="height: 60vh; overflow: hidden;">
-          <div class="imageoverlay p-0">
-            <img src="{{asset('Naturbilder/DSC_0387.jpg')}}" alt="hintergrundbild" class="" style="height: 100%; width: 100%; object-fit: cover;">
-            <div class="overlayelements">
-              <div class="row m-0 textsizeu2 text-white text-shadow w-100 align-items-center">
-                <div class="col-2 center_items linkitem">
-                  <a href="{{route('unikataboutus')}}">
-                    <p class="hoveritem">Über uns</p>
-                  </a>
-                </div>
-                <div class="col-2 center_items linkitem ml-1" style="position: relative;">
-                  <div class="" style="display: block; position: relative;">
-                  <div class="dropdownactivate" id="dropdownactivate">
-                    <p class="hoveritem">Unsere Leistungen</p>
-                  </div>
-                  <div class="hoverdropdown" id="" s>
-                    <div class="dropdownitem linkitem">
-                      <p class="hoveritem">Unsere Fachkräfte</p>
-                    </div>
-                    <hr>
-                    <div class="dropdownitem linkitem">
-                      <p class="hoveritem">Stellenangebote</p>
-                    </div>
-                    <hr>
-                    <div class="dropdownitem linkitem">
-                      <p class="hoveritem">Kompetenzen</p>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-2 center_items linkitem">
-                  <p class="hoveritem">Zertifikate</p>
-                </div>
-                <div class="col-1 center_items linkitem ml-1">
-                  <p class="hoveritem" onclick="toggleContactModal()">Kontakt</p>
-                </div>
-                <div class="col-1 center_items offset-1">
-                  <a href="{{route('unikat')}}">
-                    <img src="{{asset('images/unikat_logo.jpg')}}" alt="firmenlogo_unikat" class="" style="height: 150px; width: 150px;">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="motto" style="">
-              <h1 class="textsize3 text-white text-shadow">Unikat</h1>
-              <p class="textsize1 text-white text-shadow">dein Motto</p>
-            </div>
-          </div>
-        </div> -->
-
         <div class="row m-0 ukColor1 text-white textsizeu2 hiddenonmobile align-items-center" style="min-height: 20vh;max-height: 45vh;">
                 <div class="col-2 center_items linkitem">
                   <a href="{{route('unikataboutus')}}">
@@ -245,7 +187,7 @@
                     </div>
                     <hr>
                     <div class="dropdownitem linkitem">
-                      <p class="hoveritem">Stellenangebote</p>
+                      <a href="{{route('joboffers')}}"> <p class="hoveritem">Stellenangebote</p></a>
                     </div>
                     <hr>
 
@@ -264,9 +206,12 @@
 
                 </div>
                 <div class="col-3 offset-2 center_items linkitem">
-                  <a href="{{route('unikat')}}">
-                    <img src="{{asset('images/unikat_logo_grey-removebg-preview.png')}}" alt="firmenlogo_unikat" class="unikat_logo">
-                  </a>
+                  <div class="d-flex h-100">
+                    <a href="{{route('unikat')}}">
+                      <img src="{{asset('images/unikat_logo_grey-removebg-preview.png')}}" alt="firmenlogo_unikat" class="unikat_logo">
+                    </a>
+                  </div>
+
                 </div>
               </div>
       <div class="container-fluid w-100 m-0 p-0" style="min-height: 72vh;">
@@ -327,7 +272,7 @@
               <div class="row m-0 mt-2">
                 <div class="col">
                   <div class="form-group">
-                    <h5>Was stellst du dir vor?</h5>
+                    <h5>Deine Nachricht</h5>
                     <textarea name="message" class="form-control input1" rows="8" cols="80" style="width: 100%;"></textarea>
                   </div>
                 </div>
@@ -343,13 +288,16 @@
 
 @if(!Session::get('cookies'))
 
-<div class="cookieDisclaimer ukColor1" id="cookiedisclaimer" style="position:fixed; bottom: 10px; height: auto; width:100%; z-index:99; text-align:center; color: white; ">
-  Diese Seite verwendet Cookies um das Nutzererlebnis zu steigern. <br>
-  <button type="button" name="button" class="btn btn-outline btn-dark" onclick="setCookieSession()">Akzeptieren</button>
+<div class="cookieDisclaimer bg-light border border-dark" id="cookiedisclaimer" style="position:fixed; bottom: 10px; height: auto; width:100%; z-index:99; text-align:center; color: black; ">
+
+  Diese Seite verwendet technische notwendige Cookies. Durch die Nutzung unserer Dienste stimmst du der Verwendung zu.<br>
+
+  <button type="button" name="button" class="btn btn-outline-dark" onclick="setCookieSession()" style="z-index: 201;">Verstanden</button>
 </div>
 @endif
 
   </body>
     <script  src="{{asset('js/main.js')}}"></script>
     <script  src="{{asset('js/app.js')}}"></script>
+    @yield('additional_js')
   </html>
