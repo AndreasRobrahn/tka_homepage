@@ -75,6 +75,6 @@ function setCookieSession()
   });
 
   $('#cookiedisclaimer').toggle()
-  $('#cookiedisclaimer').toggle()
+  // $('#cookiedisclaimer').toggle()
   // set the session
 }
