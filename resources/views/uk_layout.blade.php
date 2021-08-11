@@ -14,6 +14,10 @@
     <!-- <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/> -->
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/mainUK.css')}}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/c869b225f8.js" crossorigin="anonymous"></script>
     <!-- jquery-->
     <script  src="{{asset('js/jquery.js')}}"></script>
@@ -28,7 +32,7 @@
     <style media="screen">
 
     body{
-      font-family: 'Merienda One';
+      font-family: 'Miller Text', serif;
       font-size: 1.3em;
       width: 100%;
     }
@@ -101,7 +105,7 @@
 
       .mobileHeading
       {
-        display:block ;
+        display:block;
       }
     }
 

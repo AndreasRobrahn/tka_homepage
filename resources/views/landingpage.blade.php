@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ein Unternehmen für Webdesign, Webseitenerstellung und Webprogrammierung">
+    <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung von Webapplikationen und Firmenseiten auf die Fahnen geschrieben. Besonderen Wert legen wir auf eine gute Kommunikation um gemeinsame Projekte mit unseren Kunden erfolreich zu verwirklichen.">
     <meta name="keywords" content="Webdesign, Webseite, Webapplikation, Flensburg Webseite, Flensburg, Webprogrammierung">
 
     <meta name="csrf-token" content="{{csrf_token()}}">
     <!-- <link href="bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet"> -->
     <link href="{{asset('bootstrap-5.0.1-dist/css/bootstrap.min.css')}}" rel="stylesheet">
-
+    <link rel="icon" type="asset('/images/favicon_io-2/favicon.ico')" href="{{route('landingpage')}}">
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('js/slick-1.8.1/slick/slick.css')}}"/>
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">/ -->
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{{asset('css/main.css')}}"/>
@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- Bootstrap js -->
     <script  src="{{asset('bootstrap-5.0.1-dist/js/bootstrap.min.js')}}"></script>
-    <title>TKA Software Systems</title>
+    <title>TKA Software Systems, Webprogrammierung, Webdesign und Social Media</title>
     <!-- Styles -->
     <style media="screen">
     a {
@@ -35,7 +35,7 @@
     </style>
 
 </head>
-  <body>
+  <body class="bg-test">
 
     <div style="display:block;" id="top">
 
@@ -205,6 +205,14 @@
         <div class="d-flex p-2" style="position: relative;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
         </div>
+        <!-- <div class="row bgimagebottomrow center_items w-100">
+          <div class="col-md-5 center_items">
+            <p>Beliebte Serivces</p>
+          </div>
+          <div class="col-md-5 center_items">
+            <p>Impressum</p>
+          </div>
+        </div> -->
       </div>
       <div class="" style="
         position: absolute;
@@ -230,47 +238,64 @@
       ">
     </div>
   </div>
-<div class="container mt-4 p-2 " style="">
+<div class="container-fluid m-0  w-100 mt-4 p-0 " style="">
   <div class="row justify-content-center">
-    <div class="col-md-9 ">
-      <h2 class="text-center textsize3" id="aboutus">TKA Software Systems</h2>
-      <hr>
-      <p class="textsize1">Der Ansprechpartner in Flensburg für Webseiten. Unsere Dienstleistungen sind sowohl fur Unternehmen als auch für Privatpersonen interessant.
-        Einige Beispiele sind im Bereich <a href="#possibilities" style="color:black; text-decoration:none; font-weight: bold;">Beliebte Services</a> aufgeführt. Zudem können wir auf Wunsch auch die Einrichtung des Hostings der Webseite übernehmen so, dass du dich um nichts kümmern musst.<br><br>
+    <div class="col-md-9">
+      <h1 class="text-center textsize3 contentbreak" id="aboutus">TKA Software Systems</h1>
+      <h2 class="text-left textsize2 contentbreak">Der Ansprechpartner für Webseiten</h2>
+      <p class="textsize1 p-2">Die Geschichte der TKA Software Systems UG beginnt im Jahr 2021. Wir haben die Vision den Entwicklungsprozess für Webanwendungen und -auftritte interaktiver zu gestalten.
+        Unsere Dienstleistungen sind sowohl fur Unternehmen als auch für Privatpersonen interessant.
+        Unser Ziel ist eine Komplettbetreuung und Gestaltung der Webauftritte und Social Media Bereiche.
+        Auf diese Weise wird das Marketingpotenzial maximal ausgenutzt.
         Mit unserer Expertise und guten Vernetzung wird die Webseite die du vor Augen hast Realität!</p>
-      <hr>
+      <h2 class="text-left textsize2 contentbreak">Mannigfaltige Einsatzmöglichkeiten</h2>
+
+      <p class="textsize1 p-2">Einige Beispiele sind bereits im Bereich <a href="#possibilities" style="color:black; text-decoration:none; font-weight: bold;">Beliebte Services</a> aufgeführt. Deiner Fantasie sind keine Grenzen gesetzt. Details und Vorstellungen klären wir bestenfalls in einem persönlichem Gespräch ab. Melde dich einfach.</p>
     </div>
   </div>
-  <div class="row mt-3">
-    <h2 class="text-center textsize3" id="aboutus">Was können wir für dich tun?</h2>
+  <div class="row">
+    <h2 class="text-center textsize3 contentbreak" id="aboutus">Was können wir für dich tun?</h2>
   </div>
-  <div class="row mt-3">
-    <div class="col-md p-0 d-flex align-items-center justify-content-center">
-      <img src="{{asset('images/coding.jpg')}}" class=" p-2 picLPLR" alt="Flensburg" style="border-radius: 25px;">
-    </div>
-    <div class="col-md p-2 d-flex align-items-center justify-content-center">
-      <ul class="textsize1" style="margin-left: 25px;">
-        <li>Programmierung</li>
-        <li>Design</li>
-        <li>Hosting</li>
-      </ul>
+  <div class="row contentbreak center_items">
+    <div class="col-md-10 p-2 center_items" style="">
+      <div class="services" style="">
+          <div class="randomform center_items" style="  top: 15%; left: 20%;   transform: rotate(-25deg);">
+            <img src="{{asset('images/coding.jpg')}}" alt="Programmierung" class="image_generic">
+            <div class="readabiltyEnhancerWhite">
+              <p class="b4Pic">Programmierung</p>
+            </div>
+          </div>
+          <div class="randomform center_items" style="  top: 70%; left: 20%;   transform: rotate(15deg);">
+            <img src="{{asset('Firmenlogo/design.jpg')}}" alt="Bild Webdesign Skizze" class="image_generic">
+            <div class="readabiltyEnhancerWhite">
+              <p class="b4Pic">Design</p>
+            </div>
+          </div>
+          <div class="randomform center_items" style="  top: 45%; left: 15%;   transform: rotate(35deg);">
+            <img src="{{asset('Firmenlogo/projectrealisation.jpg')}}" alt="Programmierung" class="image_generic">
+            <div class="readabiltyEnhancerWhite">
+              <p class="b4Pic">Projektarbeit</p>
+            </div>
+          </div>
+        <div class="randomform center_items" style=" top: 65%; left: 50%;   transform: rotate(-29deg);">
+          <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" class="image_generic" alt="Ein Naturfoto" style="position:absolute;">
+          <p>Fotos</p>
+        </div>
+        <div class="randomformvideo center_items" style="top: 10%; left: 45%;   transform: rotate(15deg);">
+          <iframe  class="w-100 h-100" src="https://player.vimeo.com/video/554074757?title=0&portrait=0&byline=0&autoplay=1&loop=1&transparent=1" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+        </div>
+        <div class="randomform center_items" style="top: 36%; left: 55%;   transform: rotate(35deg);">
+          <img src="{{asset('images/socmedpic.jpg')}}" class="image_generic" alt="Social Media">
+
+          <div class="readabiltyEnhancerWhite">
+            <p class="b4Pic">Likes Likes Likes</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row mt-3">
-    <div class="col-md order-2 order-sm-2 order-md-1 center_items">
-      <ul class="textsize1">
-        <li>Fotos</li>
-        <li>Videos</li>
-        <li>Social Media</li>
-      </ul>
-    </div>
-    <div class="col-md order-1 order-sm-1 order-md-1 center_items">
-      <img src="{{asset('images/socmedpic.jpg')}}" class=" p-2 picLPLR" alt="Social Media">
-    </div>
-  </div>
-  <hr>
-</div>
-    <div class="container-fluid p-0 mt-4 shadow-lg bg-light" style="">
+    <div class="container-fluid p-0 shadow-lg bg-light " style="margin-top: 5em;">
       <div class="row m-0">
         <div class="col-1 p-1 d-flex align-items-center justify-content-center prevArrow" >
           <div class="triangle-left">
@@ -284,14 +309,12 @@
         <div class="row m-0 gallery" style="height: 70vh;">
           <div class="csh">
             <div class="row m-0">
-
               <div class="d-flex" style="position: relative; height: 10vh;">
                 <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="wiese" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
                 <div class="" style="position:absolute; right: 25px; top: 10px;">
                   <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" style="" class="logoRes">
                 </div>
               </div>
-
             </div>
             <div class="row m-2" style="background-color: #34568B; color: white;">
               <div class="col d-flex justify-content-center align-items-center text-white bwr hoverclass1">
@@ -548,15 +571,20 @@
       <hr>
       <div class="row m-0">
         <div class="col-md d-flex justify-content-center align-items-center">
-          <p>
-          Softwareentwicklungsprozesse sind oft überplant, dauern lange und sind sehr teuer. Wie oft dabei das Ergebnis darstellt was der Autraggeber vor seinem geistigen Auge hatte, ist fraglich. Das Netzwerk der TKA vereinfacht die entscheidenden Entwicklungsprozesse und kann daher flexbiler und günstiger agieren.
-          Alle Bestandteile einer hervorstechenden Webseite (Design, Programmierung, Einsatz von Medien) können bei Bedarf eingesetzt werden. Durch eine fortlaufende Kommunikation verliert der Auftraggeber nie die Kontrolle über den Entwichklungsstand und vor allem über die Kosten.
-          </p>
+          <div class="">
+            <p>
+            Softwareentwicklungsprozesse sind oft überplant, dauern lange und sind sehr teuer. Das Ergebnis ist oft nicht das was man sich vorstellt. </p>
+            <p>
+            Das Netzwerk der TKA vereinfacht die entscheidenden Entwicklungsprozesse. Der Fortschritt wird durchgehend visualisiert. Damit wird dir eine permanente Möglichkeit zur Anpassung gegeben.
+            Alle Bestandteile einer hervorstechenden Webseite (Design, Programmierung, Einsatz von Medien) können bei Bedarf von Spezialisten implementiert werden.
+            Durch eine fortlaufende Kommunikation verliert der Auftraggeber nie die Kontrolle über den Entwichklungsstand und vor allem über die Kosten.
+            </p>
+          </div>
         </div>
       </div>
       <hr>
     </div>
-     <div class="container-fluid p-0 shadow-lg bg-light">
+     <!-- <div class="container-fluid p-0 shadow-lg bg-light">
        <div class="row text-center text-dark">
          <span style="">Bildergallerien, featured by Frank Robrahn</span>
        </div>
@@ -566,13 +594,13 @@
             <div id="pagination-demo1" class="mt-3" style="position: absolute; left: calc(50% - 140px); width: 50%;"></div>
         </section>
 
-         <!-- <div class="col-sm-5 bg-dark m-1 d-flex justify-content-center align-items-center p-2"><img src="{{asset('/Naturbilder/_DSC0786.jpg')}}" alt="" class="galleryimg"> </div>
+         <div class="col-sm-5 bg-dark m-1 d-flex justify-content-center align-items-center p-2"><img src="{{asset('/Naturbilder/_DSC0786.jpg')}}" alt="" class="galleryimg"> </div>
          <div class="col-sm-5 bg-dark m-1 d-flex justify-content-center align-items-center p-2"><img src="{{asset('/Naturbilder/_DSC0800.jpg')}}" alt="" class="galleryimg"> </div>
          <div class="col-sm-5 bg-dark m-1 d-flex justify-content-center align-items-center p-2"><img src="{{asset('/Naturbilder/_DSC0918.jpg')}}" alt="" class="galleryimg"> </div>
          <div class="col-sm-5 bg-dark m-1 d-flex justify-content-center align-items-center p-2"><img src="{{asset('/Naturbilder/_DSC1005.jpg')}}" alt="" class="galleryimg"> </div>
-       </div> -->
+       </div>
      </div>
-   </div>
+   </div> -->
    <div class="container-fluid p-0 shadow-lg bg-light" style="margin-top: 5em;">
      <div class="row justify-content-center align-items-center mb-2">
         <button type="button" class="btn-primary" name="button" onclick="showContactModal()" style="background-color: #34568B; color:white; font-weight: 500; border-radius: 25px; width: 350px;">Kontaktiere uns</button>
@@ -665,10 +693,7 @@
       </div>
     </template>
   </body>
-  <script>
 
-
-  </script>
   <script  src="{{asset('js/slick-1.8.1/slick/slick.min.js')}}"></script>
   <script  src="{{asset('js/pagination.js')}}"></script>
   <script  src="{{asset('js/main.js')}}"></script>

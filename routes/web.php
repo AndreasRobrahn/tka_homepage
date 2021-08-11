@@ -24,7 +24,7 @@ Route::get('/', function () {
        }
          // dd($filenames);
     return view('landingpage', compact('filenames'));
-});
+})->name('landingpage');
 
 Route::view('/impressum','impressum')->name('impressum');
 Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@CustomerNotification')->name('notification.customer');
@@ -51,6 +51,6 @@ Route::get('/cookiesAccept', 'App\Http\Controllers\NotificationsController@setCo
 
 Route::get('test', function(){
 
-
+  return view('gallerys');
 
 });
