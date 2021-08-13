@@ -164,7 +164,7 @@
                     info
                   </i>
                   <div class="popupleft">
-                    <span>Uber uns</span>
+                    <span>Über uns</span>
                   </div>
                 </div>
             </div>
