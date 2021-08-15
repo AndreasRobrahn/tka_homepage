@@ -79,9 +79,17 @@ a{
 }
 .bg-gallery1
 {
-  background: #c6ffdd; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  background: #D1913C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-gallery2
+{
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 /* unikat stuff
 
@@ -611,7 +619,20 @@ to
 }
   .csh
   {
-    height: 60vh;
+    height: 60vh !important;
+  }
+  .dotcustom
+  {
+
+  }
+  .galleryimg3
+  {
+    /* position: absolute;  */
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 0 0 20px;
   }
     .galleryimg
     {
@@ -775,6 +796,19 @@ to
       height: 300px !important;
       width: 90% !important;
     }
+    .bwbgi1,
+    .bwbgi2,
+    .bwbgi3
+    {
+      height: 125px;
+      width: 125px;
+      /* bottom: -2em; */
+      border-radius: 50%;
+      border: 5px solid white;
+      margin: 25px;
+      /* background-color: green; */
+    }
+
     @media only screen and (min-width: 300px){
       .fa-angle-left
       {
@@ -791,6 +825,32 @@ to
     }
 
     @media only screen and (max-width: 415px){
+
+      .bwbgi1,
+      .bwbgi2,
+      .bwbgi3
+
+      {
+        height: 90px;
+        width: 90px;
+        bottom: -1em;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin: 15px;
+        /* background-color: green; */
+      }
+      .csh
+      {
+        height: auto !important;
+      }
+      .galleryimg3
+      {
+        /* width: 90%; */
+        height: 350px;
+        max-width: 90%;
+        object-fit: cover;
+
+      }
 
       .randomform,
       .randomformvideo

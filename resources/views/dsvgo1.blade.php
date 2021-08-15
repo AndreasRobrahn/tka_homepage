@@ -9,6 +9,12 @@
       <p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>
       <p><strong>Benennung der verantwortlichen Stelle</strong></p>
       <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+
+      TKA Software Systems UG <br>
+      Andreas Robrahn <br>
+      01629722979 <br>
+      info@tka-software-systems.de <br>
+
       <p><span id="s3-t-firma">Unikat Personaldienstleistungen</span><br><span id="s3-t-ansprechpartner">O und T</span><br><span id="s3-t-strasse">521313</span><br><span id="s3-t-plz">13132</span> <span id="s3-t-ort">Dortmund</span></p><p></p>
       <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
       <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
