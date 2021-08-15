@@ -573,6 +573,7 @@ to
 #bgimage1 {
 
 position: relative;
+/* width: 100%; */
 
 object-fit: cover;
 
@@ -637,7 +638,10 @@ to
 }
   .csh
   {
-    height: 34vh !important;
+    /* position: absolute; */
+    height: 70vh !important;
+    width: 90vw !important;
+    margin-left: 8vw;
   }
   .dotcustom
   {
@@ -649,7 +653,8 @@ to
     border-radius: 25px;
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    /* margin-left: 10%; */
+    object-fit: cover;
     box-shadow: 0 0 20px;
   }
     .galleryimg
@@ -677,6 +682,10 @@ to
     {
       border-left: solid white 2px;
       /* border-width: 10px; */
+    }
+    .disSMNone
+    {
+      display: flex;
     }
     .fa-angle-left,.fa-angle-right
     {
@@ -848,7 +857,7 @@ to
         {
           height: 300px;
         }
-      .d-sm-none
+      .disSMNone
       {
         display: none;
       }
@@ -857,9 +866,9 @@ to
       .bwbgi3
 
       {
-        height: 90px;
-        width: 90px;
-        margin: 25px;
+        height: 75px;
+        width: 75px;
+        margin: 15px;
         margin-bottom: -2em;
         bottom: -5em;
         border-radius: 50%;
@@ -869,7 +878,7 @@ to
       }
       .csh
       {
-        height: 26vh !important;
+        height: 65vh !important;
       }
       .csh2
       {
@@ -878,8 +887,8 @@ to
       .galleryimg3
       {
         /* width: 90%; */
-        height: 350px;
-        max-width: 90%;
+        height: 90%;
+        max-width: 95%;
         object-fit: cover;
 
       }

@@ -63,7 +63,7 @@
   }
   .bwbgi3
   {
-    background-image: url({{asset('Naturbilder/_DSC0691.jpg')}});
+    background-image: url({{asset('Naturbilder/DSC_0877.jpg')}});
   }
   .gradient-border {
   --borderWidth: 3px;
@@ -126,21 +126,21 @@
       </div>
     </div>
     <div class="row center_items mt1 bg-gallery2" style="min-height: 250px;">
-      <div class="col-md-10 mt1" style="position:relative;">
-          <div class="row center_items gallery">
-            <div class="csh">
-              <div class="center_items" style="">
+      <div class="col-md-12 mt1" style="position:relative;">
+          <div class="row gallery">
+            <div class="csh ">
+              <div class="h-100" style="">
                   <img src="{{asset('Naturbilder/_DSC0786.jpg')}}" class="galleryimg3 " alt="Foto" >
               </div>
             </div>
-            <div class="csh p-2">
-              <div class=" center_items">
+            <div class="csh">
+              <div class=" h-100">
                   <img src="{{asset('Naturbilder/_DSC3262.jpg')}}" class="galleryimg3 " alt="" style="">
                 </div>
             </div>
             <div class="csh">
-              <div class="center_items">
-                  <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" class="galleryimg3" alt="" style="">
+              <div class="h-100">
+                  <img src="{{asset('Naturbilder/DSC_0877.jpg')}}" class="galleryimg3" alt="bild3" style="">
               </div>
             </div>
           </div>
@@ -149,95 +149,26 @@
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 <script  src="{{asset('js/slick-1.8.1/slick/slick.min.js')}}"></script>
 
 <script type="text/javascript">
-var ctx = document.getElementById('testchart1').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni'],
-        datasets: [{
-            label: 'Verkäufe',
-            data: [17, 26, 9, 8, 15, 35],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor:     'rgba(255, 159, 64, 1)',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-    });
-var ctx1 = document.getElementById('testchart2').getContext('2d');
-var myChart = new Chart(ctx1, {
-    type: 'line',
-    data: {
-        labels: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni'],
-        datasets: [{
-            label: 'Verkäufe',
-            data: [7, 14, 15, 12, 11, 17],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor:     'rgba(255, 159, 64, 1)',
-            borderWidth: 1
-        },
-        {
-            label: 'durschn.',
-            data: [12, 12, 12, 12, 12, 12],
-            backgroundColor: 'rgba(99, 99, 243, 0.2)',
-            borderColor:     'rgba(22, 17, 243, 1)',
-            borderWidth: 1
-        }],
-    },
-    options: {
-        tension: 0.4,
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-    });
-var ctx2 = document.getElementById('testchart3').getContext('2d');
-var myChart = new Chart(ctx2, {
-    type: 'pie',
-    data: {
-        labels: ['Beschwerden', 'Rechnungsfragen', 'Versicherung', 'sonstiges'],
-        datasets: [{
-            label: 'Anliegen',
-            data: [7, 14, 15, 12],
-          backgroundColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(50, 50, 250, 1)',
-            'rgba(50, 250, 50, 1)',
-            'rgba(125, 125, 125,1)',
-          ],
-            borderColor:     'rgba(0, 0, 0, 1)',
-            borderWidth: 1
-          }],
-    }
-    });
+
 
 $('.gallery').slick({
 slidesToShow: 1,
 slidesToScroll: 1,
-autoplay: true,
-autoplaySpeed: 5000,
+// fade: true,
+
+// autoplaySpeed: 5000,
 arrows: false,
 dots: true,
-fade: true,
-cssEase: 'linear',
 dotsClass: 'sl-dots',
 appendDots: $('.slick-slider-dots'),
-// prevArrow: $('.prevArrow')[0],
-// nextArrow: $('.nextArrow')[0],
+
+cssEase: 'linear',
+// autoplay: true,
   });
 // let bgimage1 =  {!! json_encode(asset('Naturbilder/_DSC0786.jpg')) !!};
 // let bgimage2 =  {!! json_encode(asset('Naturbilder/_DSC3262.jpg')) !!};
