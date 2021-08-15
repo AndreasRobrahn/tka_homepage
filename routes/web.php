@@ -49,8 +49,18 @@ Route::get('/projects/Unikat/joboffers', function(){
 })->name('joboffers');
 Route::get('/cookiesAccept', 'App\Http\Controllers\NotificationsController@setCookies');
 
-Route::get('test', function(){
+Route::get('/gallerys', function(){
 
   return view('gallerys');
+
+})->name("gallerys");
+Route::get('examples', function(){
+
+  return view('examples');
+
+})->name("examples");
+Route::get('test', function(){
+
+  return view('exammples');
 
 });
