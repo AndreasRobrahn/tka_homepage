@@ -32,6 +32,16 @@
       list-style-type: none;
       padding: 0px !important;
     }
+
+    .spin-border
+    {
+      animation: spin 10s linear infinite
+    }
+    @keyframes spin {
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
     </style>
 
 </head>
@@ -204,10 +214,10 @@
             </a>
           </div>
         </div>
-        <div class="d-flex p-2" style="position: relative;">
+        <div class="d-flex p-2" style="position: relative; height: 100vh;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
         </div>
-        <div class="row bgimagebottomrow center_items w-100 d-sm-none">
+        <div class="row bgimagebottomrow center_items w-100  disSMNone">
           <div class="col-md-3 center_items">
             <a href="{{route('examples')}}"><p>Beliebte Services</p></a>
 
@@ -231,10 +241,11 @@
         width: 33%;
         left: 33%;
         top: 15%;
-        background-image: url('{{asset('Firmenlogo/Firmenlogo.jpeg')}}');
-        background-repeat: no-repeat;
-        background-size: contain;
-        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        /* border: 5px dashed; */
+        border-image-slice: 1;
+        border-width: 5px;
+        /* border-image-source: linear-gradient(to left, #743ad5, #d53a9d); */
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 
         /* box-shadow: 20px 20px 20px 20px , 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -244,6 +255,12 @@
         font-weight: 700;
         opacity: 0.5;
       ">
+      <div class="h-100 w-100">
+        <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt=""style="
+        border-radius: 25px ;
+        /* position: absolute; */
+        ">
+      </div>
     </div>
   </div>
 <div class="container-fluid m-0  w-100 mt-4 p-0 " style="">
