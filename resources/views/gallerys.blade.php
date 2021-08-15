@@ -21,6 +21,7 @@
     -webkit-transform: rotateY(25deg);
      -moz-transform: rotateY(25deg);
      transform: rotateY(25deg);
+     perspective: 900px;
      -webkit-transform-origin:center;
      -moz-transform-origin:center;
      transform-origin:center;
@@ -37,9 +38,9 @@
   .sl-dots
   {
     list-style-type: none;
-    height: 50px;
+    /* height: 50px; */
     /* margin: 15px; */
-
+    padding: 0px !important;
     display: flex !important;
   }
 
@@ -64,45 +65,75 @@
   {
     background-image: url({{asset('Naturbilder/_DSC0691.jpg')}});
   }
+  .gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
 
+  }
+  .gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: movingColor 3s ease alternate infinite;
+  background-size: 300% 300%;
+  }
+
+  @keyframes movingColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 </style>
 <body>
   <div class="container-fluid">
     <h1>Bildergallerien verschiedenen Typs</h1>
-    <div class="row bg-gallery1 center_items" style="min-height: 500px;">
-      <div class="col-md h-75 ">
-        <div class="crp center_items" style="">
-          <img src="{{asset('Naturbilder/_DSC0685.jpg')}}" class="galleryimg2 rotated" alt="">
+    <div class="row bg-gallery1 center_items" style="min-height: 500px; margin-top:50px;">
+      <div class="col-md crp mt1 " style="">
+        <div class="rotated unit-translucent center_items h-100" style="">
+          <img src="{{asset('Naturbilder/_DSC0685.jpg')}}" class="galleryimg2 gradient-border" alt="">
         </div>
 
       </div>
-      <div class="col-md h-75">
-        <div class="crp center_items" style="">
-        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" class="galleryimg2 rotated" alt="">
+      <div class="col-md crp mt1  ">
+        <div class="rotated unit-translucent center_items h-100" style="">
+        <img src="{{asset('Naturbilder/_DSC0691.jpg')}}" class="galleryimg2" alt="">
       </div>
       </div>
-
-      <div class="col-md h-75">
-        <div class=" crp center_items p-2" style="">
-          <img src="{{asset('Naturbilder/_DSC0786.jpg')}}" class="galleryimg2 rotated" alt="">
+      <div class="col-md crp mt1  ">
+        <div class="rotated unit-translucent center_items h-100" style="">
+          <img src="{{asset('Naturbilder/_DSC0786.jpg')}}" class="galleryimg2" alt="">
         </div>
       </div>
-      <div class="col-md h-75">
-        <div class=" crp center_items p-2" style="">
-        <img src="{{asset('Naturbilder/_DSC3262.jpg')}}" class="galleryimg2 rotated" alt="">
+      <div class="col-md crp mt1  ">
+        <div class="rotated unit-translucent center_items h-100" style="">
+        <img src="{{asset('Naturbilder/_DSC3262.jpg')}}" class="galleryimg2 " alt="">
       </div>
       </div>
     </div>
-    <div class="row center_items mt-4 bg-gallery2" style="min-height: 500px;">
-      <div class="col-md-10  h-75" style="position:relative;">
+    <div class="row center_items mt1 bg-gallery2" style="min-height: 250px;">
+      <div class="col-md-10 mt1" style="position:relative;">
           <div class="row center_items gallery">
             <div class="csh">
               <div class="center_items" style="">
                   <img src="{{asset('Naturbilder/_DSC0786.jpg')}}" class="galleryimg3 " alt="Foto" >
               </div>
             </div>
-            <div class="csh">
+            <div class="csh p-2">
               <div class=" center_items">
                   <img src="{{asset('Naturbilder/_DSC3262.jpg')}}" class="galleryimg3 " alt="" style="">
                 </div>
@@ -122,8 +153,77 @@
 </body>
 
 <script  src="{{asset('js/slick-1.8.1/slick/slick.min.js')}}"></script>
-<script type="text/javascript">
 
+<script type="text/javascript">
+var ctx = document.getElementById('testchart1').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni'],
+        datasets: [{
+            label: 'Verkäufe',
+            data: [17, 26, 9, 8, 15, 35],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor:     'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+    });
+var ctx1 = document.getElementById('testchart2').getContext('2d');
+var myChart = new Chart(ctx1, {
+    type: 'line',
+    data: {
+        labels: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni'],
+        datasets: [{
+            label: 'Verkäufe',
+            data: [7, 14, 15, 12, 11, 17],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor:     'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        },
+        {
+            label: 'durschn.',
+            data: [12, 12, 12, 12, 12, 12],
+            backgroundColor: 'rgba(99, 99, 243, 0.2)',
+            borderColor:     'rgba(22, 17, 243, 1)',
+            borderWidth: 1
+        }],
+    },
+    options: {
+        tension: 0.4,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+    });
+var ctx2 = document.getElementById('testchart3').getContext('2d');
+var myChart = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+        labels: ['Beschwerden', 'Rechnungsfragen', 'Versicherung', 'sonstiges'],
+        datasets: [{
+            label: 'Anliegen',
+            data: [7, 14, 15, 12],
+          backgroundColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(50, 50, 250, 1)',
+            'rgba(50, 250, 50, 1)',
+            'rgba(125, 125, 125,1)',
+          ],
+            borderColor:     'rgba(0, 0, 0, 1)',
+            borderWidth: 1
+          }],
+    }
+    });
 
 $('.gallery').slick({
 slidesToShow: 1,
