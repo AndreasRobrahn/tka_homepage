@@ -23,7 +23,7 @@ Route::get('/', function () {
          $filenames[] = $file["filename"];
        }
          // dd($filenames);
-    return view('landingpage', compact('filenames'));
+    return view('landingpage2', compact('filenames'));
 })->name('landingpage');
 
 Route::view('/impressum','impressum')->name('impressum');
@@ -32,21 +32,21 @@ Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@C
 Route::get('/projects/TeamYak', function(){
   return view('teamyak');
 });
-Route::get('/projects/Unikat', function(){
-  return view('unikat');
-})->name('unikat');
-Route::get('/projects/Unikat/aboutus', function(){
-  return view('unikataboutus');
-})->name('unikataboutus');
-Route::get('/projects/Unikat/advantages', function(){
-  return view('unikatSpeciality');
-})->name('unikatSpeciality');
-Route::get('/projects/Unikat/datasecurity', function(){
-  return view('dsvgo1');
-})->name('datasecurity');
-Route::get('/projects/Unikat/joboffers', function(){
-  return view('joboffers');
-})->name('joboffers');
+// Route::get('/projects/Unikat', function(){
+//   return view('unikat');
+// })->name('unikat');
+// Route::get('/projects/Unikat/aboutus', function(){
+//   return view('unikataboutus');
+// })->name('unikataboutus');
+// Route::get('/projects/Unikat/advantages', function(){
+//   return view('unikatSpeciality');
+// })->name('unikatSpeciality');
+// Route::get('/projects/Unikat/datasecurity', function(){
+//   return view('dsvgo1');
+// })->name('datasecurity');
+// Route::get('/projects/Unikat/joboffers', function(){
+//   return view('joboffers');
+// })->name('joboffers');
 Route::get('/cookiesAccept', 'App\Http\Controllers\NotificationsController@setCookies');
 
 Route::get('/gallerys', function(){
@@ -54,6 +54,12 @@ Route::get('/gallerys', function(){
   return view('gallerys');
 
 })->name("gallerys");
+Route::get('/dataprivacy', function(){
+
+  return view('dsvgo1');
+
+})->name("dataprivacy");
+
 Route::get('examples', function(){
 
   return view('examples');
