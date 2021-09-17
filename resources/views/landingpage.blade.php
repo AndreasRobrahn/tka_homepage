@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung von Webapplikationen und Firmenseiten auf die Fahnen geschrieben. Besonderen Wert legen wir auf eine gute Kommunikation um gemeinsame Projekte mit unseren Kunden erfolreich zu verwirklichen.">
     <meta name="keywords" content="Webdesign, Webseite, Webapplikation, Flensburg Webseite, Flensburg, Webprogrammierung">
-
+    <meta name="refresh" content="">
     <meta name="csrf-token" content="{{csrf_token()}}">
     <!-- <link href="bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet"> -->
     <link href="{{asset('bootstrap-5.0.1-dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -37,6 +37,7 @@
     {
       animation: spin 10s linear infinite
     }
+
     @keyframes spin {
       100% {
         transform: rotateZ(360deg);
@@ -45,7 +46,7 @@
     </style>
 
 </head>
-  <body class="bg-test">
+  <body class="">
 
     <div style="display:block;" id="top">
 
@@ -57,13 +58,7 @@
         ">
 
         <div id="bgimage"class="border-dark p-1" style="
-          position: relative;
-          background: rgb(138,110,77);
-          background: linear-gradient(90deg, rgba(138,110,77,1) 6%, rgba(134,105,70,1) 35%, rgba(70,53,33,1) 66%);
-          width:100%;
-          height:100%;
-          border-radius: 15px;
-          overflow: hidden;
+
         ">
 
           <!-- <div class="" id="sidemenuwrapper" >
@@ -217,72 +212,53 @@
         <div class="d-flex p-2" style="position: relative; height: 100vh;">
           <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
         </div>
-        <div class="row bgimagebottomrow center_items w-100  disSMNone">
+        <div class="row bgimagebottomrow center_items w-100  disSMNone softerCchars font-test1">
           <div class="col-md-3 center_items">
             <a href="{{route('examples')}}"><p>Beliebte Services</p></a>
 
           </div>
           <div class="col-md-3 center_items">
             <a href="{{route('gallerys')}}"><p>Bildergallerien</p></a>
-
           </div>
           <div class="col-md-3 center_items">
-            <a href="{{route('impressum')}}"></a>
-            <p>Impressum</p>
+            <a href="{{route('impressum')}}"><p>Impressum</p></a>
           </div>
         </div>
       </div>
-      <div class="" style="
-        position: absolute;
-        display: flex;
-        /* justify-content: center; */
-        /* align-items: center; */
-        height: 49%;
-        width: 33%;
-        left: 33%;
-        top: 15%;
-        /* border: 5px dashed; */
-        border-image-slice: 1;
-        border-width: 5px;
-        /* border-image-source: linear-gradient(to left, #743ad5, #d53a9d); */
-        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-
-        /* box-shadow: 20px 20px 20px 20px , 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-        text-align: center;
-        z-index: 100;
-        font-size: 1.5em;
-        font-weight: 700;
-        opacity: 0.5;
-      ">
+      <div class="logocontainer" style="">
       <div class="h-100 w-100">
-        <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt=""style="
+        <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" class="logoRes"style="
         border-radius: 25px ;
         /* position: absolute; */
         ">
       </div>
     </div>
   </div>
-<div class="container-fluid m-0  w-100 mt-4 p-0 " style="">
-  <div class="row justify-content-center">
-    <div class="col-md-9">
-      <h1 class="text-center textsize3 contentbreak" id="aboutus">TKA Software Systems</h1>
-      <h2 class="text-left textsize2 contentbreak">Der Ansprechpartner für Webseiten</h2>
-      <p class="textsize1 p-2">Die Geschichte der TKA Software Systems UG beginnt im Jahr 2021. Wir haben die Vision den Entwicklungsprozess für Webanwendungen und -auftritte interaktiver zu gestalten.
-        Unsere Dienstleistungen sind sowohl fur Unternehmen als auch für Privatpersonen interessant.
-        Unser Ziel ist eine Komplettbetreuung und Gestaltung der Webauftritte und Social Media Bereiche.
-        Auf diese Weise wird das Marketingpotenzial maximal ausgenutzt.
-        Mit unserer Expertise und guten Vernetzung wird die Webseite die du vor Augen hast Realität!</p>
-      <h2 class="text-left textsize2 contentbreak">Vielfältige Einsatzmöglichkeiten</h2>
-
-      <p class="textsize1 p-2">Einige Beispiele sind bereits im Bereich <a href="#possibilities" style="color:black; text-decoration:none; font-weight: bold;">Beliebte Services</a> aufgeführt. Deiner Fantasie sind keine Grenzen gesetzt. Details und Vorstellungen klären wir bestenfalls in einem persönlichem Gespräch ab. Melde dich einfach.</p>
+<div class="container-fluid m-0  w-100 mt-4 p-0 text-white" style="">
+  <h1 class="text-center textsize3 contentbreak text-dark" id="aboutus">TKA Software Systems</h1>
+  <div class=" wrapper " style="position:relative; height: 150vh;">
+    <div class="" style="position:absolute">
+      <img src="{{asset('/Naturbilder/DSC_0171.jpg')}}" alt="Hintergrundbild" style="width: 100%; height: 150vh; object-fit: cover;">
+    </div>
+    <div class=" h-100 w-100 bg-test2" style="position:absolute;">
+      <div class="description1 p-2" style="">
+        <h2 class="text-left textsize2 contentbreak">Der Ansprechpartner für Webseiten</h2>
+        <p class="textsize1 p-2">Die Geschichte der TKA Software Systems UG beginnt im Jahr 2021. Unser loses Netzwerk aus Fotografen, Webdesignern- und entwicklern hilft dir dein Projekt erfolgreich abzuschließen.</p>
+      </div>
+      <div class="description2 p-2" style="">
+        <h2 class="text-left textsize2 contentbreak" style="overflow-wrap: break-word;">Vielfältige Einsatzmöglichkeiten</h2>
+        <p class="textsize1 p-2">
+          Brauchst du eine moderne zeitgemäße Webseite? Benötigt dein Unternehmen eine komplexe Webanwendung, inklusive Datenverarbeitung mit einer Datenbank? Oder willst du dein Social Media Profil aufhübschen? Alles kein Problem. </p>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <h2 class="text-center textsize3 contentbreak" id="aboutus">Was können wir für dich tun?</h2>
-  </div>
-  <div class="row contentbreak center_items">
-    <div class="col-md-10 p-2 center_items" style="">
+  <div class=" wrapper bg-test2" style="position:relative; top: 25px;height: 125vh;">
+    <div class="mt-4" >
+      <h2 class="text-center textsize1 p-2" id="aboutus">Was können wir für dich tun?</h2>
+        <p class="textsize1 m-2 font-test1">Einige Beispiele sind bereits im Bereich <a href="#possibilities" style="color:black; text-decoration:none; font-weight: bold;">Beliebte Services</a> aufgeführt. Deiner Fantasie sind keine Grenzen gesetzt.
+    </div>
+  <div class="w-100 contentbreak center_items">
+    <div class="center_items w-100" style="">
       <div class="services" style="">
           <div class="randomform center_items" style="  top: 15%; left: 20%;   transform: rotate(-25deg);">
             <img src="{{asset('images/coding.jpg')}}" alt="Programmierung" class="image_generic">
@@ -318,7 +294,9 @@
           </div>
         </div>
       </div>
+
     </div>
+  </div>
   </div>
   <div class="container-fluid p-2 t_stand" style="position: relative; margin-top: 7em;">
       <div class="row center_items">
@@ -368,6 +346,7 @@
         <button type="button" class="btn-primary" name="button" onclick="showContactModal()" style="background-color: #34568B; color:white; font-weight: 500; border-radius: 25px; width: 350px;">Kontaktiere uns</button>
 
      </div>
+   </div>
    </div>
   </div>
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

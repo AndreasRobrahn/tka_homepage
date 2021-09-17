@@ -1,6 +1,4 @@
-@extends('uk_layout')
 
-@section('content')
 
 <div class="row m-0 ">
   <div class="col-12">
@@ -15,7 +13,7 @@
       01629722979 <br>
       info@tka-software-systems.de <br>
 
-      <p><span id="s3-t-firma">Unikat Personaldienstleistungen</span><br><span id="s3-t-ansprechpartner">O und T</span><br><span id="s3-t-strasse">521313</span><br><span id="s3-t-plz">13132</span> <span id="s3-t-ort">Dortmund</span></p><p></p>
+      
       <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
       <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
       <p>Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
@@ -54,4 +52,3 @@
     </div>
     </div>
 </div>
-@endsection
