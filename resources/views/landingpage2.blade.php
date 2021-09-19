@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung und das Design von Webapplikationen, Firmenauftritten oder sontigen ausgefallenen Ideen auf die Fahnen geschrieben. Dabei wird eine gesamtheitliche Betreuung (Webseiten, Social Media) angestrebt um das Marketingpotenzial gezielt zusteigern.  Wir helfen Ihnen auch bei Ihren laufenden Projekten weiter.">
+    <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung und das Design von Webapplikationen, Firmenauftritten oder sonstigen ausgefallenen Ideen auf die Fahnen geschrieben. Dabei wird eine gesamtheitliche Betreuung (Webseiten, Social Media) angestrebt um das Marketingpotenzial gezielt zu steigern. Ebenfalls helfen wir Ihnen auch bei Ihren laufenden Projekten weiter.">
     <meta name="keywords" content="Webdesign, Webseite, Webapplikation, Flensburg Webseite, Flensburg, Webprogrammierung">
     <meta name="refresh" content="">
     <meta name="csrf-token" content="{{csrf_token()}}">
@@ -85,7 +85,7 @@
             cancel
           </i>
         </div>
-        <div class="" id="sidemenu" >
+        <div class="" id="sidemenu">
           <div class="row  d-flex align-items-center justify-content-start m-0" onclick="showContactModal()">
               <div class="sidemenuitem text-white">
                 <i class="material-icons" >
@@ -110,16 +110,6 @@
 
               </div>
             </a>
-          <div class="row d-flex align-items-center justify-content-start m-0" onclick="toTheId('aboutus')">
-            <div class="sidemenuitem">
-              <i class="material-icons" >
-                info
-              </i>
-              <div class="popupleft">
-                <span>Über uns</span>
-              </div>
-            </div>
-          </div>
           <div class="row d-flex align-items-center justify-content-start m-0" onclick="toTheId('possibilities')">
             <div class="sidemenuitem">
               <i class="material-icons" >
@@ -153,11 +143,11 @@
               </div>
           </div>
         </a>
-        </div>
+      </div>
       </div>
         <img src="{{asset('/images/backgroumd_img.jpg')}}" alt="" id="bgimage1">
-        <div class="unit-black-transparent bgbt1">
-          <div class="container-fluid mt-4  h-100">
+        <div class="unit-black-transparent bgbt1" >
+          <div class="container-fluid mt-4  h-100" id="top">
             <div class="row align-items-end justify-content-center disSMNone" id="" style="height: 15%;width:90%;margin-left: 5%;" >
               <div class="col p-2 center_items fsize1">
                 <a href="{{route('examples')}}">Services</a>
@@ -185,11 +175,9 @@
               </div>
               <div class="col-md-6" id="thebusiness">
                 <div class="wrapper">
-                  <div class="row p-2 ">
-                    <h1 class="w-100">TKA Software Systems</h1>
-                  </div>
+
                   <div class="row center_items p-2">
-                    <h2 class="fsize1 ">Webapplikationen, Webdesign & Social Media</h2>
+                    <h1 class="fsize1 ">Webapplikationen, Webdesign & Social Media im hohen Norden</h2>
                   </div>
                   <div class="row center_items mt-2 p-2">
                     <p class="textsize1">Dein Ansprechpartner für Webseiten.
@@ -209,28 +197,22 @@
                       <img src="{{asset('/generico_imagio/design3.png')}}" class="img-gall1" alt="Design2">
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-6 center_items">
-                      l
-                    </div>
-                    <div class="col-6 center_items">
-                      r
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="unit-black-transparent bgbt2">
-          <div class="container-fluid mt-4 fsize1 h-100">
-            <div class="row center_items" style="height: 15%;">
-              <h2 class="text-center">Was können wir für dich tun?</h2>
+          <div class="container-fluid mt-4 h-100" id="whatwedo">
+            <div class="row center_items p-2" style="height: 15%;">
+
+              <h2 class="fsize1 text-center">Was können wir für dich tun?</h2>
             </div>
-            <div class="row align-items-center justify-content-center" style="height: 85%;width:90%;margin-left: 10%;">
+            <div class="row align-items-center justify-content-center" style="height: 85%;width:90%;margin-left: 5%;">
               <div class="col-sm-5">
-                <div class="row">
-                  <p>Unsere Dienste sind sowohl für Unternehmen als
+                <div class="wrapper">
+                <div class="row center_items mt-2 p-2">
+                  <p class="textsize1">Unsere Dienste sind sowohl für Unternehmen als
                     auch Privatpersonen interessant. Als loses Netzwerk
                     aus Programmieren, Designern und Social Media
                     Veteranen decken wir jeden Bereich modernen
@@ -239,6 +221,7 @@
                 <div class="row p-1">
                   <h3>Social Media</h3>
                   <p><a class="fa fa-facebook socmedbutton facebookcolor" href="https://www.facebook.com/"></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/"></a></p>
+                </div>
                 </div>
 
               </div>
@@ -258,13 +241,13 @@
                             <p class="b4Pic">Design</p>
                           </div>
                         </div>
-                        <div class="randomform center_items" style="  top: 45%; left: 15%;   transform: rotate(35deg);">
+                        <div class="randomform center_items" style="  top: 25%; left: 15%;   transform: rotate(-22deg);">
                           <img src="{{asset('Firmenlogo/projectrealisation.jpg')}}" alt="Programmierung" class="image_generic">
                           <div class="readabiltyEnhancerWhite">
                             <p class="b4Pic">Projektarbeit</p>
                           </div>
                         </div>
-                      <div class="randomform center_items" style=" top: 65%; left: 29%;transform: rotate(-29deg);">
+                      <div class="randomform center_items" style=" top: 45%; left: 29%;transform: rotate(-29deg);">
                         <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" class="image_generic" alt="Ein Naturfoto" style="position:absolute;">
                         <div class="readabiltyEnhancerWhite ">
                           <p class="b4Pic text-black">Fotos</p>
@@ -276,13 +259,11 @@
                       </div>
                       <div class="randomform center_items" style="top: 36%; left: 37%; transform: rotate(35deg);">
                         <img src="{{asset('images/socmedpic.jpg')}}" class="image_generic" alt="Social Media">
-
                         <div class="readabiltyEnhancerWhite">
                           <p class="b4Pic">Likes Likes Likes</p>
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -292,14 +273,14 @@
         <div class="unit-black-transparent" style="height: auto;">
           <div class="container-fluid mt-4 fsize1 h-100">
             <div class="row center_items" style=" height: 15%;">
-              <h3 class="text-center"><strong>Zusätzliche Informationen</strong></h3>
+              <h3 class="text-center mt-2"><strong>Zusätzliche Informationen</strong></h3>
             </div>
 
-            <div class="row mt-4 justify-content-center" style=" height: 75%;">
-              <div class="col-5 center_items">
+            <div class="row mt-4 justify-content-center" style="height: 75%;">
+              <div class="col-md-5 center_items">
                 <div class="wrapper">
                   <div class="row">
-                    <table class="table table-borderless text-white">
+                    <table class="table table-borderless text-white textsize1 w-100">
                       <tr>
                         <td>Mobil:</td>
                         <td>+49 (0)162/97227979</td>
@@ -320,7 +301,7 @@
                   </div>
                   <div class="row m-2 ">
                     <div class="col center_items">
-                      <button type="button" name="button" class="btn btn-block border-rounded border border-white bg-dark-outline" onclick="showContactModal()">Kontaktformular aufrufen</button>
+                      <button type="button" name="button" class="btn btn-block border-rounded border border-white bg-test2 text-white" onclick="showContactModal()">Kontaktformular aufrufen</button>
                     </div>
 
                   </div>
@@ -338,7 +319,7 @@
               </div>
           </div>
           <div class="row mt-4">
-            <div class="col center_items">
+            <div class="col center_items mb-2">
               <a href="{{route('impressum')}}">Impressum</a>
 
             </div>
@@ -412,7 +393,7 @@
               </div>
             </div>
             <div class="row m-2">
-              <button type="submit" name="button" class="btn btn-success btn-block btn-outline">Absenden</button>
+              <button type="submit" name="button" class="btn btn-success btn-block bg-test2 text-white">Absenden</button>
             </div>
           </form>
         </div>
@@ -474,7 +455,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        cssEase: 'fade',
+        cssEase: 'linear',
         autoplay: true,
         // dots: true
       }

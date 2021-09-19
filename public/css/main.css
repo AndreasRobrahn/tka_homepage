@@ -6,9 +6,9 @@ body
   font-family: 'Lato' ;
   font-size: 1.3em;
   margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 
   /* background:
   linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -60,7 +60,7 @@ a{
 }
 .container-1
 {
-  height: 2700px !important;
+  height: auto !important;
   width: 100%;
   overflow: hidden;
 }
@@ -1084,6 +1084,11 @@ to
 
     @media only screen and (max-width: 415px){
 
+      .unit-black-transparent
+      {
+        width: 98%;
+        left: 1%;
+      }
       .description1
       {
         width: 80vw;
@@ -1160,7 +1165,7 @@ to
         height: 30vh;
         width: 95vw;
       }
-      #thebusiness
+      #thebusiness,#whatwedo
       {
         text-align:  center;
       }
