@@ -67,6 +67,6 @@ Route::get('examples', function(){
 })->name("examples");
 Route::get('test', function(){
 
-  return view('exammples');
+  return view('eros/general_layout');
 
 });
