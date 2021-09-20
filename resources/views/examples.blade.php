@@ -30,12 +30,116 @@
       <h2 class="text-center w-100 textsize3" id="possibilities">Beliebte Services</h2>
     </div>
     <div class="row m-0 gallery" style="height: 70vh;">
+      <div class="col-md-6 csh2">
+          <nav>
+            <div class="row m-0 justify-content-center align-items-center text-center" style="
+            background: rgb(62,3,12);
+            background: radial-gradient(circle, rgba(62,3,12,1) 62%, rgba(134,9,12,1) 88%, rgba(162,7,33,1) 98%);
+            color: rgb(255,235,205);
+
+            ">
+              <div class="col">
+                <input type="checkbox" id="hamburg" onclick="showSidebar()">
+                <label for="hamburg" class="hamburg">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+              </div>
+              <div class="col ">
+                Suche
+              </div>
+              <div class="col">
+                Nachrichten
+              </div>
+              <div class="col p-2">
+                <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" class="img-fluid " style="border: 2px solid white;">
+              </div>
+              <div class="col">
+                Favoriten
+              </div>
+              <div class="col">
+                Profilbesucher
+              </div>
+              <div class="col d-flex justify-content-end">
+                <input type="checkbox" id="hamburg" onclick="showSidebar()">
+                <label for="hamburg" class="hamburg">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+              </div>
+            </div>
+          </nav>
+            <div class="d-flex" style="position: absolute;">
+              <div id="mySidebar" class="sidebartest">
+                <a href="">Startseite</a>
+                <a href="">Mein Profil</a>
+                <a href="">Einstellungen</a>
+                <a href="">Person 3</a>
+                <a href="">Person 4</a>
+                <a href="">Person 5</a>
+                <a href="">Person 6</a>
+            </div>
+          </div>
+
+          <div class="container-fluid h-100"
+          style="
+          background-image:url({{asset('/Naturbilder/DSC_0400.jpg')}});
+          background-size: cover;
+          background-position: center top;
+          /* background-attachment: fixed; */
+          background-repeat: no-repeat;">
+
+          <div class="row m-0 mt-2 text-dark text-center">
+            <h2>ästhetische Profildesigns</h2>
+          </div>
+          <hr>
+            <div class="row justify-content-center mt-3">
+            @for($i=0; $i <= 8; $i++ )
+                  <div class="col-designed m-3" style="">
+                    @if($i % 2)
+                    <div class="d-flex" style="background-image: url('{{asset('Naturbilder/DSC_9797.jpg')}}');background-size: contain;position:absolute; height: 100%; width: 100%; font-size: 1.1em; display: flex; align-items: center; justify-content: center;">
+                    </div>
+                    @else
+                    <div class="d-flex" style="background-image: url('{{asset('Naturbilder/_DSC0691.jpg')}}');background-size: contain;position:absolute; height: 100%; width: 100%; font-size: 1.1em; display: flex; align-items: center; justify-content: center;">
+                    </div>
+                    @endif
+                    <div class="flip-card fsize1">
+                      <div class="flip-card-inner" style="">
+                        <div class="flip-card-front">
+                          <div class="row h-100 m-0 align-items-center">
+                            <div class="col-5">
+                              <img src="http://www.stylez4anacondas.org/images/WhatsApp%20Image%202020-05-08%20at%2023.31.36.jpeg" class="img-fluid shadow-lg" alt="" style="border: 5px solid white;">
+                            </div>
+                            <div class="col-7 ">
+                              <span>Andreas Robrahn</span>
+                              <span>Flensburg</span><br>
+                              <span><small>versuch mich zu klicken</small></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flip-card-back">
+                          <div class="row m-0">
+                            <p> Motto: Carpediem</p>
+                          </div>
+                          <div class="row m-0" style="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                @endfor
+                </div>
+              </div>
+            </div>
       <div class="csh2">
         <div class="row m-0">
           <div class="d-flex" style="position: relative; height: 10vh;">
             <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="wiese" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
-            <div class="" style="position:absolute; right: 25px; top: 10px;">
-              <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" style="" class="logoRes">
+            <div class="" style="height: 90%; max-width: 15%;position:absolute; right: 25px; top: 10px;">
+              <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" style="" class="h-75" >
             </div>
           </div>
         </div>
@@ -106,7 +210,7 @@
       </div>
       <div class="col-md-6 csh2" style="overflow: scroll;">
         <div class="row p-0">
-          <div class="col-sm-2 p-0" style="background: rgb(241,254,241);background: linear-gradient(180deg, rgba(241,254,241,1) 30%, rgba(174,255,174,1) 75%, rgba(166,250,166,1) 90%);">
+          <div class="col-md p-0" style="background: rgb(241,254,241);background: linear-gradient(180deg, rgba(241,254,241,1) 30%, rgba(174,255,174,1) 75%, rgba(166,250,166,1) 90%);">
             <div class="row m-0 justify-content-center align-items-center">
               <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" class="img-fluid p-2" style="max-height: 250px; width: 150px;">
             </div>
@@ -125,12 +229,11 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-10"
+          <div class="col-md-8 csh2"
           style="
           background: rgb(52,86,139);
           background: linear-gradient(180deg, rgba(52,86,139,1) 19%, rgba(61,102,166,1) 77%, rgba(100,143,210,1) 95%);
           color: white;
-          height: 100%;
           ">
             <div class="row">
               <div class="d-flex justify-content-end align-items-center" >
@@ -148,7 +251,6 @@
             <div class="row h-100 justify-content-center" >
               <div class="d-flex justify-content-center align-items-center " >
                 <h2>übersichtliche Analysetools, automatisierte Prozesse</h2>
-
               </div>
               <div class="text-dark  mb-2" style="height: 50%;">
                 <div class="row m-0 justify-content-center">
@@ -172,110 +274,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 csh2">
-          <nav>
-            <div class="row m-0 justify-content-center align-items-center text-center" style="
-            background: rgb(62,3,12);
-            background: radial-gradient(circle, rgba(62,3,12,1) 62%, rgba(134,9,12,1) 88%, rgba(162,7,33,1) 98%);
-            color: rgb(255,235,205);
 
-            ">
-              <div class="col">
-                <input type="checkbox" id="hamburg" onclick="showSidebar()">
-                <label for="hamburg" class="hamburg">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </label>
-              </div>
-              <div class="col ">
-                Suche
-              </div>
-              <div class="col">
-                Nachrichten
-              </div>
-              <div class="col p-2">
-                <img src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" alt="" class="img-fluid " style="border: 2px solid white;">
-              </div>
-              <div class="col">
-                Favoriten
-              </div>
-              <div class="col">
-                Profilbesucher
-              </div>
-              <div class="col d-flex justify-content-end">
-                <input type="checkbox" id="hamburg" onclick="showSidebar()">
-                <label for="hamburg" class="hamburg">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </label>
-              </div>
-            </div>
-          </nav>
-            <div class="d-flex" style="position: absolute;">
-              <div id="mySidebar" class="sidebartest">
-                <a href="">Startseite</a>
-                <a href="">Mein Profil</a>
-                <a href="">Einstellungen</a>
-                <a href="">Person 3</a>
-                <a href="">Person 4</a>
-                <a href="">Person 5</a>
-                <a href="">Person 6</a>
-            </div>
-          </div>
-
-          <div class="container-fluid h-100"
-          style="
-          background-image:url('https://cdn.prod.www.spiegel.de/images/3f57c70a-0001-0004-0000-000000355905_w996_r1.77_fpx46.48_fpy50.jpg');
-          background-size: 100% 100%;
-          background-position: center top;
-          background-attachment: fixed;
-          background-repeat: no-repeat;">
-
-          <div class="row m-0 mt-2 text-dark text-center">
-            <h2>ästhetische Profildesigns</h2>
-          </div>
-          <hr>
-            <div class="row justify-content-center mt-3">
-            @for($i=0; $i <= 8; $i++ )
-                  <div class="col-designed m-3" style="">
-                    @if($i % 2)
-                    <div class="d-flex" style="background-image: url('{{asset('Naturbilder/DSC_9797.jpg')}}');background-size: contain;position:absolute; height: 100%; width: 100%; font-size: 3em; display: flex; align-items: center; justify-content: center;">
-                    </div>
-                    @else
-                    <div class="d-flex" style="background-image: url('{{asset('Naturbilder/_DSC0691.jpg')}}');background-size: contain;position:absolute; height: 100%; width: 100%; font-size: 3em; display: flex; align-items: center; justify-content: center;">
-                    </div>
-                    @endif
-                    <div class="flip-card">
-                      <div class="flip-card-inner" style="">
-                        <div class="flip-card-front">
-                          <div class="row h-100 m-0 align-items-center">
-                            <div class="col-5">
-                              <img src="http://www.stylez4anacondas.org/images/WhatsApp%20Image%202020-05-08%20at%2023.31.36.jpeg" class="img-fluid shadow-lg" alt="" style="border: 5px solid white;">
-                            </div>
-                            <div class="col-7">
-                              <span>Andreas Robrahn</span>
-                              <span>Flensburg</span><br>
-                              <span><small>scroll auf die Karte für mehr Infos</small></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="flip-card-back">
-                          <div class="row m-0">
-                            <p> Motto: Carpediem</p>
-                          </div>
-                          <div class="row m-0" style="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                @endfor
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       <div class="col-1  d-flex align-items-center justify-content-center nextArrow">

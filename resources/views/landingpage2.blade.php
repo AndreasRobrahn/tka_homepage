@@ -220,7 +220,7 @@
                 </div>
                 <div class="row p-1">
                   <h3>Social Media</h3>
-                  <p><a class="fa fa-facebook socmedbutton facebookcolor" href="https://www.facebook.com/"></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/"></a></p>
+                  <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
                 </div>
                 </div>
 
