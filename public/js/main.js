@@ -78,3 +78,16 @@ function setCookieSession()
   // $('#cookiedisclaimer').toggle()
   // set the session
 }
+function enlargePicture(picurl){
+
+  console.log(picurl)
+  $('#picturemodal').modal({
+		backdrop: true,
+		keyboard: true,
+
+	})
+	// $('#picturemodal').modal('toggle')
+	$('#picturemodal').show()
+	$('#picturemodalimage').src = picurl
+	$("#picturemodalimage").attr("src", picurl);
+}

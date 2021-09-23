@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung und das Design von Webapplikationen, Firmenauftritten oder sonstigen ausgefallenen Ideen auf die Fahnen geschrieben. Dabei wird eine gesamtheitliche Betreuung (Webseiten, Social Media) angestrebt um das Marketingpotenzial gezielt zu steigern. Ebenfalls helfen wir Ihnen auch bei Ihren laufenden Projekten weiter.">
+    <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung und das Design von Webapplikationen, Firmenauftritten oder sonstigen ausgefallenen Ideen auf die Fahnen geschrieben. Kurz wir erstellen Webseiten. Dabei streben wir die gesamtheitliche Betreuung (Webseiten, Social Media) an um das Marketingpotenzial gezielt zu steigern.">
     <meta name="keywords" content="Webdesign, Webseite, Webapplikation, Flensburg Webseite, Flensburg, Webprogrammierung">
     <meta name="refresh" content="">
     <meta name="csrf-token" content="{{csrf_token()}}">
@@ -63,7 +63,7 @@
     }
     .img-gall1
     {
-      height: 15vh;
+      height: 10em;
       width: 100%;
       object-fit: cover;
     }
@@ -177,7 +177,7 @@
                 <div class="wrapper">
 
                   <div class="row center_items p-2">
-                    <h1 class="fsize1 ">Webapplikationen, Webdesign & Social Media im hohen Norden</h2>
+                    <h1 class="textsize2">Webapplikationen, Webdesign & Social Media im hohen Norden</h2>
                   </div>
                   <div class="row center_items mt-2 p-2">
                     <p class="textsize1">Dein Ansprechpartner für Webseiten.
@@ -188,13 +188,13 @@
                   </div>
                   <div class="row mt-2 p-2 justify-content-center gallery">
                     <div class="galleryitem ">
-                      <img src="{{asset('/generico_imagio/design1.png')}}" class="img-gall1" alt="Design1">
+                      <img src="{{asset('/generico_imagio/design1.png')}}" class="img-gall1" alt="Design1" onclick="enlargePicture('{{asset('/generico_imagio/design1.png')}}')">
                     </div>
                     <div class="galleryitem">
-                      <img src="{{asset('/generico_imagio/design2.png')}}" class="img-gall1" alt="Design2">
+                      <img src="{{asset('/generico_imagio/design2.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design2png')}}')">
                     </div>
                     <div class="galleryitem">
-                      <img src="{{asset('/generico_imagio/design3.png')}}" class="img-gall1" alt="Design2">
+                      <img src="{{asset('/generico_imagio/design3.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design3.png')}}')">
                     </div>
                   </div>
                 </div>
@@ -206,19 +206,19 @@
           <div class="container-fluid mt-4 h-100" id="whatwedo">
             <div class="row center_items p-2" style="height: 15%;">
 
-              <h2 class="fsize1 text-center">Was können wir für dich tun?</h2>
+              <h2 class="textsize2 text-center">Was können wir für dich tun?</h2>
             </div>
             <div class="row align-items-center justify-content-center" style="height: 85%;width:90%;margin-left: 5%;">
               <div class="col-sm-5">
                 <div class="wrapper">
                 <div class="row center_items mt-2 p-2">
-                  <p class="textsize1">Unsere Dienste sind sowohl für Unternehmen als
-                    auch Privatpersonen interessant. Als loses Netzwerk
+                  <p class="textsize1">Unsere Dienste sind sowohl für Unternehmen wie für
+                    Privatpersonen interessant. Als loses Netzwerk
                     aus Programmieren, Designern und Social Media
                     Veteranen decken wir jeden Bereich modernen
                     Marketings ab.</p>
                 </div>
-                <div class="row p-1">
+                <div class="row p-1 mt-4">
                   <h3>Social Media</h3>
                   <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
                 </div>
@@ -283,7 +283,7 @@
                     <table class="table table-borderless text-white textsize1 w-100">
                       <tr>
                         <td>Mobil:</td>
-                        <td>+49 (0)162/97227979</td>
+                        <td>+49 (0)162/9722979</td>
                       </tr>
                       <tr>
                         <td>Adresse:</td>
@@ -412,6 +412,21 @@
       </div>
     </div>
   </div>
+  <div class="modal" id="picturemodal" role="dialog" aria-labelledby="picturemodal" aria-hidden="true">
+    <div class="modal-dialog modal-individual p-0" role="document">
+      <div class="modal-content" style="background:none;">
+        <div class="row justify-content-center p-1" >
+          <div class="" style="position:relative;width:auto; height: auto;">
+            <img src="" id="picturemodalimage" alt="Bild im Original" style="display:block; max-width:100%;border-radius: 15px;">
+            <div class="" style="position: absolute; top:1%; height: 50px; width: 50px; right: 5px; ">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-window-close fa-2x"></i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
     <template id="">
 
     </template>
