@@ -78,6 +78,10 @@ function setCookieSession()
   // $('#cookiedisclaimer').toggle()
   // set the session
 }
+function closePictureModal()
+{
+  $("#picturemodal").toggle()
+}
 function enlargePicture(picurl){
 
   console.log(picurl)
