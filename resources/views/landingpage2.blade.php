@@ -191,7 +191,7 @@
                       <img src="{{asset('/generico_imagio/design1.png')}}" class="img-gall1" alt="Design1" onclick="enlargePicture('{{asset('/generico_imagio/design1.png')}}')">
                     </div>
                     <div class="galleryitem">
-                      <img src="{{asset('/generico_imagio/design2.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design2png')}}')">
+                      <img src="{{asset('/generico_imagio/design2.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design2.png')}}')">
                     </div>
                     <div class="galleryitem">
                       <img src="{{asset('/generico_imagio/design3.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design3.png')}}')">
@@ -254,8 +254,8 @@
                         </div>
                       </div>
                       <div class="randomformvideo center_items" style="top: 10%; left: 36%;   transform: rotate(15deg);">
-                        <iframe  class="w-100 h-100" src="https://player.vimeo.com/video/554074757?title=0&portrait=0&byline=0&autoplay=1&loop=1&transparent=1" frameborder="0" allowfullscreen></iframe>
-                        </iframe>
+                        <iframe  src="https://player.vimeo.com/video/554074757?title=0&portrait=0&byline=0&autoplay=1&loop=1&transparent=1"></iframe>
+                          das Video funktioniert nicht
                       </div>
                       <div class="randomform center_items" style="top: 36%; left: 37%; transform: rotate(35deg);">
                         <img src="{{asset('images/socmedpic.jpg')}}" class="image_generic" alt="Social Media">
@@ -402,7 +402,7 @@
     </div>
 
   <div class="modal" id="errormodal" tabindex="-1" >
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="row">
           <div class="col">
@@ -412,16 +412,15 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="picturemodal" role="dialog" aria-labelledby="picturemodal" aria-hidden="true">
-    <div class="modal-dialog modal-individual p-0" role="document">
+  <div class="modal" id="picturemodal" tabindex="-1" role="dialog" aria-labelledby="picturemodal" aria-hidden="true">
+    <div class="modal-individual p-0" role="document">
       <div class="modal-content" style="background:none;">
         <div class="row justify-content-center p-1" >
-          <div class="" style="position:relative;width:auto; height: auto;">
             <img src="" id="picturemodalimage" alt="Bild im Original" style="display:block; max-width:100%;border-radius: 15px;">
             <div class="" style="position: absolute; top:1%; height: 50px; width: 50px; right: 5px; ">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-window-close fa-2x"></i></button>
+                <button type="button" onclick="closePictureModal()"><i class="fas fa-window-close fa-2x"></i></button>
             </div>
-          </div>
+
         </div>
     </div>
     </div>
@@ -446,12 +445,12 @@
         showErrorsModal()
 
     @endif
-
-    createBubble()
+    //
+    // createBubble()
 
     setInterval(function() {
       createBubble()
-  }, 5 * 1000);
+  }, 10 * 1000);
 
   $('.gallery').slick({
   slidesToShow: 2,
