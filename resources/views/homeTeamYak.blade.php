@@ -1,30 +1,35 @@
 @extends('teamyak_generalLayout')
 
     @section('title')
-
-      <title>Team Yak, Brasilian Jiu Jitsu (BJJ) in Flensburg</title>
-    @endsection
-
-    @section('description')
-      <meta name="description" content="TeamYak heisst dich willkommen! Suchst das nach einer Art Sport zu treiben, die aufregend ist und dich trotzdem an deine Grenzen bringt?"></meta>
-    @endsection
-
-    @section('keywords')
-      <meta name="keywords" content="Brasilian Jiu Jitsu, Kampfsport, Flensburg, Trainer, Training"></meta>
+      <title>Team Yak, Neugikeiten, Termine etc.</title>
       @endsection
+      @section('description')
+        <meta name="description" content="Neugikeiten aus der Welt des BJJ. Wenn es was wichtiges über Team Yak zu berichten gibt findest du es hier als erstes">
+        @endsection
+      @section('title')
+        <meta name="keywords" content="Brasilian Jiu Jitsu, Kampfsport, Flensburg, Trainer, Training">Team Yak, Brasilian Jiu Jitsu (BJJ) in Flensburg</title>
+        @endsection
 
     @section('unique_style')
     <!-- Styles -->
-    <style media="screen">
+      <style media="screen">
       body{
         font-family: 'Nadeem' !important;
         font-size: 1.3em;
         overflow:initial !important;
       }
-      video {
-          object-fit: fill;
+      #tov
+      {
+        width: 50%;
+        position: absolute;
+        z-index: 150;
       }
+      #frontpagevideo
+      {
+        position: absolute;
+        width: 100%;
 
+      }
       .button
       {
         background-color: transparent;
@@ -33,19 +38,6 @@
         border-radius: 25px;
         border: 2px solid RGB(221, 65, 36);
         width: 50%;
-      }
-      #frontpagevideo
-      {
-        position: absolute;
-        width: 100%;
-        /* z-index: 200; */
-
-      }
-      #tov
-      {
-        width: 50%;
-        position: absolute;
-        z-index: 150;
       }
       .button:hover
       {
@@ -109,7 +101,6 @@
       }
       #stickynav
       {
-        display:none;
         color: white;
         background: RGBA(221, 65, 36,0.2);
         width:100%;
@@ -179,7 +170,7 @@
           display:none;
         }
         #stickynavmob{
-          display:none;
+          display:flex;
           background: RGBA(221, 65, 36,0.2);
         }
       }
@@ -189,29 +180,32 @@
           display:none;
         }
         #stickynavmob{
-          display:none;
+          display:flex;
           background-color: rgba(221, 65, 36,0.5);
         }
       }
       </style>
-@endsection
 
 @section('content')
-    <div class="container" id="tov" >
-      <div class="row">
-        <h1 class="text-center text-white textsize3"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></h1>
+    <div class="container" id="tov">
+      <div class="row center_items">
+        <div class="col-sm-8 shadow center_items">
+          <div class="text-white">
+            <h1 class="headline">Neuigkeiten aus der Welt der Yaks</h1>
+            <p class="">Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus. Wir bitten um euer Verständnis!</p>
+          </div>
+        </div>
       </div>
       <div class="row">
-        <h1 class="text-center text-white textsize3">Team Yak</h1>
-      </div>
-      <div class="row mt-2">
-        <h2 class="text-center text-white textsize3">Bjj in Flensburg</h2>
-      </div>
-      <div class="row center_items mt-4">
-        <a class="w-100 center_items" href="{{route('teamyak.news')}}"> <button type="button" class="button"name="button btn-outline" style=""><span class="text-white">Seite Betreten</span></button></a>
-
+        <a href="{{route('teamyak.abouts')}}">Über uns</a>
       </div>
     </div>
-    <video  class="w-100 h-100 p-0" src="{{asset('Videos/frontpagevideo.mp4')}}" id="frontpagevideo" playsinline webkit-playsinline autoplay muted loop>
+    <div class="h-100 w-100" style="position:absolute; background-color: rgba(0,0,0,0.8);">
+
+    </div>
     </video>
+
 @endsection
+</body>
+
+</html>
