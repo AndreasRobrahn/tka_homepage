@@ -1,7 +1,7 @@
 @extends('teamyak_generalLayout')
 
-    @section('title')
 
+    @section('title')
       <title>Team Yak, Brasilian Jiu Jitsu (BJJ) in Flensburg</title>
     @endsection
 

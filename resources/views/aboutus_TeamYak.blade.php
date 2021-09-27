@@ -30,12 +30,14 @@
 
       .button
       {
-        background-color: transparent;
+        background-color: RGB(221, 65, 36);
         font-size: 1.2em;
         font-weight: 300;
-        border-radius: 25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
         border: 2px solid RGB(221, 65, 36);
-        width: 50%;
+        /* width: 50%; */
       }
       .button:hover
       {
@@ -136,17 +138,20 @@
 @section('content')
     <div class="container-fluid shadow" id="tov">
       <div class="row center_items">
-        <div class="col-1 center_items">
-            <button type="button" class="button" name="button" id="prev"><</button>
-        </div>
-        <div class="col-sm-10 col-lg-6 shadow">
 
-          <div class="row m-1">
+        <div class="col-sm-10 col-lg-6 shadow">
+          <div class="row text-white">
+            <h1 class="textsize2">Team Yak, das Team stellt sich vor</h1>
+          </div>
+          <div class="row m-1 rel" >
+            <div class="abs" style="width: auto; top: 50%; left: 5px; z-index:200;">
+                <button type="button" class="button" name="button" id="prev"><</button>
+            </div>
             <div class="gallery" style="height: 60vh;">
               <div class="h-100" >
                 <div class="rel h-100 center_items ">
                   <img src="{{asset('generico_imagio/tyhc1.jpeg')}}" class="img-slide abs" alt="">
-                  <div class="abs h-100 w-100 center_items readabiltyEnhancerWhite">
+                  <div class="abs h-100 w-100 center_items ">
                     <p class="readabiltyEnhancerWhite textsize2">Kristoffer Madsen Headcoach</p>
                   </div>
                 </div>
@@ -173,13 +178,12 @@
               </div>
 
             </div>
+            <div class="abs" style="width: auto; top: 50%; right: 5px; z-index:200;">
+                <button type="button" class="button" name="button" id="next">></button>
+            </div>
           </div>
           </div>
-          <div class="col-1 center_items">
 
-              <button type="button" class="button" name="button" id="next">></button>
-
-          </div>
         </div>
       </div>
     <div class="h-100 w-100" style="position:absolute; background-color: rgba(0,0,0,0.8);">
