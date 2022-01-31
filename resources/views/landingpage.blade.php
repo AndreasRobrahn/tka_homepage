@@ -234,9 +234,9 @@
       </div>
     </div>
   </div>
-<div class="container-fluid m-0  w-100 mt-4 p-0 text-white" style="">
+<div class="container-fluid m-0 w-100 mt-4 p-0 text-white" style="">
   <h1 class="text-center textsize3 contentbreak text-dark" id="aboutus">TKA Software Systems</h1>
-  <div class=" wrapper " style="position:relative; height: 150vh;">
+  <div class="wrapper " style="position:relative; height: 150vh;">
     <div class="" style="position:absolute">
       <img src="{{asset('/Naturbilder/DSC_0171.jpg')}}" alt="Hintergrundbild" style="width: 100%; height: 150vh; object-fit: cover;">
     </div>
@@ -252,7 +252,7 @@
       </div>
     </div>
   </div>
-  <div class=" wrapper bg-test2" style="position:relative; top: 25px;height: 125vh;">
+  <div class="wrapper bg-test2" style="position:relative; top: 25px;height: 125vh;">
     <div class="mt-4" >
       <h2 class="text-center textsize1 p-2" id="aboutus">Was können wir für dich tun?</h2>
         <p class="textsize1 m-2 font-test1">Einige Beispiele sind bereits im Bereich <a href="#possibilities" style="color:black; text-decoration:none; font-weight: bold;">Beliebte Services</a> aufgeführt. Deiner Fantasie sind keine Grenzen gesetzt.

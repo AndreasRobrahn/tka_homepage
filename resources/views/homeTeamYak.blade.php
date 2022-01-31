@@ -20,7 +20,8 @@
       }
       #tov
       {
-        width: 50%;
+        width: 80%;
+        height: 80vh;
         position: absolute;
         z-index: 150;
       }
@@ -187,25 +188,32 @@
       </style>
 
 @section('content')
-    <div class="container" id="tov">
-      <div class="row center_items">
-        <div class="col-sm-8 shadow center_items">
-          <div class="text-white">
-            <h1 class="headline">Neuigkeiten aus der Welt der Yaks</h1>
-            <p class="">Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus. Wir bitten um euer Verständnis!</p>
+    <div class="container " id="tov">
+      <div class="row center_items h-100">
+        <div class="col-sm-10 p-4 center_items unit-translucent text-white">
+          <div class="text-white row m-2">
+            <div class="col-sm">
+              <h1 class="textsize2">Neuigkeiten aus der Welt der Yaks</h1>
+              <p class="">Seit dem 31.05.21 ist das Training in Gruppen wieder möglich. Bis auf weiteres setzten wir ein negatives Coronatestergbnis, das nicht älter als 48 Stunden ist, zur Teilnahme am Training voraus. Wir bitten um euer Verständnis!</p>
+            </div>
+            <div class="col-sm center_items">
+              <div class="">
+              <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
+            </div>
+            </div>
+
           </div>
+
+        </div>
+
         </div>
       </div>
-      <div class="row">
-        <a href="{{route('teamyak.abouts')}}">Über uns</a>
-      </div>
     </div>
-    <div class="h-100 w-100" style="position:absolute; background-color: rgba(0,0,0,0.8);">
 
-    </div>
     </video>
 
 @endsection
+
 </body>
 
 </html>

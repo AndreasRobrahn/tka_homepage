@@ -26,6 +26,7 @@ Route::get('/', function () {
     return view('landingpage2', compact('filenames'));
 })->name('landingpage');
 
+
 Route::view('/impressum','impressum')->name('impressum');
 Route::post('/sendNotification', 'App\Http\Controllers\NotificationsController@CustomerNotification')->name('notification.customer');
 
@@ -71,8 +72,15 @@ Route::get('examples', function(){
   return view('examples');
 
 })->name("examples");
+Route::get('/training', function(){
+
+  return view('training');
+
+})->name("training");
 Route::get('test', function(){
 
   return view('eros/general_layout');
 
 });
+
+Route::view('/sto','sto_landingpage');

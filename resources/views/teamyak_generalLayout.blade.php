@@ -37,11 +37,11 @@
                 <span class="line"></span>
             </label>
           </div>
-          
+
       </div>
 
       <div class="col p-1 d-flex justify-content-end align-items-center">
-        <a href="{{route('teamyak.landingpage')}}"><img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="Teamlogo" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
+        <a href="{{route('teamyak.landingpage')}}"><img src="{{asset('images/teamlogo2.jpg')}}" alt="Teamlogo" style="transform:rotate(-90deg); width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;"></a>
       </div>
     </div>
     <div class="row mainColor" id='stickynav'>
@@ -50,12 +50,12 @@
 
       </div>
       <div class="col d-flex justify-content-center align-items-center headline">
-        <a href="#training">Training</a>
+        <a href="{{route('training')}}">Training</a>
 
       </div>
       <div class="col d-flex justify-content-center align-items-center headline1">
         <a href="{{route('teamyak.landingpage')}}">
-        <img src="https://static.wixstatic.com/media/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.jpg/v1/fill/w_110,h_110,al_c,q_80,usm_0.66_1.00_0.01/f48c3a_bd5d30ff99ab4ab29a8621d05c2e190c~mv2.webp" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%;">
+        <img src="{{asset('images/teamlogo2.jpg')}}" alt="" style="width:110px;height:110px;object-fit:cover;object-position:50% 50%; border-radius: 50%; transform:rotate(-90deg);">
         </a>
       </div>
       <div class="col d-flex justify-content-center align-items-center headline">
@@ -67,7 +67,8 @@
     </div>
     <div class="row center_items" style="height: 100vh; position:relative; ">
       @yield('content')
-      <img  class="w-100 h-100 p-0" src="{{asset('Videos/bggif2.gif')}}" >
+    <img  class="w-100 p-0 h-100 bgimage shadow border-rounded" src="{{asset('Videos/bgfoto2.jpeg')}}" style="position:absolute;top:0%;">
+    @yield('layer')
     </div>
   </div>
 

@@ -27,15 +27,31 @@
       text-decoration: none;
       background-color: none;
     }
-    ul
+    .slick-dots
     {
-      list-style-type: none;
-      padding: 0px !important;
+      list-style:none;
+      display: flex;
+      justify-content: center;
+      margin: 10px;
     }
-
+    .sliderbutton
+    {
+      height: 85px;
+      width: 85px;
+      font-size: 0.55em;
+      border-radius: 35%;
+      background-color: black;
+      color: white;
+      margin: 10px;
+      filter: drop-shadow(0px 0px 20px rgba(201, 68, 68, 0.835));
+    }
     .spin-border
     {
       animation: spin 10s linear infinite
+    }
+    .slick-list
+    {
+      height: 100% !important;
     }
 
     @keyframes spin {
@@ -67,6 +83,12 @@
       width: 100%;
       object-fit: cover;
     }
+    .slick-slide
+    {
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
     #gmap_canvas
     {
       border-radius: 25px;
@@ -75,7 +97,7 @@
 
 </head>
   <body class="">
-    <div class="container-1" id="bgimage">
+    <div class="" id="bgimage">
       <div class="" id="sidemenuwrapper">
         <div class="sidemenubutton">
           <i class="material-icons" onclick="openSidemenu()" id="openbutton">
@@ -145,26 +167,17 @@
         </a>
       </div>
       </div>
-        <img src="{{asset('/images/backgroumd_img.jpg')}}" alt="" id="bgimage1">
-        <div class="unit-black-transparent bgbt1" >
-          <div class="container-fluid mt-4  h-100" id="top">
-            <div class="row align-items-end justify-content-center disSMNone" id="" style="height: 15%;width:90%;margin-left: 5%;" >
-              <div class="col p-2 center_items fsize1">
-                <a href="{{route('examples')}}">Services</a>
+        <div class="" style="position:fixed; left: 5%; top: 50%;">
+          left
+        </div>
+        <div class="" style="position:fixed; right: 5%; top: 50%;">
+          left
+        </div>
+        <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
 
-              </div>
-              <div class="col p-2 center_items fsize1">
-                <a href="{{route('gallerys')}}">Bildergallerie</a>
-
-              </div>
-              <div class="col p-2 center_items fsize1" onclick="showContactModal()">
-                Kontakt
-              </div>
-              <div class="col p-2 center_items fsize1" style="margin-left: 35%;">
-                <a href="#">Home</a>
-
-              </div>
-            </div>
+        <div class="unit-black-transparent bgbt1" style="position: relative; left: 10vw;top: 5vh; width: 80vw;height: 90vh;">
+          <div class="row gallery center_items" style="height:85%;">
+          <div class="container-fluid " id="top" style="overflow:scroll;">
             <div class="row align-items-center " style="height: 85%;width:90%;margin-left: 5%;">
 
               <div class="col-md-6 center_items mt-2 p-3" style="position:relative; overflow:hidden; ">
@@ -179,30 +192,34 @@
                   <div class="row center_items p-2">
                     <h1 class="textsize2">Webapplikationen, Webdesign & Social Media im hohen Norden</h2>
                   </div>
-                  <div class="row center_items mt-2 p-2">
-                    <p class="textsize1">Dein Ansprechpartner für Webseiten.
-                      Du hast eine Idee für eine Webseite? Wir erstellen sie.
-                      Programmierung, Design oder Social Media - alles aus einer Hand.
-                      Melde dich einfach auf einem unserer Kanäle und wir besprechen die Details.
-                      </p>
-                  </div>
-                  <div class="row mt-2 p-2 justify-content-center gallery">
-                    <div class="galleryitem ">
-                      <img src="{{asset('/generico_imagio/design1.png')}}" class="img-gall1" alt="Design1" onclick="enlargePicture('{{asset('/generico_imagio/design1.png')}}')">
-                    </div>
-                    <div class="galleryitem">
-                      <img src="{{asset('/generico_imagio/design2.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design2.png')}}')">
-                    </div>
-                    <div class="galleryitem">
-                      <img src="{{asset('/generico_imagio/design3.png')}}" class="img-gall1" alt="Design2" onclick="enlargePicture('{{asset('/generico_imagio/design3.png')}}')">
-                    </div>
-                  </div>
+
+
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="unit-black-transparent bgbt2">
+          <div class="container-fluid" id="whatwedo" style="overflow:scroll;">
+            <div class="row text-dark align-items-center" style="height: 85%;">
+              <div class="col-md-6">
+                <p>Du hast eine Idee für eine Webseite? Wir erstellen sie.
+                Programmierung, Design oder Social Media - alles aus einer Hand.
+                Melde dich einfach auf einem unserer Kanäle und wir besprechen die Details.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="row p-1 mt-4">
+                  <h3>Social Media</h3>
+                  <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
           <div class="container-fluid mt-4 h-100" id="whatwedo">
             <div class="row center_items p-2" style="height: 15%;">
 
@@ -218,16 +235,12 @@
                     Veteranen decken wir jeden Bereich modernen
                     Marketings ab.</p>
                 </div>
-                <div class="row p-1 mt-4">
-                  <h3>Social Media</h3>
-                  <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
-                </div>
+
                 </div>
 
               </div>
               <div class="col-sm-7">
-                <div class="w-100 contentbreak center_items">
-                  <div class="center_items w-100" style="">
+                <div class="row text-dark align-items-center" style="height: 85%;">
                     <div class="services" style="">
                         <div class="randomform center_items" style="  top: 5%; left: 5%;   transform: rotate(-25deg);">
                           <img src="{{asset('images/coding.jpg')}}" alt="Programmierung" class="image_generic">
@@ -267,11 +280,8 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="unit-black-transparent" style="height: auto;">
-          <div class="container-fluid mt-4 fsize1 h-100">
+          <div class="container-fluid fsize1 h-100">
             <div class="row center_items" style=" height: 15%;">
               <h3 class="text-center mt-2"><strong>Zusätzliche Informationen</strong></h3>
             </div>
@@ -318,16 +328,7 @@
                 </div>
               </div>
           </div>
-          <div class="row mt-4">
-            <div class="col center_items mb-2">
-              <a href="{{route('impressum')}}">Impressum</a>
 
-            </div>
-            <div class="col center_items">
-              <a href="{{route('dataprivacy')}}">Datenschutz</a>
-
-            </div>
-          </div>
           <!-- <div class="row m-2 justify-content-center ">
             <p>Adresse: Sonnenscheineck 16, 44278 Dortmund</p>
           </div>
@@ -339,9 +340,11 @@
           </div> -->
 
         </div>
-
-      </div>
     </div>
+    <div class="row w-100 center_items m-2 slick-dots" style="position: absolute; bottom: 0%; ">
+
+    </div>
+  </div>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -440,6 +443,7 @@
   <script type="text/javascript">
   $(document).ready(function(){
 
+  var buttons =['Start','deine Vorteile','Informationen','Services']
     @if($errors->any())
 
         showErrorsModal()
@@ -453,15 +457,22 @@
   }, 10 * 1000);
 
   $('.gallery').slick({
-  slidesToShow: 2,
+  slidesToShow: 1,
   slidesToScroll: 1,
   // fade: true,
+  dots: true,
+  // dotsClass: 'slick-dots',
+  customPaging : function(slider, i) {
+    var thumb = $(slider.$slides[i]).data();
 
-  autoplaySpeed: 5000,
+    return '<div class="col" ><button class="sliderbutton">'+buttons[i]+'</button></div>';
+            },
+  appendDots: $('.slick-dots'),
+  // autoplaySpeed: 5000,
   arrows: false,
-  dots: false,
+  // dots: false,
   cssEase: 'linear',
-  autoplay: true,
+  autoplay: false,
   responsive: [
     {
       breakpoint: 1024,
@@ -470,7 +481,8 @@
         slidesToScroll: 1,
         infinite: true,
         cssEase: 'linear',
-        autoplay: true,
+        autoplay: false,
+        // dotsClass: 'slick-dots',
         // dots: true
       }
     }],

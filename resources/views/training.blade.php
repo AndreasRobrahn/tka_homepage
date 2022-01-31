@@ -1,30 +1,30 @@
 @extends('teamyak_generalLayout')
 
-
     @section('title')
-      <title>Team Yak, Brasilian Jiu Jitsu (BJJ) in Flensburg</title>
-    @endsection
-
-    @section('description')
-      <meta name="description" content="TeamYak heisst dich willkommen! Suchst das nach einer Art Sport zu treiben, die aufregend ist und dich trotzdem an deine Grenzen bringt?"></meta>
-    @endsection
-
-    @section('keywords')
-      <meta name="keywords" content="Brasilian Jiu Jitsu, Kampfsport, Flensburg, Trainer, Training"></meta>
+      <title>Team Yak, Neugikeiten, Termine etc.</title>
       @endsection
+      @section('description')
+        <meta name="description" content="Neugikeiten aus der Welt des BJJ. Wenn es was wichtiges über Team Yak zu berichten gibt findest du es hier als erstes">
+        @endsection
+      @section('title')
+        <meta name="keywords" content="Brasilian Jiu Jitsu, Kampfsport, Flensburg, Trainer, Training">Team Yak, Brasilian Jiu Jitsu (BJJ) in Flensburg</title>
+        @endsection
 
     @section('unique_style')
     <!-- Styles -->
-    <style media="screen">
+      <style media="screen">
       body{
         font-family: 'Nadeem' !important;
         font-size: 1.3em;
         overflow:initial !important;
       }
-      video {
-          object-fit: fill;
-      }
+      
+      #frontpagevideo
+      {
+        position: absolute;
+        width: 100%;
 
+      }
       .button
       {
         background-color: transparent;
@@ -33,19 +33,6 @@
         border-radius: 25px;
         border: 2px solid RGB(221, 65, 36);
         width: 50%;
-      }
-      #frontpagevideo
-      {
-        position: absolute;
-        width: 100%;
-        /* z-index: 200; */
-      }
-      
-      #tov
-      {
-        width: 50%;
-        position: absolute;
-        z-index: 150;
       }
       .button:hover
       {
@@ -80,10 +67,6 @@
         width:100%;
         padding: 15px;
       }
-      .bgimage
-      {
-        display: none;
-      }
       .fa {
         padding: 5px;
         font-size: 30px;
@@ -111,13 +94,8 @@
         background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
 
       }
-      .bgimage
-      {
-        height: 60% !important;
-      }
       #stickynav
       {
-        display:none;
         color: white;
         background: RGBA(221, 65, 36,0.2);
         width:100%;
@@ -187,7 +165,7 @@
           display:none;
         }
         #stickynavmob{
-          display:none;
+          display:flex;
           background: RGBA(221, 65, 36,0.2);
         }
       }
@@ -197,29 +175,71 @@
           display:none;
         }
         #stickynavmob{
-          display:none;
+          display:flex;
           background-color: rgba(221, 65, 36,0.5);
         }
       }
       </style>
-@endsection
 
 @section('content')
-    <div class="container" id="tov" >
-      <div class="row">
-        <h1 class="text-center text-white textsize3"><img src="{{asset('images/teamlogo2.jpg')}}" alt="" style="width:220px;height:220px;object-fit:cover;object-position:50% 50%; border-radius: 50%; transform: rotate(270deg);"></h1>
-      </div>
-      <div class="row">
-        <h1 class="text-center text-white textsize3">Team Yak</h1>
-      </div>
-      <div class="row mt-2">
-        <h2 class="text-center text-white textsize3">Bjj in Flensburg</h2>
-      </div>
-      <div class="row center_items mt-4">
-        <a class="w-100 center_items" href="{{route('teamyak.news')}}"> <button type="button" class="button"name="button btn-outline" style=""><span class="text-white">Seite Betreten</span></button></a>
+    <div class="container " id="tov">
+      <div class="row center_items h-100">
+        <div class="col-sm-8 center_items unit-translucent text-white">
+          <div class="text-white row m-2">
+            <div class="col-sm">
+              <h1 class="textsize2">Trainingszeiten</h1>
+              <div class="table-responsive shadow-lg">
+      <table class="table table-striped " id="training">
+        <thead class="headline" style="background-color: #ffcc5c; opacity: 0.5;">
+          <tr>
+            <th class="">#</th>
+            <th style="font-weight: 700px;">Uhrzeit</th>
+            <th>Trainingsinhalt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Montag</td>
+            <td>20.00 Uhr - 21.30 Uhr</td>
+            <td>Grappling Fundamentals</td>
+          </tr>
+          <tr>
+            <td>Dienstag</td>
+            <td>16.15 Uhr - 17.45 Uhr</td>
+            <td>BJJ Technik</td>
+          </tr>
+          <tr>
+            <td>Donnerstag</td>
+            <td>16.15 Uhr - 17.45 Uhr</td>
+            <td>BJJ Technik</td>
+          </tr>
+          <tr>
+            <td>Freitag</td>
+            <td>18.00 Uhr - 19.30 Uhr</td>
+            <td>Competition Class</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+            </div>
+            <div class="col-sm center_items">
+              <div class="">
+              <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
+            </div>
+            </div>
 
+          </div>
+
+        </div>
+
+        </div>
       </div>
     </div>
-    <video  class="w-100 h-100 p-0" src="{{asset('Videos/frontpagevideo.mp4')}}" id="frontpagevideo" controls playsinline webkit-playsinline autoplay muted loop >
+
     </video>
+
 @endsection
+
+</body>
+
+</html>
