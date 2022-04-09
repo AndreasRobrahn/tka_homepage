@@ -57,51 +57,35 @@ Route::get('/abouts', function(){
 Route::get('/cookiesAccept', 'App\Http\Controllers\NotificationsController@setCookies');
 
 Route::get('/gallerys', function(){
-
   return view('gallerys');
-
 })->name("gallerys");
 Route::get('/dataprivacy', function(){
-
   return view('dsvgo1');
-
 })->name("dataprivacy");
 
 Route::get('examples', function(){
-
   return view('examples');
-
 })->name("examples");
 Route::get('/training', function(){
-
   return view('training');
-
 })->name("training");
 Route::get('test', function(){
-
   return view('eros/general_layout');
-
 });
 Route::get('/eros/agb', function(){
-
   return view('eros/AGB');
-
 })->name('agb');
 
 Route::get('/eros/datenschutz', function(){
-
   return view('eros/DatenschutzIndex');
-
 })->name('datenschutz');
+
 Route::get('/eros/start', function(){
-
   return view('eros/Home');
-
 })->name('home');
+
 Route::get('/eros/aboutMe', function(){
-
   return view('eros/ProfileShow');
-
 })->name('aboutMe');
 
 Route::view('/sto','sto_landingpage');

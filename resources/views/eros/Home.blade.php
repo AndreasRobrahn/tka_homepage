@@ -1,4 +1,16 @@
-@extends('eros.general_layout') @section('content')
+@extends('eros.general_layout')
+
+
+@section('additional_css')
+<style media="screen">
+  .blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+</style>
+@endsection
+
+@section('content')
 <div class="container text-center">
 <h1 class="heading-sw text-capitalize">Willkommen auf meiner offiziellen Homepage</h1>
 <br>
@@ -9,7 +21,7 @@
 <hr>
 <div class="row">
 <div class="col-md-6">
-  <img class="img-fluid rounded" src="{{asset('images/swi_about.jpg')}}">
+  <img class="img-fluid rounded blur" src="{{asset('images/swi_about.jpg')}}">
 </div>
   <div class="col-md-6">
     <div class="card">

@@ -99,6 +99,7 @@
        }
      }
     </style>
+    @yield('additional_css')
 </head>
 
 <body>

@@ -1,4 +1,13 @@
-@extends('eros.general_layout') @section('content')
+@extends('eros.general_layout')
+@section('additional_css')
+<style media="screen">
+  .blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+</style>
+
+ @section('content')
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">ABOUT ME - SNOWWHITE</li>
@@ -10,7 +19,7 @@
 
               <div class="carousel-inner" role="listbox">
                   <div class="carousel-item active">
-                      <img src="{{asset('img/swi_2.jpg')}}" class="d-block carousel-profile-img">
+                      <img src="{{asset('images/swi_2.jpg')}}" class="d-block carousel-profile-img blur">
                   </div>
               </div>
 
@@ -40,7 +49,7 @@
             <div class="row">
                 <div class="col text-center">
                   <span class="align-middle m-2">
-                    <blockquote class="blockquote">&bdquo;Aktuell im P-Club bei Flensburg besuchbar!&ldquo;</blockquote>
+                    <blockquote class="blockquote">&bdquo;Aktuell nicht besuchbar!&ldquo;</blockquote>
                     <b class="text-pclub">SO WEIT IST ES <i class="fas fa-map-marker-alt fa-2x ml-2"></i></b>
                   </span>
 
