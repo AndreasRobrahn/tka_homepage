@@ -134,7 +134,7 @@
         <h2 class="text-center">Eine einzigartige Erfahrung</h2>
       </div>
       <div class="row contentbreak1">
-        <p class="text-center">Willst du dem grauen Alltag entkommen? Einach mal ne geile Zeit haben? Dann bist du hier richtig! Hab Spaß, lass dich gehen. Wir beide versüßen dir ganz ohne Zeitdruck deinen Tag.Wir sind gut drauf und für fast jeden Spaß zu haben.</p>
+        <p class="text-center">Willst du dem grauen Alltag entkommen und Einfach mal ne geile Zeit haben? Dann bist du hier richtig! Hab Spaß, lass dich gehen. Wir beide versüßen dir in aller Ruhe deinen Tag. Wir sind gut drauf und für fast jeden Spaß zu haben.</p>
       </div>
     </div>
     <div class="col-8">
