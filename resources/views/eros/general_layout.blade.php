@@ -15,6 +15,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/album.css') }}">
 
     <style>
+    a{
+      text-decoration: none;
+      color: white !important;
+    }
       /* Style the Image Used to Trigger the Modal */
      .myImageTrigger {
        border-radius: 5px;
@@ -100,7 +104,7 @@
 <body>
     <header>
 
-        <nav class="navbar navbar-expand-lg shadow-sm bg-primary text-pclub">
+        <nav class="navbar navbar-expand-lg shadow-sm  text-pclub">
             <div class="container">
                 <a class="navbar-brand" href="#"></span> <img class="img-fluid" src="{{asset('Firmenlogo/Firmenlogo.jpeg')}}" style="height: 150px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,16 +113,16 @@
                 <div class="collapse navbar-collapse text-white" id="navbarColor03">
                     <ul class="navbar-nav mr-auto text-white">
                       <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-                          <a class="nav-link" href="route('home.index')">HOME</a>
+                          <a class="nav-link" href="{{route('home')}}">HOME</a>
                       </li>
                         <li class="nav-item {{ Request::is('about*') ? 'active' : '' }}">
-                            <a class="nav-link" href="route('profile.show')">ABOUT ME</a>
+                            <a class="nav-link" href="{{route('aboutMe')}}">ABOUT ME</a>
                         </li>
                         <li class="nav-item {{ Request::is('blog*') ? 'active' : '' }}">
                             <a class="nav-link" href="route('blog.index')">BLOG</a>
                         </li>
                         <li class="nav-item dropdown" >
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle {{ Request::is('account*') ? 'active' : '' }}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Medien <span class="caret"></span>
                             </a>
 
@@ -201,11 +205,11 @@
 
     <a id="back-to-top" href="#" class="btn btn-warning back-to-top mb-5" role="button" data-placement="left"><span data-feather="chevron-up"></span></a>
 
-    <nav class=" fixed-bottom text-center bg-primary text-white">
+    <nav class=" bg-dark fixed-bottom text-center text-white">
        <span class="navbar-text text-center text-muted">
           <a class="mr-5" href="route('impressum.index')">Impressum</a>
-          <a class="mr-5" href="route('agb.index')">AGB</a>
-          <a class="mr-5" href="route('datenschutz.index')">Datenschutz</a>
+          <a class="mr-5" href="{{route('agb')}}">AGB</a>
+          <a class="mr-5" href="{{route('datenschutz')}}">Datenschutz</a>
         </span>
     </nav>
 

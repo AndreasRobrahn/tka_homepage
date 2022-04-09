@@ -5,7 +5,7 @@ html {
 }
 
 body{
-  background-image:url('../img/bg.jpg');
+  background-image:url('/images/bg.jpg');
   background-repeat: no-repeat;
   background-color: #050517;
   background-position: center;

@@ -82,5 +82,27 @@ Route::get('test', function(){
   return view('eros/general_layout');
 
 });
+Route::get('/eros/agb', function(){
+
+  return view('eros/AGB');
+
+})->name('agb');
+
+Route::get('/eros/datenschutz', function(){
+
+  return view('eros/DatenschutzIndex');
+
+})->name('datenschutz');
+Route::get('/eros/start', function(){
+
+  return view('eros/Home');
+
+})->name('home');
+Route::get('/eros/aboutMe', function(){
+
+  return view('eros/ProfileShow');
+
+})->name('aboutMe');
 
 Route::view('/sto','sto_landingpage');
+Route::view('/girls','CamGirlz.landingpage2Girlz');
