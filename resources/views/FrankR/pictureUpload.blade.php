@@ -144,7 +144,7 @@
                 <div class="bg-light h-100 w-100 position-absolute overlaymenu" style="">
                   <ul>
                     <li><a href="{{route('change.picTure.front', ['newthumb' => $picture->id, 'oldthumb'=> $image->id])}}">Erstes Bild</a> </li>
-                    <li><a href="#">Bild löschen</a> </li>
+                    <li><a href="{{route('picture.delete', ['id' => $picture->id])}}">Bild löschen</a> </li>
                     <li><a href="#">Bild nicht anzeigen</a> </li>
                   </ul>
                 </div>

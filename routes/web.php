@@ -95,6 +95,7 @@ Route::view('/frank/imgupload','FrankR.pictureUpload')->name('pictureUpload');
 Route::post('/frank/imgupload/post','App\Http\Controllers\pictureController@uploadImage')->name('pictureUpload.post');
 Route::get('/frank/changeImg/{newthumb}/{oldthumb}','App\Http\Controllers\pictureController@changeFrontPicture')->name('change.picTure.front');
 Route::get('/frank/gallerys/delete/{id}','App\Http\Controllers\pictureController@deleteGallery')->name('gallerys.delete');
+Route::get('/frank/gallerys/pic/delete/{id}','App\Http\Controllers\pictureController@deleteGallery')->name('picture.delete');
 Route::view('/frank/gallerys','FrankR.Gallerys')->name('frontend.gallerys');
 Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('GallerysIndex');
 Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('Gallery');
