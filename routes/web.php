@@ -90,3 +90,12 @@ Route::get('/eros/aboutMe', function(){
 
 Route::view('/sto','sto_landingpage');
 Route::view('/girls','CamGirlz.landingpage2Girlz');
+Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('videoChat');
+Route::view('/frank/imgupload','FrankR.pictureUpload')->name('pictureUpload');
+Route::post('/frank/imgupload/post','App\Http\Controllers\pictureController@uploadImage')->name('pictureUpload.post');
+Route::get('/frank/changeImg/{newthumb}/{oldthumb}','App\Http\Controllers\pictureController@changeFrontPicture')->name('change.picTure.front');
+Route::get('/frank/gallerys/delete/{id}','App\Http\Controllers\pictureController@deleteGallery')->name('gallerys.delete');
+Route::view('/frank/gallerys','FrankR.Gallerys')->name('frontend.gallerys');
+Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('GallerysIndex');
+Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('Gallery');
+Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('GallerysIndex');

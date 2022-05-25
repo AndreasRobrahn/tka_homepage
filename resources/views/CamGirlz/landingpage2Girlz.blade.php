@@ -97,7 +97,7 @@
     <div class="col-sm-12 col-md-8 overflow-hidden changingColors1 p-0">
       <div class="row">
         <div class="col-1 offset-2">
-          <a href="/videochat">
+          <a href="{{route('videoChat')}}">
             <span class="material-icons fontsize3">
             videocam
             </span>
