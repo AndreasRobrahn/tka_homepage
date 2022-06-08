@@ -100,3 +100,8 @@ Route::view('/frank/gallerys','FrankR.Gallerys')->name('frontend.gallerys');
 Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('GallerysIndex');
 Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('Gallery');
 Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('GallerysIndex');
+
+
+//Bistro Mandana Page
+
+Route::view('/bistroM/','BistroMandana.BistroMandana_landingpage')->name('BM');

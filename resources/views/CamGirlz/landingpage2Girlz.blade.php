@@ -236,9 +236,5 @@ responsive: [
 
       // console.log(centralel)
     });
-
-
-
-
 </script>
 @endsection
