@@ -210,7 +210,7 @@
           </div>
         </div>
         <div class="d-flex p-2" style="position: relative; height: 100vh;">
-          <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
+          <img src="{{asset('images/starz.gif')}}" alt="" id="bgimage1">
         </div>
         <div class="row bgimagebottomrow center_items w-100  disSMNone softerCchars font-test1">
           <div class="col-md-3 center_items">

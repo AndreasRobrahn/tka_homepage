@@ -93,6 +93,15 @@
     {
       border-radius: 25px;
     }
+    @media screen and (max-width: 416px) {
+
+      .sliderbutton
+      {
+        width: 75px;
+        height: 75px;
+        word-break: break-all;
+      }
+    }
     </style>
 
 </head>
@@ -173,9 +182,9 @@
         <div class="" style="position:fixed; right: 5%; top: 50%;">
           left
         </div>
-        <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" alt="" id="bgimage1">
+        <img src="{{asset('images/starz.gif')}}" alt="" id="bgimage1">
 
-        <div class="unit-black-transparent bgbt1" style="position: relative; left: 10vw;top: 5vh; width: 80vw;height: 90vh;">
+        <div class="unit-black-transparent bgbt1" style="position: relative; left: 10vw;top: 5vh; width: 80vw;height: 90vh;box-shadow: inset 0px 0px 25px 25px white, inset 0px 0px 50px 25px red">
           <div class="row gallery center_items" style="height:85%;">
           <div class="container-fluid " id="top" style="overflow:scroll;">
             <div class="row align-items-center " style="height: 85%;width:90%;margin-left: 5%;">
@@ -190,17 +199,15 @@
                 <div class="wrapper">
 
                   <div class="row center_items p-2">
-                    <h1 class="textsize2">Webapplikationen, Webdesign & Social Media im hohen Norden</h2>
+                    <h1 class="textsize2">Applikationen, Design & Social Media im hohen Norden</h2>
                   </div>
-
-
                 </div>
               </div>
             </div>
           </div>
           <div class="container-fluid" id="whatwedo" style="overflow:scroll;">
-            <div class="row text-dark align-items-center" style="height: 85%;">
-              <div class="col-md-6">
+            <div class="row text-dark center_items mt-4" style="height: 85%;">
+              <div class="col-10 col-md-6 text-white">
                 <p>Du hast eine Idee für eine Webseite? Wir erstellen sie.
                 Programmierung, Design oder Social Media - alles aus einer Hand.
                 Melde dich einfach auf einem unserer Kanäle und wir besprechen die Details.
@@ -211,21 +218,24 @@
                 </p>
               </div>
               <div class="col-md-6">
-                <div class="row p-1 mt-4">
-                  <h3>Social Media</h3>
-                  <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
+                <div class="row center_items p-1 mt-4">
+                  <div class="col-10 text-white">
+                    <h3>Social Media</h3>
+                    <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
+                  </div>
+
                 </div>
               </div>
 
             </div>
 
           </div>
-          <div class="container-fluid mt-4 h-100" id="whatwedo">
+          <div class="container-fluid mt-4 h-100" id="whatwedo" style="overflow : scroll;">
             <div class="row center_items p-2" style="height: 15%;">
 
               <h2 class="textsize2 text-center">Was können wir für dich tun?</h2>
             </div>
-            <div class="row align-items-center justify-content-center" style="height: 85%;width:90%;margin-left: 5%;">
+            <div class="row align-items-center justify-content-center" style="height: 85%;width:90%;margin-left: 5%;overflow : scroll;">
               <div class="col-sm-5">
                 <div class="wrapper">
                 <div class="row center_items mt-2 p-2">
@@ -240,7 +250,7 @@
 
               </div>
               <div class="col-sm-7">
-                <div class="row text-dark align-items-center" style="height: 85%;">
+                <div class="row text-dark align-items-center" style="height: 85%; ">
                     <div class="services" style="">
                         <div class="randomform center_items" style="  top: 5%; left: 5%;   transform: rotate(-25deg);">
                           <img src="{{asset('images/coding.jpg')}}" alt="Programmierung" class="image_generic">
@@ -443,7 +453,7 @@
   <script type="text/javascript">
   $(document).ready(function(){
 
-  var buttons =['Start','deine Vorteile','Informationen','Services']
+  var buttons =['Start','deine Idee','was erwartet dich','Infos']
     @if($errors->any())
 
         showErrorsModal()
@@ -465,7 +475,7 @@
   customPaging : function(slider, i) {
     var thumb = $(slider.$slides[i]).data();
 
-    return '<div class="col" ><button class="sliderbutton">'+buttons[i]+'</button></div>';
+    return '<div class="" ><button class="sliderbutton">'+buttons[i]+'</button></div>';
             },
   appendDots: $('.slick-dots'),
   // autoplaySpeed: 5000,
