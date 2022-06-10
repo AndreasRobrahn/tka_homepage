@@ -23,6 +23,7 @@
     <title>TKA Software Systems Webprogrammierung, Webdesign und Social Media aus Flensburg</title>
     <!-- Styles -->
     <style media="screen">
+
     a {
       text-decoration: none;
       background-color: none;
@@ -89,6 +90,28 @@
       height: 90vh;
       overflow: hidden;
     }
+    .circleGlowing
+    {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      height: 1200px;
+      width: 1200px;
+      z-index:10;
+
+    }
+    .glowing
+    {
+      box-shadow:
+      inset 0 0 750px rgba(255,255,255, 1),
+      0 0 30px 10px rgba(255,255,255, 0.8),
+      inset 0 0 90px 10px rgba(123,104,238,0.3),
+      inset 0 0 90px 150px rgba(65,105,225,0.3),
+      inset 0 0 90px 450px rgba(0,191,255,0.3);
+
+    }
     #gmap_canvas
     {
       border-radius: 25px;
@@ -105,7 +128,8 @@
     </style>
 
 </head>
-  <body class="">
+  <body class="" style="">
+
     <div class="" id="bgimage">
       <div class="" id="sidemenuwrapper">
         <div class="sidemenubutton">
@@ -148,7 +172,6 @@
               </i>
               <div class="popupleft">
                 <a href="{{route('examples')}}">  <span>Beispiele</span></a>
-
               </div>
             </div>
           </div>
@@ -184,14 +207,13 @@
         </div>
         <img src="{{asset('images/starz.gif')}}" alt="" id="bgimage1">
 
-        <div class="unit-black-transparent bgbt1" style="position: relative; left: 10vw;top: 5vh; width: 80vw;height: 90vh;box-shadow: inset 0px 0px 25px 25px white, inset 0px 0px 50px 25px red">
-          <div class="row gallery center_items" style="height:85%;">
+        <div class="unit-black-transparent glowing" style="position: relative; left: 10vw;top: 5vh; width: 80vw;height: 90vh; z-index:11;">
+          <div class="row gallery center_items  " style="height:85%;">
           <div class="container-fluid " id="top" style="overflow:scroll;">
             <div class="row align-items-center " style="height: 85%;width:90%;margin-left: 5%;">
 
               <div class="col-md-6 center_items mt-2 p-3" style="position:relative; overflow:hidden; ">
                 <div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 150%;">
-
                 </div>
                 <img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
               </div>

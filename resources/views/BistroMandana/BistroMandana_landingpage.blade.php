@@ -22,9 +22,11 @@
   {
     background-image: url("{{asset('images/starz.gif')}}");
     font-family: 'Lato';
+    overflow-x: scroll;
+    overflow-y: hidden;
     /* height: auto;
     width: 100vw;
-    overflow-y: hidden; */
+     */
 
   }
   .rowSpace
