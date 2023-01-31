@@ -28,24 +28,44 @@
       text-decoration: none;
       background-color: none;
     }
-    .slick-dots
+    ul.slick-dots
     {
       list-style:none;
       display: flex;
       justify-content: center;
-      margin: 10px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: rgb(96,156,225) !important;
+      background: linear-gradient(90deg, rgba(96,156,225,1) 0%, rgba(35,106,185,1) 25%, rgba(19,56,99,1) 50%, rgba(9,29,52,1) 75%) !important;
+      /* margin: 10px; */
+    }
+
+    ul.slick-dots li
+    {
+      width: 25%;
+      margin: 0;
+      padding: 0px;
+    }
+    .content
+    {
+      position: relative;
+      width: 75%;height: 75%;
+      z-index:11;
+      border-radius: 15px;
     }
     .sliderbutton
     {
-      height: 85px;
-      width: 85px;
-      font-size: 0.55em;
-      border-radius: 35%;
-      background-color: black;
+      height: 100%;
+      width: 100%;
+      /* font-size: 0.55em; */
+      border-radius: 0%;
+      background-color: transparent;
       color: white;
-      margin: 10px;
-      filter: drop-shadow(0px 0px 20px rgba(201, 68, 68, 0.835));
+      /* margin: 10px; */
+      /* filter: drop-shadow(0px 0px 20px rgba(201, 68, 68, 0.835)); */
     }
+
     .spin-border
     {
       animation: spin 10s linear infinite
@@ -60,11 +80,14 @@
         transform: rotateZ(360deg);
       }
     }
-
-    .logo
+    .slick-track
     {
       height: 100%;
-      width: 100%;
+    }
+    .logo
+    {
+      height: 90%;
+      width: 90%;
       object-fit: cover;
       border-radius: 25px;
       border: 5px solid white;
@@ -118,6 +141,13 @@
     }
     @media screen and (max-width: 416px) {
 
+      .content
+      {
+        position: relative;
+        width: 95%;height: 98%;
+        z-index:11;
+        border-radius: 15px;
+      }
       .sliderbutton
       {
         width: 75px;
@@ -130,8 +160,11 @@
 </head>
   <body class="" style="">
 
-    <div class="" id="bgimage">
-      <div class="" id="sidemenuwrapper">
+    <div class="center_items" id="bgimage">
+
+
+
+      <!-- <div class="" id="sidemenuwrapper">
         <div class="sidemenubutton">
           <i class="material-icons" onclick="openSidemenu()" id="openbutton">
             settings
@@ -198,185 +231,167 @@
           </div>
         </a>
       </div>
+      </div> -->
+
+
+        <!-- <img src="{{asset('images/starz.gif')}}" alt="" id="bgimage1"> -->
+        <img src="https://thumbs.gfycat.com/ActualPresentAntipodesgreenparakeet.webp" alt="" id="bgimage1">
+
+        <div class="glowing content p-0" style="">
+          <div class="row w-100 slick-dots m-0 fsize1" style="height:10%;">
+
+          </div>
+          <div class="row gallery center_items m-0" style="height:80%;">
+            <!-- container with logo and Initial Text -->
+            <div class="container-fluid h-100" id="top" style="overflow:scroll;">
+              <div class="row align-items-center h-100 m-0" style="">
+
+                <div class="col-md-6 center_items position-relative overflow-hidden p-3" style="">
+                  <div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 150%;">
+                  </div>
+                  <img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
+                </div>
+                <div class="col-md-6" id="thebusiness">
+                  <div class="wrapper">
+
+                    <div class="row center_items p-2 text-white text-">
+                      <h1 class="textsize2">Webapplikationen, Automatisierung, Design, Social Media und andere IT Dienstleistungen</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end container -->
+            <!-- Container with  services-->
+            <div class="container-fluid h-100" id="services" style="overflow : scroll;">
+
+              <div class="row center_items h-100 " style="">
+
+                <div class="col h-100 w-100 p-0">
+                  <div class="row text-dark align-items-center" style="height: 100%; ">
+                      <div class="services h-100 " style="">
+                          <div class="randomform center_items" style="  top: 5%; left: 5%;   transform: rotate(-25deg);">
+                            <img src="{{asset('images/coding.jpg')}}" alt="Programmierung" class="image_generic">
+                            <div class="readabiltyEnhancerWhite">
+                              <p class="b4Pic">Programmierung</p>
+                            </div>
+                          </div>
+                          <div class="randomform center_items" style="  top: 32%; left: 6%;   transform: rotate(15deg);">
+                            <img src="{{asset('Firmenlogo/design.jpg')}}" alt="Bild Webdesign Skizze" class="image_generic">
+                            <div class="readabiltyEnhancerWhite">
+                              <p class="b4Pic">Design</p>
+                            </div>
+                          </div>
+                          <div class="randomform center_items" style="  top: 11%; left: 27%;   transform: rotate(-22deg);">
+                            <img src="{{asset('Firmenlogo/projectrealisation.jpg')}}" alt="Programmierung" class="image_generic">
+                            <div class="readabiltyEnhancerWhite">
+                              <p class="b4Pic">Projektarbeit</p>
+                            </div>
+                          </div>
+                        <div class="randomform center_items" style=" top: 45%; left: 65%;transform: rotate(-29deg);">
+                          <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" class="image_generic" alt="Ein Naturfoto" style="position:absolute;">
+                          <div class="readabiltyEnhancerWhite ">
+                            <p class="b4Pic text-black">Fotos</p>
+                          </div>
+                        </div>
+                        <div class="randomformvideo center_items" style="top: 7%; left: 62%;   transform: rotate(15deg);">
+                          <iframe  class="h-100 w-100" src="https://player.vimeo.com/video/554074757?title=0&portrait=0&byline=0&autoplay=1&loop=1&transparent=1"></iframe>
+                          <div class="readabiltyEnhancerWhite">
+                            <p class="b4Pic">Videobearbeitung</p>
+                          </div>
+                            das Video funktioniert nicht
+                        </div>
+                        <div class="randomform center_items" style="top: 29%; left: 43%; transform: rotate(35deg);">
+                          <img src="{{asset('images/socmedpic.jpg')}}" class="image_generic" alt="Social Media">
+                          <div class="readabiltyEnhancerWhite">
+                            <p class="b4Pic">Likes Likes Likes</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- end container -->
+            <!-- container with social media -->
+            <div class="container-fluid h-100" id="socialmedia" style="overflow:scroll;">
+              <!-- end container -->
+              <div class="row text-dark center_items mt-4" id="additionalInfo" style="height: 85%;">
+                <div class="col-10 text-white ">
+                  <p class="fsize2">Du hast eine Idee für eine Webseite? Wir erstellen sie.
+                  Programmierung, Design oder Social Media - alles aus einer Hand.
+                  Melde dich einfach auf einem unserer Kanäle und wir besprechen die Details.
+                  </p>
+                </div>
+
+                <div class="col-10">
+                  <div class="row center_items p-1 mt-4">
+                    <div class="col text-white ">
+                      <h3 class="fsize2">Wir freuen uns auf einen Besuch auf unseren sozialen Medien</h3>
+                      <p class="d-flex"><a class="m-1 fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="m-1 fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="container-fluid h-100">
+              <div class="row center_items fsize2 " style=" height: 15%;">
+                <h3 class="text-center mt-2 fsize2 text-white"><strong>Zusätzliche Informationen</strong></h3>
+              </div>
+
+              <div class="row mt-4 justify-content-center" style="height: 75%;">
+                <div class="col-md-5 center_items">
+                  <div class="wrapper">
+                    <div class="row">
+                      <table class="table table-borderless text-white text-bold fsize1 w-100">
+                        <tr>
+                          <td>Mobil:</td>
+                          <td>+49 (0)162/9722979</td>
+                        </tr>
+                        <tr>
+                          <td>Adresse:</td>
+                          <td>Norderstr. 33, 24939 Flensburg</td>
+                        </tr>
+                        <tr>
+                          <td>Email:</td>
+                          <td>info@tka-software-systems.de</td>
+                        </tr>
+                        <tr>
+                          <td>Webseite:</td>
+                          <td>www.tka-software-systems.de</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="row m-2 ">
+                      <div class="col center_items">
+                        <button type="button" name="button" class="btn btn-block border-rounded border border-white bg-test2 text-white" onclick="showContactModal()">Kontaktformular aufrufen</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-5 p-0 order-sm-first order-md-last center_items" >
+                  <div class="mapouter" style="height: 350px; width: 100%;padding: 5px; border-radius: 25px;">
+                    <div class="gmap_canvas p-0 center_items">
+                      <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Norderstr.%2033,%2024939%Flensburg&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width: 90%;height: 350px;"></iframe><br>
+                      <br>
+                      </style>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      <div class="row w-100 slick-dots m-0" style="height:10%;">
+
       </div>
-        <div class="" style="position:fixed; left: 5%; top: 50%;">
-          left
-        </div>
-        <div class="" style="position:fixed; right: 5%; top: 50%;">
-          left
-        </div>
-        <img src="{{asset('images/starz.gif')}}" alt="" id="bgimage1">
-
-        <div class="unit-black-transparent glowing" style="position: relative; left: 10vw;top: 5vh; width: 80vw;height: 90vh; z-index:11;">
-          <div class="row gallery center_items  " style="height:85%;">
-          <div class="container-fluid " id="top" style="overflow:scroll;">
-            <div class="row align-items-center " style="height: 85%;width:90%;margin-left: 5%;">
-
-              <div class="col-md-6 center_items mt-2 p-3" style="position:relative; overflow:hidden; ">
-                <div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 150%;">
-                </div>
-                <img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
-              </div>
-              <div class="col-md-6" id="thebusiness">
-                <div class="wrapper">
-
-                  <div class="row center_items p-2">
-                    <h1 class="textsize2">Applikationen, Design & Social Media im hohen Norden</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid" id="whatwedo" style="overflow:scroll;">
-            <div class="row text-dark center_items mt-4" style="height: 85%;">
-              <div class="col-10 col-md-6 text-white">
-                <p>Du hast eine Idee für eine Webseite? Wir erstellen sie.
-                Programmierung, Design oder Social Media - alles aus einer Hand.
-                Melde dich einfach auf einem unserer Kanäle und wir besprechen die Details.
-                </p>
-              </div>
-              <div class="col-md-6">
-                <p>
-                </p>
-              </div>
-              <div class="col-md-6">
-                <div class="row center_items p-1 mt-4">
-                  <div class="col-10 text-white">
-                    <h3>Social Media</h3>
-                    <p><a class="fa fa-facebook socmedbutton facebookcolor" href=""></a>  <a class="fa fa-instagram socmedbutton instacolor" href="https://www.instagram.com/tkasosy/"></a></p>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="container-fluid mt-4 h-100" id="whatwedo" style="overflow : scroll;">
-            <div class="row center_items p-2" style="height: 15%;">
-
-              <h2 class="textsize2 text-center">Was können wir für dich tun?</h2>
-            </div>
-            <div class="row align-items-center justify-content-center" style="height: 85%;width:90%;margin-left: 5%;overflow : scroll;">
-              <div class="col-sm-5">
-                <div class="wrapper">
-                <div class="row center_items mt-2 p-2">
-                  <p class="textsize1">Unsere Dienste sind sowohl für Unternehmen wie für
-                    Privatpersonen interessant. Als loses Netzwerk
-                    aus Programmieren, Designern und Social Media
-                    Veteranen decken wir jeden Bereich modernen
-                    Marketings ab.</p>
-                </div>
-
-                </div>
-
-              </div>
-              <div class="col-sm-7">
-                <div class="row text-dark align-items-center" style="height: 85%; ">
-                    <div class="services" style="">
-                        <div class="randomform center_items" style="  top: 5%; left: 5%;   transform: rotate(-25deg);">
-                          <img src="{{asset('images/coding.jpg')}}" alt="Programmierung" class="image_generic">
-                          <div class="readabiltyEnhancerWhite">
-                            <p class="b4Pic">Programmierung</p>
-                          </div>
-                        </div>
-                        <div class="randomform center_items" style="  top: 57%; left: 6%;   transform: rotate(15deg);">
-                          <img src="{{asset('Firmenlogo/design.jpg')}}" alt="Bild Webdesign Skizze" class="image_generic">
-                          <div class="readabiltyEnhancerWhite">
-                            <p class="b4Pic">Design</p>
-                          </div>
-                        </div>
-                        <div class="randomform center_items" style="  top: 25%; left: 15%;   transform: rotate(-22deg);">
-                          <img src="{{asset('Firmenlogo/projectrealisation.jpg')}}" alt="Programmierung" class="image_generic">
-                          <div class="readabiltyEnhancerWhite">
-                            <p class="b4Pic">Projektarbeit</p>
-                          </div>
-                        </div>
-                      <div class="randomform center_items" style=" top: 45%; left: 29%;transform: rotate(-29deg);">
-                        <img src="{{asset('/Naturbilder/_DSC0972.jpg')}}" class="image_generic" alt="Ein Naturfoto" style="position:absolute;">
-                        <div class="readabiltyEnhancerWhite ">
-                          <p class="b4Pic text-black">Fotos</p>
-                        </div>
-                      </div>
-                      <div class="randomformvideo center_items" style="top: 10%; left: 36%;   transform: rotate(15deg);">
-                        <iframe  src="https://player.vimeo.com/video/554074757?title=0&portrait=0&byline=0&autoplay=1&loop=1&transparent=1"></iframe>
-                          das Video funktioniert nicht
-                      </div>
-                      <div class="randomform center_items" style="top: 36%; left: 37%; transform: rotate(35deg);">
-                        <img src="{{asset('images/socmedpic.jpg')}}" class="image_generic" alt="Social Media">
-                        <div class="readabiltyEnhancerWhite">
-                          <p class="b4Pic">Likes Likes Likes</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="container-fluid fsize1 h-100">
-            <div class="row center_items" style=" height: 15%;">
-              <h3 class="text-center mt-2"><strong>Zusätzliche Informationen</strong></h3>
-            </div>
-
-            <div class="row mt-4 justify-content-center" style="height: 75%;">
-              <div class="col-md-5 center_items">
-                <div class="wrapper">
-                  <div class="row">
-                    <table class="table table-borderless text-white textsize1 w-100">
-                      <tr>
-                        <td>Mobil:</td>
-                        <td>+49 (0)162/9722979</td>
-                      </tr>
-                      <tr>
-                        <td>Adresse:</td>
-                        <td>Norderstr. 33, 24939 Flensburg</td>
-                      </tr>
-                      <tr>
-                        <td>Email:</td>
-                        <td>info@tka-software-systems.de</td>
-                      </tr>
-                      <tr>
-                        <td>Webseite:</td>
-                        <td>www.tka-software-systems.de</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="row m-2 ">
-                    <div class="col center_items">
-                      <button type="button" name="button" class="btn btn-block border-rounded border border-white bg-test2 text-white" onclick="showContactModal()">Kontaktformular aufrufen</button>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-sm-5 p-0 order-sm-first order-md-last center_items" >
-                <div class="mapouter" style="height: 350px; width: 100%;padding: 5px; border-radius: 25px;">
-                  <div class="gmap_canvas p-0 center_items">
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Norderstr.%2033,%2024939%Flensburg&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width: 90%;height: 350px;"></iframe><br>
-                    <br>
-                    </style>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <!-- <div class="row m-2 justify-content-center ">
-            <p>Adresse: Sonnenscheineck 16, 44278 Dortmund</p>
-          </div>
-          <div class="row m-2 justify-content-center ">
-            <p>Email: info@unikat-deutschland.de</p>
-          </div>
-          <div class="row m-2 justify-content-center ">
-            <p>Social Media: <a class="fa fa-facebook facebookcolor text-white" href="https://www.facebook.com/Unikat-110609097951924/"></a>  <a class="fa fa-instagram instacolor text-white" href="https://www.instagram.com/unikat_gmbh"></a></p>
-          </div> -->
-
-        </div>
-    </div>
-    <div class="row w-100 center_items m-2 slick-dots" style="position: absolute; bottom: 0%; ">
-
-    </div>
   </div>
+
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -475,7 +490,7 @@
   <script type="text/javascript">
   $(document).ready(function(){
 
-  var buttons =['Start','deine Idee','was erwartet dich','Infos']
+  var buttons =['Start','Dienstleistungen','Social Media','Infos']
     @if($errors->any())
 
         showErrorsModal()
@@ -497,7 +512,7 @@
   customPaging : function(slider, i) {
     var thumb = $(slider.$slides[i]).data();
 
-    return '<div class="" ><button class="sliderbutton">'+buttons[i]+'</button></div>';
+    return '<button class="sliderbutton">'+buttons[i]+'</button>';
             },
   appendDots: $('.slick-dots'),
   // autoplaySpeed: 5000,

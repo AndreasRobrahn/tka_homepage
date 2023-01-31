@@ -6,7 +6,7 @@
       @section('description')
         <meta name="description" content="Neugikeiten aus der Welt des BJJ. Wenn es was wichtiges über Team Yak zu berichten gibt findest du es hier als erstes">
         @endsection
-      @section('title')
+      @section('keywords')
         <meta name="keywords" content="Brasilian Jiu Jitsu, Kampfsport, Flensburg, Trainer, Training">Team Yak, Brasilian Jiu Jitsu (BJJ) in Flensburg</title>
         @endsection
 
@@ -18,7 +18,7 @@
         font-size: 1.3em;
         overflow:initial !important;
       }
-      
+
       #frontpagevideo
       {
         position: absolute;
