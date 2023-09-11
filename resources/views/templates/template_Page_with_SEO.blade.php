@@ -1,4 +1,4 @@
-@extends('landingpage.landingpageStructure')
+@extends('templates.landingpageStructure')
 
 @section('refresh')
  <meta http-equiv="refresh" content="120">
@@ -14,10 +14,4 @@
 
 @section('description')
 <meta name="description" content="Willkommen in der aufregenden Welt der digitalen Währungen">
-@endsection
-
-@section('content')
-<div class="body">
-  <h1>Uberschrift 12</h1>
-</div>
 @endsection

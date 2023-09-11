@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="die TKA Software Systems UG hat sich die Programmierung von Webapplikationen und Firmenseiten auf die Fahnen geschrieben. Besonderen Wert legen wir auf eine gute Kommunikation um gemeinsame Projekte mit unseren Kunden erfolreich zu verwirklichen.">
-    <meta name="keywords" content="Webdesign, Webseite, Webapplikation, Flensburg Webseite, Flensburg, Webprogrammierung">
+    <meta name="keywords" content="Webdesign,Programmierung, Roboterprozessautomatisierung, Website, Flensburg Webseite, Flensburg, Webprogrammierung">
     <meta name="refresh" content="">
     <meta name="csrf-token" content="{{csrf_token()}}">
     <!-- <link href="bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet"> -->

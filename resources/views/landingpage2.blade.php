@@ -162,9 +162,7 @@
 
     <div class="center_items" id="bgimage">
 
-
-
-      <!-- <div class="" id="sidemenuwrapper">
+       <div class="" id="sidemenuwrapper">
         <div class="sidemenubutton">
           <i class="material-icons" onclick="openSidemenu()" id="openbutton">
             settings
@@ -231,11 +229,10 @@
           </div>
         </a>
       </div>
-      </div> -->
-
+      </div>
 
         <!-- <img src="{{asset('images/starz.gif')}}" alt="" id="bgimage1"> -->
-        <img src="https://thumbs.gfycat.com/ActualPresentAntipodesgreenparakeet.webp" alt="" id="bgimage1">
+        <img src="https://i.makeagif.com/media/8-27-2016/avxov6.gif" alt="calming background" id="bgimage1">
 
         <div class="glowing content p-0" style="">
           <div class="row w-100 slick-dots m-0 fsize1" style="height:10%;">
@@ -245,17 +242,29 @@
             <!-- container with logo and Initial Text -->
             <div class="container-fluid h-100" id="top" style="overflow:scroll;">
               <div class="row align-items-center h-100 m-0" style="">
+                <div class="col-md-4">
+                  <ul class="textsize2">
+                    <li>Webapplikationen</li>
+                    <li>Webdesign</li>
+                    <li>Social Media Managmenent</li>
+                  </ul>
 
-                <div class="col-md-6 center_items position-relative overflow-hidden p-3" style="">
+                </div>
+                <div class="col-md-4 center_items position-relative overflow-hidden p-3" style="">
                   <div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 150%;">
                   </div>
                   <img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
                 </div>
-                <div class="col-md-6" id="thebusiness">
+                <div class="col-md-4" id="thebusiness">
                   <div class="wrapper">
 
                     <div class="row center_items p-2 text-white text-">
-                      <h1 class="textsize2">Webapplikationen, Automatisierung, Design, Social Media und andere IT Dienstleistungen</h2>
+
+                          <ul class="textsize2">
+                          <li>Automatisierungssoftware</li>
+                          <li>Design</li>
+                          <li>andere IT Dienstleistungen</li>
+                        </ul>
                     </div>
                   </div>
                 </div>

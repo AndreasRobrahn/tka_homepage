@@ -23,7 +23,7 @@ Route::get('/', function () {
          $filenames[] = $file["filename"];
        }
          // dd($filenames);
-    return view('landingpage2', compact('filenames'));
+    return view('landingpage3', compact('filenames'));
 })->name('landingpage');
 
 
@@ -89,6 +89,8 @@ Route::get('/eros/aboutMe', function(){
 })->name('aboutMe');
 
 Route::view('/sto','sto_landingpage');
+Route::view('/hejo','hejo');
+Route::view('/hejo','hejoDB');
 Route::view('/girls','CamGirlz.landingpage2Girlz');
 Route::view('/girls/videochat','CamGirlz.CamGirlzVideochat')->name('videoChat');
 Route::view('/frank/imgupload','FrankR.pictureUpload')->name('pictureUpload');
