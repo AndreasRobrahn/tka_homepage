@@ -61,7 +61,7 @@
 
 	.btn:before {
 		content: '';
-		background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		/* background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); */
 		position: absolute;
 		top: -2px;
 		left:-2px;
@@ -110,22 +110,10 @@
 		background: linear-gradient(0deg, rgba(111,173,207,0.9738270308123249) 18%, rgba(224,224,224,1) 67%, rgba(245,246,246,1) 90%);
 	}
 
-	.flip-card {
-	  background-color: transparent;
-	  height: 100%;
-	  width: 100%;
-	  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-	}
+
 
 	/* This container is needed to position the front and back side */
-	.flip-card-inner {
-	  position: relative;
-	  width: 100%;
-	  height: 100%;
-	  text-align: center;
-	  transition: transform 0.8s;
-	  transform-style: preserve-3d;
-	}
+
 
 	/* Do an horizontal flip when you move the mouse over the flip box container */
 
@@ -148,14 +136,29 @@
 	/* Style the back side */
 	.flip-card-back {
 
-	  color: white;
+	  color: black;
+    background-color: rgba(200, 200, 205, 0.8);
 	  transform: rotateY(180deg);
 	}
 	body{
 		height: 100vh;
 		width: 100vw;
 		overflow: hidden;
+    font-size: 1.1em;
+
+
 	}
+  .background-body
+  {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://cache.teia.rocks/ipfs/QmVacftCGVBnPJ5PzZR1b9aBJVAqi93bcGadxKP37CLVv1);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
 	.logo
 	{
 		height: 90px;
@@ -178,19 +181,19 @@
 		width: 50%;
 	}
 	#toprow{
-		height: 5vh;
-		background: rgb(111,111,207);
-		background: linear-gradient(180deg, rgba(111,173,207,0.9738270308123249) 18%, rgba(224,224,224,1) 67%, rgba(245,246,246,1) 96%);
+		height: 2vh;
+		/* background: rgb(111,111,207); */
+		/* background: linear-gradient(180deg, rgba(111,173,207,0.9738270308123249) 18%, rgba(224,224,224,1) 67%, rgba(245,246,246,1) 96%); */
 	}
 	#secondrow{
 
 		height: 85vh;
-		background: rgb(111,173,207);
-		background: linear-gradient(0deg, rgba(111,173,207,0.9738270308123249) 18%, rgba(224,224,224,1) 67%, rgba(245,246,246,1) 90%);
+		/* background: rgb(111,173,207); */
+		/* background: linear-gradient(0deg, rgba(111,173,207,0.9738270308123249) 18%, rgba(224,224,224,1) 67%, rgba(245,246,246,1) 90%); */
 	}
 	#thirdrow
 	{
-		background-image: url(https://media4.giphy.com/media/VapauFsEHWCt2/giphy.gif?cid=ecf05e47j7ae6w6z8mrop1kjzg4n7e1ac1a47mq9zxaka9bl&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+		/* background-image: url(https://media4.giphy.com/media/VapauFsEHWCt2/giphy.gif?cid=ecf05e47j7ae6w6z8mrop1kjzg4n7e1ac1a47mq9zxaka9bl&ep=v1_gifs_search&rid=giphy.gif&ct=g); */
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 100% 100%;
@@ -264,10 +267,7 @@
 		}
 		#thirdrow
 		{
-			background-image: url(https://media4.giphy.com/media/VapauFsEHWCt2/giphy.gif?cid=ecf05e47j7ae6w6z8mrop1kjzg4n7e1ac1a47mq9zxaka9bl&ep=v1_gifs_search&rid=giphy.gif&ct=g);
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: 100% 100%;
+
 			height: 10vh;
 			text-shadow: 5px 5px 5px black;;
 		}
@@ -290,6 +290,9 @@
 	}
 	</style>
 	<body class="center_items">
+    <div class="background-body">
+
+    </div>
 		<div class="container" id="content" style="">
 			<div class="row h-100 p-2" >
 				<div class="col-sm-4 center_items p-2 ">
@@ -520,7 +523,7 @@
 					</div>
 			</div>
 		</div>
-			<div class="container-fluid h-100 bg-light">
+			<div class="container-fluid h-100x">
 				<div class="row" id="toprow">
 					<div class="col center_items" id="">
 						Investieren sie in die Zukunft
