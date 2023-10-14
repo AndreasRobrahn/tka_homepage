@@ -1,7 +1,7 @@
 @extends('templates.template_Page_with_SEO')
 
 @section('refresh')
- <meta http-equiv="refresh" content="120">
+ <!-- <meta http-equiv="refresh" content="120"> -->
 @endsection
 
 @section('title')
@@ -27,6 +27,11 @@
 		width: 2px;
 		height: 2px;
 		}
+
+  .mobile
+  {
+    display: none;
+  }
 	::-webkit-scrollbar-corner {
 		  background: rgba(0,0,0,0.5);
 	}
@@ -119,35 +124,90 @@
 
 
 	/* Position the front and back side */
-	.flip-card-front, .flip-card-back {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
-	  -webkit-backface-visibility: hidden; /* Safari */
-	  backface-visibility: hidden;
-	}
+
 
 	/* Style the front side (fallback if image is missing) */
-	.flip-card-front {
 
-	  color: black;
-	}
 
 	/* Style the back side */
-	.flip-card-back {
-
-	  color: black;
-    background-color: rgba(200, 200, 205, 0.8);
-	  transform: rotateY(180deg);
-	}
-	body{
-		height: 100vh;
-		width: 100vw;
-		overflow: hidden;
-    font-size: 1.1em;
 
 
-	}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  right: 0 !important;
+}
+.menu__btn {
+  position: relative;
+  /* top: 20px; */
+  /* left: 20px; */
+  width: 96px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 6;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #616161;
+  transition-duration: .25s;
+  /* top: 20px; */
+  /* margin-top: 18px; */
+}
+.menu__btn > span::before {
+  content: '';
+  /* margin-top: 15px; */
+  top: 25px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 50px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+  z-index: 5;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
   .background-body
   {
     position: absolute;
@@ -161,7 +221,7 @@
   }
 	.logo
 	{
-		height: 90px;
+		height: 120px;
 		/* width: 90%; */
 		margin-top: 5px;
 		object-fit: cover;
@@ -187,7 +247,7 @@
 	}
 	#secondrow{
 
-		height: 85vh;
+		height: 90vh;
 		/* background: rgb(111,173,207); */
 		/* background: linear-gradient(0deg, rgba(111,173,207,0.9738270308123249) 18%, rgba(224,224,224,1) 67%, rgba(245,246,246,1) 90%); */
 	}
@@ -197,16 +257,14 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 100% 100%;
-		height: 10vh;
+		height: 5vh;
 		text-shadow: 5px 5px 5px black;;
 	}
 
-	#content{
-		position: absolute;
-		height: 70vh;
-		border-radius: 15px;
 
-	}
+  #contentMobile{
+    display: none;
+  }
 	.wcshadow
 	{
 		box-shadow: 0px 0px 15px black;
@@ -251,37 +309,71 @@
 	}
 	@media screen and (max-width: 416px) {
 		body{
-			height: auto;
+			height: 100vh;
 			width: 100vw;
-			overflow-Y: scroll;
-			overflow-X: scroll;
+			overflow: hidden;
+      display: block !important;
+      position: relative;
+			/* overflow-X: scroll; */
 		}
-		#toprow{
-			height: 150px;
+    .buttonMo{
+      height:40px;
+      width: 85px;
+      border-radius: 5px;
+      line-height: 90%;
+      background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    }
+    .desktop
+    {
+      display: none;
+    }
+    .mobile
+    {
+      display: block;
+      height: 100%;`
+    }
+    .background-mobile
+    {
+      height: 100%;
+      background-image: url(https://img.freepik.com/free-vector/blue-futuristic-networking-technology_53876-97395.jpg?w=1800&t=st=1697149705~exp=1697150305~hmac=d4198397a4ba96c97308bf712342953235ace5dd75b174e12395655b26c979bf);
+      /* background-image: url(https://cache.teia.rocks/ipfs/QmVacftCGVBnPJ5PzZR1b9aBJVAqi93bcGadxKP37CLVv1); */
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+    }
+		#firstrow{
+			height: 20%;
 
 		}
 		#secondrow{
 
-			height: 850px;
+			height: 70%;
 
 		}
 		#thirdrow
 		{
 
-			height: 10vh;
+			height: 7%;
+      /* margin-top: 20px; */
+
 			text-shadow: 5px 5px 5px black;;
 		}
+    #thirdrow h3
+    {
+      font-size: 1.03em;
+    }
+
 
 		#content{
-			position: absolute;
-			height: 100%;
+			/* position: relative; */
+			height: auto;
 			border-radius: 15px;
 
 		}
-		.flip-card
-		{
-			height: 500px;
-		}
+    #contentMobile{
+      display: block;
+    }
+
 		.flip-card-inner
 		{
 			margin-left: 0px;
@@ -290,274 +382,574 @@
 	}
 	</style>
 	<body class="center_items">
-    <div class="background-body">
+    <!-- the backgorund giff -->
+    <div class="desktop h-100 w-100 position-relative">
+      <div class="background-body">
+        <h1 class="" style="visibility: hidden;">Programmierung, Webseiten, IT Dienstleistungen</h1>
+      </div>
+      <!-- end -->
+      <!-- 3 rows but only the first is filled with a logo, the third is on the bottom -->
+  			<div class="container-fluid h-100">
+          <!-- logo -->
+  				<div class="row" id="toprow">
+
+  					<div class="col-12 center_items  " style="">
+              <div class="d-flex position-relative overflow-hidden">
+                <div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 150%;">
+  						   </div>
+  						   <img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
+  					    </div>
+              </div>
+  				</div>
+  				<div class="row" id="secondrow">
+            <div class="container" id="content" style="">
+              <div class="row h-100 mt-2 p-2" >
+                <div class="col-sm-4 center_items p-2">
+                  <div class="flip-card">
+                  <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                   <div class="h-100 w-100 center_items">
+                    <div class="row h-100">
+                      <div class="col-12 h-75 center_items">
+                        <h2> Über uns </h2>
+                      </div>
+                      <div  class="col-12 h-25 center_items">
+                        <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                          weitere infos
+                        </button>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="flip-card-back overflow-scroll p-2">
+                    <p>gegründet im Jahre 2021 haben wir uns vorgenommen alle Bereiche im Bereich des WorldWideWeb abzudecken. Wir sind eine Gruppe aus Experten aus dem Bereich IT, Social Media und Webmedien. </p>
+                  </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-sm-4 center_items p-2 ">
+                <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2 class=""> Programmierung </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="flip-card-back overflow-scroll">
+
+                      <p>Benötigen Sie eine einfache Anwendung mit einer Datenbank. Kein Problem. Wir haben Erfahrungen mit Chats, Analyse- und Reporttools, Apps für ein verbesseters Monitoring und schneller Aktualisierung. Wenn Sie die Idee haben setzen wir sie um! </p>
+                      <p></p>
+
+                    </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-4 center_items p-2">
+                <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 border white center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2> Social Media </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card-back overflow-scroll p-2">
+                      <p>Die sozialen Medien verbessern Ihre Reichweite enorm. Warum nicht gekoppelt mit einer Webseite oder einem Webshop? Wir helfen Ihnen Ihren Auftritt zu verbessern und mehr Reichweite zu generieren</p>
+                    </div>
+                    </div>
+                  </div>
+
+                </div>
+                  <div class="col-sm-4 center_items p-2">
+                    <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 border white center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2> Wordpress </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="flip-card-back overflow-scroll p-2">
+                      <p>Selbsterklärend. Wollen sie das bekannteste aller Frameworks für Webauftritte nutzen? Wir richten die Seite ein und sie können die einzelnen Beiträge verfassen. </p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 center_items p-2">
+                  <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 border white center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2>Beispiele</h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card-back overflow-scroll p-2">
+                      <div class="d-block">
+                        <p><a href=""> ein Chatsystem </a></p>
+                        <p><a href=""> The Wheel of Fortune </a></p>
+                        <p><a href=""> Galgenmann </a></p>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 center_items p-2">
+                    <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 border white center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2> SEO </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card-back p-2">
+                      <p>Suchmaschinenoptimierung ist eines der wichtigsten Marketingwerkzeuge das es gibt heutzutage. Die technischen und inhaltlichen Sachverhalte können manipuliert werden um für Sie eine erheblich größere Reichweite zu erzeugen</p>
+
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="col-sm-4 center_items p-2">
+                    <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2> Roboter Prozessautomatisierung </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card-back overflow-scroll p-2">
+                      <p>Industrie 4.0 steht vor der Türe. Es gibt mittlerweile viefältige Möglichkeiten um sich wiederholende, lästige Tätigkeiten zu automatisieren. </p>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="col-sm-4 center_items p-2">
+                    <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100 center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2> Projektarbeit / Freelance </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card-back overflow-scroll p-2">
+                      <p>benötigen Sie Hilfe bei einem Projekt? Fehlen Ihnen Personalressourcen? Melden sie sich über den Kontakt Button</p>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col-sm-4 center_items p-2">
+                    <div class="flip-card">
+                    <div class="flip-card-inner wcshadow">
+                    <div class="flip-card-front">
+                     <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-75 center_items">
+                          <h2> weitere IT-Diensleistungen </h2>
+                        </div>
+                        <div  class="col-12 h-25 center_items">
+                          <button onclick="rotator(this)" id="clickor" class="btn text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card-back overflow-scroll p-2">
+                      <p>Jahrelange Erfahrung im Support von Desktop- und Webapplikationen wie Office365, Outlook, MS Word, Excel etc. Installationen, Einrichtungen von Geräten und vieles mehr. Wir vereinbaren im Vorfeld einen Preis und sollten wir das Anliegen nicht lösen können, mûssen sie auch nichts zahlen</p>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+  				</div>
+  				<div class="row " id="thirdrow">
+  					<div class="col-4 center_items h-100" id="">
+  						<h3 class="text-white cursor-pointer">
+                <a href="{{route('impressum')}}">Impressum</a> </h3>
+  						</div>
+  						<div class="col-4 center_items" id="">
+  						<h3 class="text-white cursor-pointer">
+                <a href="{{route('dataprivacy')}}">Datenschutz</a> </h3>
+  						</div>
+  						<div class="col-4 center_items" id="">
+  						<h3 class="text-white cursor-pointer" onclick="showContactModal()">
+
+                Kontakt </h3>
+  						</div>
+  				</div>
+  			</div>
+        <!-- the container with the cards centered in the middle -->
 
     </div>
-		<div class="container" id="content" style="">
-			<div class="row h-100 p-2" >
-				<div class="col-sm-4 center_items p-2 ">
-				<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100  center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2 class=""> Programmierung </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+    <div class="mobile">
+      <div class="background-mobile">
+        <div class="container h-100">
+          <div class="row m-0" id="firstrow">
+            <div class="col-6 center_items">
+              <!-- the logo -->
+              <div class="d-flex position-relative overflow-hidden">
+                <div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 150%;">
+  						   </div>
+  						   <img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
+  					    </div>
+            </div>
+            <div class="col-6 center_items">
+              <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
 
-						<div class="flip-card-back overflow-scroll center_items">
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="#">Home</a></li>
+                  <li><a class="menu__item" href="#">Kontakt</a></li>
+                  <li><a class="menu__item" href="#">Datenschutz</a></li>
+                  <li><a class="menu__item" href="#">Impressum</a></li>
+                  <li><a class="menu__item" href="#">Instagram</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- where the cards are -->
+          <div class="row m-0" id="secondrow">
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> Programmierung  </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-						  <p>Benötigen Sie eine Webseite? Vielleicht eine komplexere Applikation mit Datenbankanbindung? Kein Problem! Melden Sie sich einfach </p>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <ul class="list-unstyled">
+                        <li>Anwendungen mit Datenbanken</li>
+                        <li>Analysetools für ein besseres Monitoring</li>
+                        <li>Umfragen, Kontaktformulare, Chats etc.</li>
+                        <li>Blogs, Webauftritte</li>
+                      </ul>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-						</div>
-					  </div>
-					</div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> Social Media </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-				</div>
-				<div class="col-sm-4 center_items p-2">
-				<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 border white center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> Social Media </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <p>Die sozialen Medien verbessern Ihre Reichweite enorm. Warum nicht gekoppelt mit einer Webseite oder einem Webshop? Wir helfen Ihnen Ihren Auftritt zu verbessern und mehr Reichweite zu generieren</p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-						<div class="flip-card-back overflow-scroll">
-						  <p>Ein Auftritt in den sozialen Medien ist notwendig für ein gezieltes Marketing Ihrer Zielgruppe </p>
-						</div>
-					  </div>
-					</div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> Wordpress </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-				</div>
-					<div class="col-sm-4 center_items p-2">
-						<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 border white center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> Webdesign </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <p>Selbsterklärend. Wollen sie das bekannteste aller Frameworks für Webauftritte nutzen? Wir richten die Seite ein und sie können die einzelnen Beiträge verfassen.</p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <h2>Webdesign</h2>
-						  <p>Eine ansprechende, zielgruppenorientierte Webseite benötigt Konzepte, Erfahrung und </p>
-						</div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-sm-4 center_items p-2">
-					<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 border white center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2>Beispiele</h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> Beispiele </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <h2>Beispiele</h2>
-						  <p><a href=""> ein Chatsystem </a></p>
-						  <p><a href=""> the wheel of fortune </a></p>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
 
-						</div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-sm-4 center_items p-2">
-						<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 border white center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> SEO </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                        <p><a href=""> Ein Chatsystem </a></p>
+                        <p><a href=""> The Wheel of Fortune </a></p>
+                        <p><a href=""> Galgenmann </a></p>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <p>Suchmaschinenoptimierung ist heute wohl eines der wichtigsten Werkzeuge für die um zB Leads zu erzeugen oder Mitarbeiter zu werben. </p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-						</div>
-					  </div>
-					</div>
-					</div>
-				<div class="col-sm-4 center_items p-2">
-						<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> Roboter Prozessautomatisierung </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> SEO </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <p>Industrie 4.0 steht vor der Türe. Wo wollen Sie sich positionieren. Es gibt mittlerweile viefältige Software um wiederholende Tätigkeiten zu automatisieren. </p>
-						</div>
-					  </div>
-					</div>
-					</div>
-				<div class="col-sm-4 center_items p-2">
-						<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> Projektarbeit / Freelance </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <p>Suchmaschinenoptimierung ist eines der wichtigsten Marketingwerkzeuge das es gibt heutzutage. Die technischen und inhaltlichen Sachverhalte können manipuliert werden um für Sie eine erheblich größere Reichweite zu erzeugen</p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <p>benötigen Sie Hilfe bei einem Projekt? Melden sie sich über den Kontakt Button</p>
-						</div>
-					  </div>
-					</div>
-					</div>
-					<div class="col-sm-4 center_items p-2">
-						<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100 center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> Über uns </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1">Projektarbeit / Freelance</h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <p>gegründet im Jahre 2021 haben wir uns vorgenommen alle Bereiche im Bereich des WorldWideWeb abzudecken. Wir sind eine Gruppe aus Experten aus dem Bereich IT, Social Media und Webmedien. </p>
-						</div>
-					  </div>
-					</div>
-					</div>
-					<div class="col-sm-4 center_items p-2">
-						<div class="flip-card">
-					  <div class="flip-card-inner wcshadow">
-						<div class="flip-card-front">
-						 <div class="h-100 w-100  center_items">
-							<div class="row h-100">
-								<div class="col-12 h-75 center_items">
-									<h2> weitere IT Diensleistungen </h2>
-								</div>
-								<div  class="col-12 h-25 center_items">
-									<button onclick="rotator(this)" id="clickor" class="btn text-white">
-										weitere infos
-									</button>
-								</div>
-							</div>
-							</div>
-						</div>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <p>benötigen Sie Hilfe bei einem Projekt? Fehlen Ihnen Personalressourcen? Melden sie sich über den Kontakt Button</p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-						<div class="flip-card-back overflow-scroll p-2">
-						  <p>Jahrelange Erfahrung im Support von Desktop- und Webapplikationen wie Office365, Outlook, MS Word, Excel etc. Installationen, Einrichtungen von Geräten und vieles mehr. Wir vereinbaren im Vorfeld einen Preis und sollte ich das Anliegen nicht lösen können, mûssen sie auch nichts zahlen</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> Über uns </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-						</div>
-					  </div>
-					</div>
-					</div>
-			</div>
-		</div>
-			<div class="container-fluid h-100x">
-				<div class="row" id="toprow">
-					<div class="col center_items" id="">
-						Investieren sie in die Zukunft
-					</div>
-					<div class="col center_items position-relative overflow-hidden" style="">
-						<div class="shiningeffect" style="position: absolute; background-color: rgba(255,255,255,0.3); width: 100%;">
-						</div>
-						<img src="{{asset('/Firmenlogo/Firmenlogo.jpeg')}}" class="logo" alt="Logo TKA Systems">
-					</div>
-					<div class="col center_items" id="">
-						<p><a href="tel:+491629722979">
-              <i class="fa fa-mobile-phone" style="font-size:28px;color:black;"></i>
-            </a></p>
-					</div>
-				</div>
-				<div class="row" id="secondrow">
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <p>gegründet im Jahre 2021 haben wir uns vorgenommen alle Bereiche im Bereich des WorldWideWeb abzudecken. Wir sind eine Gruppe aus Experten aus dem Bereich IT, Social Media und Webmedien. </p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
 
-				</div>
-				<div class="row " id="thirdrow">
-					<div class="col-4 center_items h-100" id="">
-						<h3 class="text-white cursor-pointer">
-              <a href="{{route('impressum')}}">Impressum</a> </h3>
-						</div>
-						<div class="col-4 center_items" id="">
-						<h3 class="text-white cursor-pointer">
-              <a href="{{route('dataprivacy')}}">Datenschutz</a> </h3>
-						</div>
-						<div class="col-4 center_items" id="">
-						<h3 class="text-white cursor-pointer" onclick="showContactModal()">
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="col-6 center_items p-2">
+              <div class="flip-card">
+                <div class="flip-card-inner wcshadow">
+                  <div class="flip-card-front">
+                    <div class="h-100 w-100  center_items">
+                      <div class="row h-100">
+                        <div class="col-12 h-50 center_items">
+                          <h2 class="mt-1"> weitere IT-Diensleistungen </h2>
+                        </div>
+                        <div  class="col-12 h-50 center_items">
+                          <button onclick="rotator2(this)" id="clickor" class="buttonMo text-white">
+                            weitere infos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-              Kontakt </h3>
-						</div>
-				</div><
-			</div>
+                  <div class="flip-card-back p-2 center_items">
+                    <div class="">
+                      <p>Jahrelange Erfahrung im Support von Desktop- und Webapplikationen wie Office365, Outlook, MS Word, Excel etc. Installationen, Einrichtungen von Geräten und vieles mehr. Wir vereinbaren im Vorfeld einen Preis und sollten wir das Anliegen nicht lösen können, mûssen sie auch nichts zahlen</p>
+                      <button onclick="deRotate(this)" id="clickor2" class="buttonMo text-white">
+                        zurück
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+          <div class="row footer bg-dark text-white fs-small" id="thirdrow">
+            <div class="col-6 p-0 ">
+               <p class="text-center align-self-center m-0">TKA Software System UG</p>
+            </div>
+            <div class="col-6 p-0 ">
+               <p class="text-center align-self-center m-0">Norderstr. 33</p>
+            </div>
+            <div class="col-6 p-0">
+               <p class="text-center m-0 ">info@tka-software-systems.com</p>
+            </div>
+            <div class="col-6 p-0 ">
+               <p class="text-center m-0">01629722979</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- contactform -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -626,14 +1018,47 @@
 					for (card of cards) {
 						card.style.transform ="rotateY(0deg)"
 					}
-
-
 					const clickor = button;
 					var flipper = clickor.parentElement.parentElement.parentElement.parentElement.parentElement
 					flipper.style.transform ="rotateY(180deg)"
 
 
+
 				}
+        // for mobile
+				function rotator2(button)
+				{
+					let cards = document.getElementsByClassName("flip-card-inner")
+					for (card of cards) {
+						card.style.transform ="rotateY(0deg)"
+					}
+					const clickor = button;
+					var flipper = clickor.parentElement.parentElement.parentElement.parentElement.parentElement
+					var flipcard = clickor.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
+					flipper.style.transform ="rotateY(180deg)"
+					flipcard.style.position ="absolute"
+					flipcard.style.height ="60vh"
+					flipcard.style.top ="15%"
+					flipcard.style.left ="5%"
+					flipcard.style.width ="90%"
+
+
+
+				}
+        function deRotate(button)
+        {
+          var clickor = button
+          var flipper = clickor.parentElement.parentElement.parentElement
+          var flipcard = clickor.parentElement.parentElement.parentElement.parentElement
+          console.log(flipcard)
+					flipper.style.transform ="rotateY(-0deg)"
+					flipcard.style.position ="relative"
+					flipcard.style.height ="105px"
+					flipcard.style.width ="100%"
+					flipcard.style.top ="0%"
+					flipcard.style.left ="0%"
+					flipcard.style.fontSize ="0.7em"
+        }
 				function myFunction(item) {
 				 item.style.transform ="rotateY(0deg)"
 				}

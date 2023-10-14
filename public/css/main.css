@@ -1,6 +1,5 @@
 body
 {
-  /* height: 100%; */
   width: 100vw;
   height: 100vh;
   font-family: 'Lato' ;
@@ -252,6 +251,17 @@ transition-property: left, top, opacity;
   transform: scale(1.1) !important;
 
   /* transform: scale(5); */
+}
+.fs-small
+{
+  font-size: 0.7em;
+}
+.footer
+{
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  bottom: 0%;
 }
 .randomformvideo:hover
 {
@@ -1005,16 +1015,27 @@ to
     }
     .flip-card {
       background-color: transparent;
-      width: 90%;
-      height: 110%;
+      width: 82%;
+      height: 100%;
       perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    }
+      /* transform: rotateX(-10deg); */
+      transition: all .5s ease;
 
+    }
+    #content{
+      position: absolute;
+      height: 70vh;
+      /* width: 100vw !important; */
+      border-radius: 15px;
+      top: 15%;
+      text-align: justify;
+
+    }
     /* This container is needed to position the front and back side */
     .flip-card-inner {
   	  position: relative;
-  	  width: 95%;
-  	  height: 85%;
+  	  width: 105%;
+  	  height: 105%;
       border: 5px solid white;
       background-color: rgba(200, 200, 205, 0.8);
   	  text-align: center;
@@ -1024,10 +1045,11 @@ to
   	}
 
     /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-      background-color: transparent;
-    } */
+    .flip-card:hover {
+      transform: scale(1.35);
+      z-index: 5;
+      /* background-color: transparent; */
+    }
 
     /* Position the front and back side */
     .flip-card-front, .flip-card-back {
@@ -1045,14 +1067,14 @@ to
       color: black;
     }
 
-    /* Style the back side */
     .flip-card-back {
-      background-color: dodgerblue;
-      color: white;
 
-      /* font-weight 500; */
-      transform: rotateY(180deg);
-    }
+  	  color: black;
+      background-color: rgba(200, 200, 205, 0.8);
+  	  transform: rotateY(180deg);
+      text-align: left;
+      font-size: 0.9em;
+  	}
     #myChart
     {
       height: 300px !important;
@@ -1089,6 +1111,37 @@ to
 
     @media only screen and (max-width: 415px){
 
+      h2
+      {
+        font-size: 1.5em;
+      }
+      .flip-card:hover {
+        transform: scale(1);
+        /* position: absolute;
+        top: 10%;
+        left: 5%;
+
+        transform: scale(1);
+        height: 70vh;
+        width: 90%; */
+
+      }
+      .flip-card
+      {
+        height: 105px;
+        width: 100%;
+        /* margin-top: 25px; */
+        font-size: 0.7em !important;
+      }
+      .flip-card-back
+      {
+        font-size: 1.5em !important;
+        text-align: center;
+      }
+      #content
+      {
+        display: none;
+      }
       .unit-black-transparent
       {
         width: 95%;
